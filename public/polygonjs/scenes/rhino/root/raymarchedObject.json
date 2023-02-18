@@ -1,0 +1,43 @@
+{
+	"type": "geo",
+	"nodes": {
+		"box1": {
+			"type": "box",
+			"params": {
+				"sizes": [2, 1, 2],
+				"center": [0, 0.5, 0]
+			}
+		},
+		"boxLines1": {
+			"type": "boxLines",
+			"inputs": ["material1"]
+		},
+		"fileGLTF1": {
+			"type": "fileGLTF",
+			"params": {
+				"url": "https://raw.githubusercontent.com/polygonjs/polygonjs-assets/master/models/resources/threedscans.com/rhino.glb"
+			}
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/rayMarchingBuilder1"
+			},
+			"inputs": ["box1"]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandard1"
+			},
+			"inputs": ["fileGLTF1"]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["material1", "boxLines1"]
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

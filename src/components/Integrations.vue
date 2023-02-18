@@ -55,15 +55,8 @@ import ReactIcon from "./icons/ReactIcon.vue";
 import VueIcon from "./icons/VueIcon.vue";
 import ThreejsIcon from "./icons/ThreejsIcon.vue";
 import WebflowIcon from "./icons/WebflowIcon.vue";
+import { Integration, ICON_BY_INTEGRATION } from "./common/Integration";
 
-enum Integration {
-	REACT = "React",
-	VUE = "Vue",
-	THREEJS = "Threejs",
-	GIT = "Git",
-	WEBFLOW = "Webflow",
-	MAPBOX = "Mapbox",
-}
 const INTEGRATIONS: Integration[] = [
 	Integration.REACT,
 	Integration.VUE,
@@ -75,19 +68,11 @@ const INTEGRATIONS: Integration[] = [
 const DESCRIPTION_BY_INTEGRATION: Record<Integration, string> = {
 	[Integration.REACT]: "Simply add our <PolygonjsScene/> component",
 	[Integration.VUE]: "Simply add our <PolygonjsScene/> component",
-	[Integration.THREEJS]: "Simply add our <PolygonjsScene/> component",
+	[Integration.THREEJS]: "Polygonjs is based on threejs after all",
 	[Integration.GIT]:
 		"Polygonjs only saves javascript and json files, super easy to diff and review",
 	[Integration.WEBFLOW]: "Simply add our <PolygonjsScene/> component",
 	[Integration.MAPBOX]: "Simply add our <PolygonjsScene/> component",
-};
-const ICON_BY_INTEGRATION: Record<Integration, any> = {
-	[Integration.REACT]: ReactIcon,
-	[Integration.VUE]: VueIcon,
-	[Integration.THREEJS]: ThreejsIcon,
-	[Integration.GIT]: GitIcon,
-	[Integration.WEBFLOW]: WebflowIcon,
-	[Integration.MAPBOX]: MapboxIcon,
 };
 
 export default defineComponent({

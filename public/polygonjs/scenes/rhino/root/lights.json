@@ -1,0 +1,14 @@
+{
+	"type": "geo",
+	"nodes": {
+		"hemisphereLight1": {
+			"type": "hemisphereLight",
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

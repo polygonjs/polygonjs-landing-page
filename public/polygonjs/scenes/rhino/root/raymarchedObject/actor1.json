@@ -1,0 +1,90 @@
+{
+	"type": "actor",
+	"nodes": {
+		"onTick1": {
+			"type": "onTick"
+		},
+		"setMaterialUniform1": {
+			"type": "setMaterialUniform",
+			"params": {
+				"type": 0,
+				"Color": {
+					"type": "color",
+					"default_value": [1, 1, 1],
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": [0.7764705882352941, 0.5490196078431373, 0.06274509803921569]
+				},
+				"uniformName": {
+					"type": "string",
+					"default_value": "",
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": "refractionTint"
+				},
+				"lerp": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.11
+				}
+			},
+			"maxInputsCount": 5,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Material",
+						"type": "Material",
+						"isArray": false
+					},
+					{
+						"name": "Color",
+						"type": "Color",
+						"isArray": false
+					},
+					{
+						"name": "uniformName",
+						"type": "string",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		}
+	},
+	"inputs": ["material1"],
+	"flags": {
+		"display": true
+	}
+}

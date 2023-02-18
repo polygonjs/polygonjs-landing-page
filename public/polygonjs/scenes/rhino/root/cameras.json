@@ -1,0 +1,29 @@
+{
+	"type": "geo",
+	"nodes": {
+		"perspectiveCamera_MAIN": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [0, 0, 1.6]
+			}
+		},
+		"emptyObject1": {
+			"type": "emptyObject"
+		},
+		"setChildren1": {
+			"type": "setChildren",
+			"inputs": ["transform1", "perspectiveCamera_MAIN"]
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [0, 0.42, 0]
+			},
+			"inputs": ["emptyObject1"]
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

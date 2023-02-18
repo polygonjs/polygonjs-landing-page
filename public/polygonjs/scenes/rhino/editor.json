@@ -1,0 +1,177 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.2890666666666667,
+		"split_panel0": {
+			"split_ratio": 0.5543217692883486,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera_MAIN",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": false,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": -100,
+									"y": 0
+								},
+								"zoom": 1
+							},
+							"history": {
+								"91": {
+									"position": {
+										"x": 0,
+										"y": -125
+									},
+									"zoom": 1
+								},
+								"475": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["sceneTree", "spreadsheet"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"mask": "*"
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"split_ratio": 0.3885971492873218,
+			"split_panel0": {
+				"panelTypes": ["network", "params", "viewer", "paramsStack"],
+				"currentPanelIndex": 3,
+				"panel_data": {
+					"linkIndex": 1,
+					"serializedStack": [
+						{
+							"nodePath": "/raymarchedObject/actor1/setMaterialUniform1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/raymarchedObject/MAT/rayMarchingBuilder1",
+							"expanded": true
+						}
+					]
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["network"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": {
+						"position": {
+							"x": -82.18444125694202,
+							"y": 4.191896174837175
+						},
+						"zoom": 0.9542221069335934
+					},
+					"history": {
+						"2": {
+							"position": {
+								"x": 33.20225870246935,
+								"y": 235.73401791313532
+							},
+							"zoom": 0.9542221069335934
+						},
+						"91": {
+							"position": {
+								"x": -2.0959480874185874,
+								"y": -368.12997814055615
+							},
+							"zoom": 0.9542221069335934
+						},
+						"475": {
+							"position": {
+								"x": -132.37764020359904,
+								"y": -231.66240558120967
+							},
+							"zoom": 0.9542221069335934
+						},
+						"1177": {
+							"position": {
+								"x": -82.18444125694202,
+								"y": 4.191896174837175
+							},
+							"zoom": 0.9542221069335934
+						}
+					},
+					"paramsDisplayed": false,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "horizontal"
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/raymarchedObject/actor1", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/raymarchedObject/MAT",
+				"/raymarchedObject",
+				"/",
+				"/cameras",
+				"/cameras/actor2",
+				"/cameras",
+				"/raymarchedObject",
+				"/raymarchedObject/MAT",
+				"/raymarchedObject/MAT/rayMarchingBuilder1",
+				"/raymarchedObject/MAT",
+				"/raymarchedObject",
+				"/raymarchedObject/actor1",
+				"/raymarchedObject",
+				"/raymarchedObject/MAT",
+				"/raymarchedObject",
+				"/raymarchedObject/actor1",
+				"/raymarchedObject",
+				"/raymarchedObject/MAT",
+				"/raymarchedObject",
+				"/raymarchedObject/actor1"
+			],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": []
+		},
+		"index": {
+			"1": 19,
+			"2": -1,
+			"3": -1,
+			"4": -1,
+			"5": -1,
+			"6": -1,
+			"7": -1,
+			"8": -1
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": false,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": true,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}

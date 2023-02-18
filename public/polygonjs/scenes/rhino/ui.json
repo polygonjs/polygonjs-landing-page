@@ -1,0 +1,288 @@
+{
+	"nodes": {
+		"COP": {
+			"pos": [-400, 200],
+			"comment": "This node contains the environment map",
+			"nodes": {
+				"envMap": {
+					"pos": [50, 200]
+				},
+				"imageEnv": {
+					"pos": [50, 100]
+				}
+			}
+		},
+		"cameras": {
+			"pos": [-50, -50],
+			"comment": "This contains the camera setup.\\nIf the performance of this scene was slow, you could try and enter this node, and un-bypass the cameraRenderer. This will set the pixelRatio from 2 (the default) to 1. Note that you will have to save the scene and reload it when you do so.",
+			"nodes": {
+				"perspectiveCamera_MAIN": {
+					"pos": [-350, -250]
+				},
+				"emptyObject1": {
+					"pos": [-650, -250]
+				},
+				"setChildren1": {
+					"pos": [-500, 50]
+				},
+				"transform1": {
+					"pos": [-650, -150]
+				},
+				"actor1": {
+					"pos": [-200, 50],
+					"selection": ["cursor1", "vec2ToFloat1", "multAdd1", "multAdd2"],
+					"nodes": {
+						"onTick1": {
+							"pos": [-100, 0]
+						},
+						"setObjectPolarTransform1": {
+							"pos": [250, 100]
+						},
+						"cursor1": {
+							"pos": [-400, 250]
+						},
+						"vec2ToFloat1": {
+							"pos": [-250, 250]
+						},
+						"multAdd1": {
+							"pos": [-100, 250]
+						},
+						"multAdd2": {
+							"pos": [-100, 400]
+						}
+					}
+				},
+				"actor2": {
+					"pos": [-500, 200],
+					"nodes": {
+						"cursor1": {
+							"pos": [-350, 100]
+						},
+						"vec2ToFloat1": {
+							"pos": [-200, 100]
+						},
+						"multAdd1": {
+							"pos": [150, 250]
+						},
+						"multAdd2": {
+							"pos": [100, -50]
+						},
+						"setObjectRotation1": {
+							"pos": [750, 0]
+						},
+						"floatToVec3_1": {
+							"pos": [500, 100]
+						},
+						"onTick1": {
+							"pos": [500, -150]
+						},
+						"max1": {
+							"pos": [0, 250]
+						}
+					}
+				}
+			}
+		},
+		"lights": {
+			"pos": [-50, 300],
+			"comment": "This contains the light. It is not used when you load the scene, but would be if you were to change the raymarchingBuilder material node",
+			"nodes": {
+				"hemisphereLight1": {
+					"pos": [50, 0]
+				}
+			}
+		},
+		"raymarchedObject": {
+			"pos": [-50, -300],
+			"comment": "This contains the raymarched object, which is the core of this scene.\\nEnter this node to see how it is set up.",
+			"nodes": {
+				"box1": {
+					"pos": [-50, 50]
+				},
+				"boxLines1": {
+					"pos": [350, 350],
+					"comment": "using a boxLine node is useful when doing the lookdev of a raymarching material, as it allows to display the bounds of the box we are using. Alternatively , If you were to render on a sphere or other object, you could apply a wireframe material to it."
+				},
+				"fileGLTF1": {
+					"pos": [-50, -400]
+				},
+				"material1": {
+					"pos": [-50, 200],
+					"comment": "This applies the raymarching builder to the material"
+				},
+				"material2": {
+					"pos": [-50, -250],
+					"comment": "This imports the rhino geometry, which was used to create the 3D texture representing its SDF (signed distance function, which is what allows to create its shape in the raymarching material) "
+				},
+				"merge1": {
+					"pos": [150, 650]
+				},
+				"COP": {
+					"pos": [-350, 400],
+					"comment": "In this node, we both create and load the 3D textures used as SDF in the material",
+					"nodes": {
+						"SDFExporter1": {
+							"pos": [-150, -50],
+							"comment": "This node saves the input SDF to disk. Note that it is much more practical to use it from the local app ( https://polygonjs.com/docs/getting_started ) as it will save it right in your textures folder of your current project."
+						},
+						"SDFFromObject1": {
+							"pos": [-150, -400],
+							"comment": "This node creates a 3D texture representing the SDF of an object. \\nNote that it can take a very long time to create an SDF with a small step size. It is therefore recommended to do it and use the SDFExporter and reload it with the SDFFromUrl"
+						},
+						"SDFFromUrl1": {
+							"pos": [-150, 250],
+							"comment": "This loads the SDF from a file or url, that was saved from the SDFExporter node. \\nTry and use the presets on the params panel to change the url it loads from"
+						}
+					}
+				},
+				"MAT": {
+					"pos": [-350, 200],
+					"comment": "This node contains the RayMarching material node. Dive into it to see how it is set up",
+					"selection": ["rayMarchingBuilder1"],
+					"nodes": {
+						"meshStandard1": {
+							"pos": [0, 0]
+						},
+						"rayMarchingBuilder1": {
+							"pos": [0, 250],
+							"comment": "This is the raymarching material node. There are parameters on itself that controls it, as well as nodes inside.\\n\\nIf you want to change the texture used as SDF, go to its \"advanced\" tab, scroll down, and edit the \"textureSDF1\" parameter.\\n Note that if you change this parameter to point to another node, you need to make sure that the textureSDF1BoundMin and textureSDF1BoundMax are updated accordingly. Instead of editing their expressions manually, you can right click on this node and click on \"mat/rayMarchingBuilder\"->\"Update Texture SDF Bounds\"",
+							"selection": ["param2"],
+							"nodes": {
+								"SDFBox1": {
+									"pos": [-550, -650]
+								},
+								"SDFBox2": {
+									"pos": [-550, -900]
+								},
+								"SDFContext1": {
+									"pos": [100, 0]
+								},
+								"SDFMaterial1": {
+									"pos": [-100, 200]
+								},
+								"SDFMin1": {
+									"pos": [-400, -800],
+									"comment": "This node and the ones on its left control 2 boxes that are animated and used to subtract from the rhino SDF. Try and press play to see the effect this creates"
+								},
+								"SDFSubtract1": {
+									"pos": [-100, -500]
+								},
+								"constant1": {
+									"pos": [-300, 200]
+								},
+								"fit1": {
+									"pos": [-750, -650]
+								},
+								"fit2": {
+									"pos": [-750, -900]
+								},
+								"floatToVec3_1": {
+									"pos": [-650, -650]
+								},
+								"floatToVec3_2": {
+									"pos": [-650, -900]
+								},
+								"globals1": {
+									"pos": [-1050, -650]
+								},
+								"globals2": {
+									"pos": [-1050, -900]
+								},
+								"multAdd1": {
+									"pos": [-950, -650]
+								},
+								"multAdd2": {
+									"pos": [-950, -900]
+								},
+								"output1": {
+									"pos": [300, 0]
+								},
+								"sin1": {
+									"pos": [-850, -650]
+								},
+								"sin2": {
+									"pos": [-850, -900]
+								},
+								"textureSDF1": {
+									"pos": [-800, -350],
+									"comment": "This node is the one that imports the 3D texture that creates the SDF representing the model.\\nIt creates a spare parameter on the raymarching node (the parent of this node), which is used to select the texture node to import."
+								},
+								"textureSDF1BoundMax": {
+									"pos": [-1100, -150]
+								},
+								"textureSDF1BoundMin": {
+									"pos": [-1100, -350]
+								},
+								"multAdd3": {
+									"pos": [-200, -350]
+								},
+								"param1": {
+									"pos": [-350, -150]
+								},
+								"param2": {
+									"pos": [-450, 500]
+								}
+							}
+						},
+						"animationsNetwork1": {
+							"pos": [-200, 400],
+							"nodes": {
+								"duration1": {
+									"pos": [0, 0]
+								},
+								"easing1": {
+									"pos": [0, 100]
+								},
+								"target1": {
+									"pos": [0, 300]
+								},
+								"propertyName1": {
+									"pos": [0, 400]
+								},
+								"propertyValue1": {
+									"pos": [0, 500]
+								},
+								"propertyValue2": {
+									"pos": [-300, 500]
+								},
+								"PLAY": {
+									"pos": [0, 600]
+								},
+								"RESET": {
+									"pos": [-300, 600]
+								},
+								"CONTROLS": {
+									"pos": [-150, 700]
+								}
+							}
+						},
+						"eventsNetwork1": {
+							"pos": [-200, 500],
+							"selection": ["animation1"],
+							"nodes": {
+								"scene1": {
+									"pos": [-450, 0]
+								},
+								"animation1": {
+									"pos": [-100, 50]
+								}
+							}
+						}
+					}
+				},
+				"actor1": {
+					"pos": [-50, 400],
+					"selection": ["setMaterialUniform1"],
+					"nodes": {
+						"onTick1": {
+							"pos": [-100, 0]
+						},
+						"setMaterialUniform1": {
+							"pos": [300, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

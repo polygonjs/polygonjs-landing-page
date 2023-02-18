@@ -69,5 +69,8 @@ module.exports = {
 		require("@tailwindcss/aspect-ratio"),
 		require("@tailwindcss/typography"),
 	],
+	corePlugins: {
+		aspectRatio: false, // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
+	},
 	darkMode: "class",
 };

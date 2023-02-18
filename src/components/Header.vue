@@ -8,9 +8,9 @@
 					<a href="#">
 						<span class="sr-only">Your Company</span>
 						<img
-							class="h-8 w-auto sm:h-10"
-							src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-							alt=""
+							class="h-8 w-auto sm:h-10 rounded-full"
+							src="/polygonjs.png"
+							alt="Polygonjs"
 						/>
 					</a>
 				</div>
@@ -259,9 +259,9 @@
 						<div class="flex items-center justify-between">
 							<div>
 								<img
-									class="h-8 w-auto"
-									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-									alt="Your Company"
+									class="h-8 w-auto rounded-full"
+									src="/polygonjs.png"
+									alt="Polygonjs"
 								/>
 							</div>
 							<div class="-mr-2">

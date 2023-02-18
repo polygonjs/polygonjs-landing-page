@@ -1,16 +1,18 @@
 <template>
 	<div class="py-24 sm:py-32">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
-			<div class="mx-auto max-w-2xl lg:mx-0">
+			<div class="mx-auto lg:mx-0 text-center">
 				<h2
-					class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+					class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
 				>
-					Learn From Example Scenes:
+					Learn From Examples
 				</h2>
-				<p class="mt-6 text-lg leading-8 text-gray-600">
+				<p
+					class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-gray-600"
+				>
 					There's nothing like a good starting point to create a
-					Scene. And every node has comment, allowing you to quickly
-					get what each does.
+					Scene. Comments attached to nodes will help you follow step
+					by step how scenes are built.
 				</p>
 			</div>
 			<ul
@@ -40,17 +42,16 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { __ExamplesRegister__ } from "../../../polygonjs-editor-rails/app/javascript/polygonjs-editor/src/engine/examples/ExamplesRegister";
+// import { __ExamplesRegister__ } from "../../../polygonjs-editor-rails/app/javascript/polygonjs-editor/src/engine/examples/ExamplesRegister";
+// console.log(__ExamplesRegister__);
 
-const people = [
-	{
-		name: "Michael Foster",
-		role: "Co-Founder / CTO",
-		imageUrl:
-			"https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-	},
-	// More people...
-];
+const imageUrl =
+	"https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80";
+const people = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(() => ({
+	name: "Michael Foster",
+	role: "Co-Founder / CTO",
+	imageUrl,
+}));
 export default defineComponent({
 	components: {},
 	setup() {
