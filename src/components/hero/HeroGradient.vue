@@ -1,5 +1,6 @@
 <template>
 	<svg
+		id="svg-gradient"
 		viewBox="0 0 1108 632"
 		aria-hidden="true"
 		class="absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"

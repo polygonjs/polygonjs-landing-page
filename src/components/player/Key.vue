@@ -1,7 +1,8 @@
 <template>
-	<span class="bg-black rounded-sm px-1 ml-1 border border-white text-sm">{{
-		keyName
-	}}</span>
+	<span
+		class="bg-black rounded-sm px-1 ml-1 border border-gray-600 text-sm"
+		>{{ keyName }}</span
+	>
 </template>
 
 <script lang="ts">

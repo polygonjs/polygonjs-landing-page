@@ -6,7 +6,7 @@
 		version="1.1"
 		viewBox="0 0 226.77 226.77"
 		xmlns="http://www.w3.org/2000/svg"
-		class="inline w-12 h-12"
+		class="inline w-12 h-12 stroke-white"
 	>
 		<g
 			transform="translate(8.964 4.2527)"
@@ -24,4 +24,3 @@
 		</g>
 	</svg>
 </template>
-s

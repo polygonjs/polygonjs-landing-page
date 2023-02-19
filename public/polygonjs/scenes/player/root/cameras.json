@@ -6,7 +6,10 @@
 		},
 		"merge1": {
 			"type": "merge",
-			"inputs": ["cameraControls1", "actor1"]
+			"inputs": ["cameraControls1", "actor1"],
+			"flags": {
+				"display": true
+			}
 		},
 		"perspectiveCamera_DEBUG": {
 			"type": "perspectiveCamera",
@@ -27,7 +30,15 @@
 		},
 		"setChildren1": {
 			"type": "setChildren",
-			"inputs": ["emptyObject1", "polarTransform1"]
+			"inputs": ["transform1", "polarTransform1"]
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [0, 3, 0]
+			},
+			"inputs": ["emptyObject1"]
 		}
 	},
 	"flags": {

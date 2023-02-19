@@ -4,6 +4,6 @@
 	"params": {
 		"backgroundMode": 0,
 		"bgColor": [0, 0, 0],
-		"mainCameraPath": "/physics/physics:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1"
+		"mainCameraPath": "/cameras/cameras:sopGroup/perspectiveCamera_PLAYER_FOLLOW"
 	}
 }

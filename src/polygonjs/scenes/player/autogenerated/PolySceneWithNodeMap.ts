@@ -87,6 +87,7 @@ export class PolySceneWithNodeMap_player extends PolyScene {
   node(
     path: "/cameras/cameraControls1/cameraOrbitControls1"
   ): CameraOrbitControlsEventNode;
+  node(path: "/cameras/transform1"): TransformSopNode;
   node(path: "/physics"): GeoObjNode;
   node(path: "/physics/material1"): MaterialSopNode;
   node(path: "/physics/material2"): MaterialSopNode;
@@ -511,6 +512,40 @@ export interface PolySceneProps_player {
   "cameras-cameraControls1-cameraOrbitControls1--targetx"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--targety"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--targetz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--applyOn"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-transform1--objectMode"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-transform1--objectTransformSpace"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-transform1--group"?: ParamValueSerializedTypeMap["string"];
+  "cameras-transform1--rotationOrder"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-transform1--t"?: ParamValueSerializedTypeMap["vector3"];
+  "cameras-transform1--t-tx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--t-ty"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--t-tz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--tx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--ty"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--tz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--r"?: ParamValueSerializedTypeMap["vector3"];
+  "cameras-transform1--r-rx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--r-ry"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--r-rz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--rx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--ry"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--rz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--s"?: ParamValueSerializedTypeMap["vector3"];
+  "cameras-transform1--s-sx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--s-sy"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--s-sz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--sx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--sy"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--sz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--scale"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivot"?: ParamValueSerializedTypeMap["vector3"];
+  "cameras-transform1--pivot-pivotx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivot-pivoty"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivot-pivotz"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivotx"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivoty"?: ParamValueSerializedTypeMap["float"];
+  "cameras-transform1--pivotz"?: ParamValueSerializedTypeMap["float"];
   "physics--transform"?: ParamValueSerializedTypeMap["folder"];
   "physics--keepPosWhenParenting"?: ParamValueSerializedTypeMap["boolean"];
   "physics--rotationOrder"?: ParamValueSerializedTypeMap["integer"];

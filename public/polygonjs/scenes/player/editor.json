@@ -7,7 +7,7 @@
 				"panelTypes": ["viewer"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"camera": "/physics/physics:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1",
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera_PLAYER_FOLLOW",
 					"isViewerInitLayoutData": true,
 					"linkIndex": 1,
 					"overlayedNetwork": {
@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 0,
-									"y": 0
+									"x": 75,
+									"y": -100
 								},
 								"zoom": 1
 							},
@@ -33,6 +33,13 @@
 									"position": {
 										"x": 100,
 										"y": -200
+									},
+									"zoom": 1
+								},
+								"65": {
+									"position": {
+										"x": 75,
+										"y": -100
 									},
 									"zoom": 1
 								},
@@ -87,8 +94,8 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 44.90308311480794,
-						"y": 224.33449264272525
+						"x": 75,
+						"y": -100
 					},
 					"zoom": 0.8502221069335932
 				},
@@ -107,10 +114,17 @@
 						},
 						"zoom": 0.6728998962402337
 					},
+					"65": {
+						"position": {
+							"x": 75,
+							"y": -100
+						},
+						"zoom": 0.8502221069335932
+					},
 					"91": {
 						"position": {
-							"x": -458.86661767009133,
-							"y": -407.9544843622293
+							"x": -470.7554588553839,
+							"y": -341.07975269495853
 						},
 						"zoom": 0.6728998962402337
 					},
@@ -142,10 +156,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/cameras", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
-			"1": ["/", "/physics", "/physics/physicsPlayer1"],
+			"1": ["/", "/cameras", "/", "/physics", "/", "/cameras"],
 			"2": ["/"],
 			"3": ["/"],
 			"4": ["/"],
@@ -155,7 +169,7 @@
 			"8": ["/"]
 		},
 		"index": {
-			"1": 0,
+			"1": 5,
 			"2": 0,
 			"3": 0,
 			"4": 0,
