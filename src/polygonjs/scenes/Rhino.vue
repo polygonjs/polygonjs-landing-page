@@ -31,6 +31,7 @@ export default defineComponent({
 
 		function onSceneReady(loadedScene: PolySceneWithNodeMap_rhino) {
 			scene = loadedScene;
+			_updateSceneColor();
 		}
 		const loadFunction = computed(() => loadScene_rhino);
 

@@ -1,0 +1,59 @@
+{
+	"type": "actor",
+	"nodes": {
+		"getObject1": {
+			"type": "getObject",
+			"params": {
+				"getCurrentObject": false,
+				"mask": " */physicsPlayer1"
+			},
+			"maxInputsCount": 2
+		},
+		"getObjectProperty1": {
+			"type": "getObjectProperty",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "Object3D",
+					"node": "getObject1",
+					"output": "object3D"
+				}
+			]
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"setObjectPosition1": {
+			"type": "setObjectPosition",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"lerp": {
+					"raw_input": 0.04,
+					"overriden_options": {}
+				},
+				"updateMatrix": {
+					"overriden_options": {}
+				}
+			},
+			"maxInputsCount": 5,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "position",
+					"node": "getObjectProperty1",
+					"output": "position"
+				}
+			]
+		}
+	},
+	"inputs": ["setChildren1"]
+}

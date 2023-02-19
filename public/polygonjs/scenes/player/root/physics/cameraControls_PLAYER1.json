@@ -1,0 +1,23 @@
+{
+	"type": "cameraControls",
+	"nodes": {
+		"cameraOrbitControls1": {
+			"type": "cameraOrbitControls",
+			"params": {
+				"allowPan": false,
+				"allowRotate": false,
+				"allowZoom": false,
+				"minDistance": 2,
+				"target": [
+					"ch('../../transform_PLAYER1/tx')",
+					"ch('../../transform_PLAYER1/ty')",
+					"ch('../../transform_PLAYER1/tz')"
+				]
+			}
+		}
+	},
+	"params": {
+		"node": "cameraOrbitControls1"
+	},
+	"inputs": ["perspectiveCamera_PLAYER1"]
+}

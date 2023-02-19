@@ -1,0 +1,169 @@
+{
+	"type": "subnet",
+	"nodes": {
+		"add1": {
+			"type": "add"
+		},
+		"attribPromote1": {
+			"type": "attribPromote",
+			"params": {
+				"classFrom": 1,
+				"classTo": 0,
+				"name": "color"
+			},
+			"inputs": ["color1"]
+		},
+		"box1": {
+			"type": "box",
+			"params": {
+				"sizes": [1, 1.5, 0.19999999999999996]
+			}
+		},
+		"color1": {
+			"type": "color",
+			"inputs": ["palette1"]
+		},
+		"copy1": {
+			"type": "copy",
+			"inputs": ["transform6", "tangent1"]
+		},
+		"curveFromPoints1": {
+			"type": "curveFromPoints",
+			"params": {
+				"pointsCount": 16,
+				"curveType": 1,
+				"tTangent": true,
+				"tangentName": "normal"
+			},
+			"inputs": ["merge3"],
+			"flags": {
+				"display": true
+			}
+		},
+		"material4": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandard_DOMINO"
+			},
+			"inputs": ["attribPromote1"]
+		},
+		"merge3": {
+			"type": "merge",
+			"params": {
+				"compact": true,
+				"inputsCount": 9
+			},
+			"maxInputsCount": 9,
+			"inputs": [
+				"transform2",
+				"transform3",
+				"transform4",
+				"transform5",
+				"transform7",
+				"transform8",
+				"transform9",
+				"transform10"
+			]
+		},
+		"palette1": {
+			"type": "palette",
+			"params": {
+				"class": 1,
+				"paletteName": "cako1",
+				"colorsCount": 5,
+				"color1": [0, 0, 0],
+				"color2": [0.8352941176470589, 0.35294117647058826, 0.22745098039215686],
+				"color3": [0.16470588235294117, 0.3607843137254902, 0.5411764705882353],
+				"color4": [0.49411764705882355, 0.49019607843137253, 0.0784313725490196],
+				"color5": [0.8588235294117647, 0.8549019607843137, 0.788235294117647]
+			},
+			"inputs": ["copy1"]
+		},
+		"physicsRBDAttributes_dominos": {
+			"type": "physicsRBDAttributes",
+			"inputs": ["material4"]
+		},
+		"resample1": {
+			"type": "resample",
+			"params": {
+				"pointsCount": 33
+			},
+			"inputs": ["curveFromPoints1"]
+		},
+		"subnetOutput1": {
+			"type": "subnetOutput",
+			"inputs": ["physicsRBDAttributes_dominos"]
+		},
+		"tangent1": {
+			"type": "tangent",
+			"params": {
+				"tangentName": "N"
+			},
+			"inputs": ["resample1"]
+		},
+		"transform10": {
+			"type": "transform",
+			"params": {
+				"t": [4.2308634433609535, 0, -7.3183206064903725]
+			},
+			"inputs": ["add1"]
+		},
+		"transform2": {
+			"type": "transform",
+			"params": {
+				"t": [-2.4146319671028653, 0, -1.8621407860929655]
+			},
+			"inputs": ["add1"]
+		},
+		"transform3": {
+			"type": "transform",
+			"params": {
+				"t": [1.9357919396866858, 0, -3.026960617917645]
+			},
+			"inputs": ["add1"]
+		},
+		"transform4": {
+			"type": "transform",
+			"params": {
+				"t": [6.891312780022934, 0, -2.1843037331429103]
+			},
+			"inputs": ["add1"]
+		},
+		"transform5": {
+			"type": "transform",
+			"params": {
+				"t": [9.266730101852074, 0, 0.6319977986170837]
+			},
+			"inputs": ["add1"]
+		},
+		"transform6": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [0, "ch(\"../box1/sizesy\")*0.5", 0]
+			},
+			"inputs": ["box1"]
+		},
+		"transform7": {
+			"type": "transform",
+			"params": {
+				"t": [12.484522085487482, 0, 0.6319977986170837]
+			},
+			"inputs": ["add1"]
+		},
+		"transform8": {
+			"type": "transform",
+			"params": {
+				"t": [12.525971949175528, 0, -7.3183206064903725]
+			},
+			"inputs": ["add1"]
+		},
+		"transform9": {
+			"type": "transform",
+			"params": {
+				"t": [8.85802961013303, 0, -7.3183206064903725]
+			},
+			"inputs": ["add1"]
+		}
+	}
+}

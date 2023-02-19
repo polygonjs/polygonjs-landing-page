@@ -1,0 +1,94 @@
+{
+	"type": "geo",
+	"nodes": {
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandardBuilder1"
+			},
+			"inputs": ["physicsGround1"]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandardBuilder_PLAYER"
+			},
+			"inputs": ["sphere_PLAYER1"]
+		},
+		"material3": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshPhysicalBuilder1"
+			},
+			"inputs": ["transform1"]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["material1", "physicsPlayer1", "merge3"]
+		},
+		"merge2": {
+			"type": "merge",
+			"inputs": [null, "material3"]
+		},
+		"merge3": {
+			"type": "merge",
+			"inputs": ["subnet_plank", "subnet_dominos"]
+		},
+		"objectProperties1": {
+			"type": "objectProperties",
+			"params": {
+				"tvisible": true,
+				"visible": false
+			},
+			"inputs": ["merge1"],
+			"flags": {
+				"bypass": true
+			}
+		},
+		"perspectiveCamera_PLAYER1": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [0, 9.1, 6.9]
+			}
+		},
+		"physicsGround1": {
+			"type": "physicsGround",
+			"params": {
+				"size": [44, 41]
+			}
+		},
+		"sphere_PLAYER1": {
+			"type": "sphere",
+			"params": {
+				"radius": 0.5
+			}
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"t": [4.2085744459605525, 0, 5.639282865706539]
+			},
+			"inputs": ["tube1"]
+		},
+		"transform_PLAYER1": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [0, 3, 0]
+			},
+			"inputs": ["material2"]
+		},
+		"tube1": {
+			"type": "tube",
+			"params": {
+				"radiusTop": 2.6,
+				"radiusBottom": "ch(\"radiusTop\")",
+				"height": 0.31,
+				"segmentsRadial": 48
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

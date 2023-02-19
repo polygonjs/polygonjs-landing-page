@@ -1,0 +1,64 @@
+{
+	"type": "physicsPlayer",
+	"nodes": {
+		"onPlayerEvent1": {
+			"type": "onPlayerEvent",
+			"params": {
+				"useArrowkeys": false
+			}
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"physicsPlayerUpdate1": {
+			"type": "physicsPlayerUpdate",
+			"maxInputsCount": 15,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "left",
+					"node": "onPlayerEvent1",
+					"output": "left"
+				},
+				{
+					"index": 3,
+					"inputName": "right",
+					"node": "onPlayerEvent1",
+					"output": "right"
+				},
+				{
+					"index": 4,
+					"inputName": "backward",
+					"node": "onPlayerEvent1",
+					"output": "backward"
+				},
+				{
+					"index": 5,
+					"inputName": "forward",
+					"node": "onPlayerEvent1",
+					"output": "forward"
+				},
+				{
+					"index": 6,
+					"inputName": "run",
+					"node": "onPlayerEvent1",
+					"output": "run"
+				},
+				{
+					"index": 7,
+					"inputName": "jump",
+					"node": "onPlayerEvent1",
+					"output": "jump"
+				}
+			]
+		}
+	},
+	"inputs": ["transform_PLAYER1", "cameraControls_PLAYER1"]
+}

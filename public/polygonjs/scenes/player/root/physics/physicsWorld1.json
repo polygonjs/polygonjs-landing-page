@@ -1,0 +1,37 @@
+{
+	"type": "physicsWorld",
+	"nodes": {
+		"onScenePlayState1": {
+			"type": "onScenePlayState"
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"physicsWorldReset1": {
+			"type": "physicsWorldReset",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onScenePlayState1",
+					"output": "triggerPause"
+				}
+			]
+		},
+		"physicsWorldStepSimulation1": {
+			"type": "physicsWorldStepSimulation",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				}
+			]
+		}
+	},
+	"inputs": ["objectProperties1"],
+	"flags": {
+		"display": true
+	}
+}

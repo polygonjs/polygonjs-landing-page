@@ -1,5 +1,23 @@
 <template>
 	<div class="polygonjs-scene-container h-full">
+		<div
+			v-if="displayLoadingPoster"
+			ref="posterContainerRef"
+			class="poster-container"
+			:style="containerStyleObject"
+			:class="fadeableElementClassObject"
+		></div>
+		<div
+			v-if="displayLoadingProgressBar"
+			ref="progressBarRef"
+			class="progress-bar"
+			:class="fadeableElementClassObject"
+		>
+			<div
+				class="progress-bar-bar"
+				:style="progressBarBarStyleObject"
+			></div>
+		</div>
 		<div class="polygonjs-scene h-full" ref="sceneContainer"></div>
 	</div>
 </template>

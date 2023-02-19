@@ -3,7 +3,7 @@
 		<HeroGrid></HeroGrid>
 		<HeroGradient></HeroGradient>
 		<div
-			class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8"
+			class="mx-auto max-w-7xl px-6 pt-10 pb-10 sm:pb-32 lg:flex lg:pt-40 lg:pb-10 lg:px-8"
 		>
 			<div
 				class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8"

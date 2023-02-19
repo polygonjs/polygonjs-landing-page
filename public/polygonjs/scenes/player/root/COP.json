@@ -1,0 +1,21 @@
+{
+	"type": "copNetwork",
+	"nodes": {
+		"envMap": {
+			"type": "envMap",
+			"inputs": ["imageEnv"]
+		},
+		"image1": {
+			"type": "image"
+		},
+		"imageEnv": {
+			"type": "imageEXR",
+			"params": {
+				"tminFilter": true,
+				"tmagFilter": true,
+				"tanisotropy": true,
+				"useRendererMaxAnisotropy": true
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"type": "root",
+	"nodes": {},
+	"params": {
+		"backgroundMode": 0,
+		"bgColor": [0, 0, 0],
+		"mainCameraPath": "/physics/physics:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1"
+	}
+}

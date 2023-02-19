@@ -1,0 +1,43 @@
+{
+	"type": "geo",
+	"nodes": {
+		"hemisphereLight1": {
+			"type": "hemisphereLight",
+			"params": {
+				"intensity": 0.52
+			}
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["hemisphereLight1", "polarTransform1"],
+			"flags": {
+				"display": true
+			}
+		},
+		"polarTransform1": {
+			"type": "polarTransform",
+			"params": {
+				"center": [0, 0.7, 0],
+				"longitude": -50.4,
+				"latitude": 25.2,
+				"depth": 9.9
+			},
+			"inputs": ["spotLight1"]
+		},
+		"spotLight1": {
+			"type": "spotLight",
+			"params": {
+				"intensity": 91,
+				"angle": 50.4,
+				"penumbra": 0.33,
+				"distance": 18,
+				"castShadow": true,
+				"volAttenuation": 7.7,
+				"volAnglePower": 32
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

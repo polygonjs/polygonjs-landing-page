@@ -1,0 +1,178 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.5,
+		"split_panel0": {
+			"split_ratio": 0.5461801596351197,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/physics/physics:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": false,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": 0,
+									"y": 0
+								},
+								"zoom": 1
+							},
+							"history": {
+								"2": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"62": {
+									"position": {
+										"x": 100,
+										"y": -200
+									},
+									"zoom": 1
+								},
+								"91": {
+									"position": {
+										"x": 100,
+										"y": -200
+									},
+									"zoom": 1
+								},
+								"117": {
+									"position": {
+										"x": 0,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"644": {
+									"position": {
+										"x": 50,
+										"y": -100
+									},
+									"zoom": 1
+								},
+								"764": {
+									"position": {
+										"x": 50,
+										"y": -100
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["params"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"active_folder": null,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panelTypes": ["network", "params", "viewer"],
+			"currentPanelIndex": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": 44.90308311480794,
+						"y": 224.33449264272525
+					},
+					"zoom": 0.8502221069335932
+				},
+				"history": {
+					"2": {
+						"position": {
+							"x": 44.90308311480794,
+							"y": 224.33449264272525
+						},
+						"zoom": 0.8502221069335932
+					},
+					"62": {
+						"position": {
+							"x": -458.86661767009133,
+							"y": -407.9544843622293
+						},
+						"zoom": 0.6728998962402337
+					},
+					"91": {
+						"position": {
+							"x": -458.86661767009133,
+							"y": -407.9544843622293
+						},
+						"zoom": 0.6728998962402337
+					},
+					"117": {
+						"position": {
+							"x": 157.50001776322281,
+							"y": -125.32609545197613
+						},
+						"zoom": 1.135802341037326
+					},
+					"644": {
+						"position": {
+							"x": 50,
+							"y": -100
+						},
+						"zoom": 0.6728998962402337
+					},
+					"764": {
+						"position": {
+							"x": 50,
+							"y": -100
+						},
+						"zoom": 0.8118998962402338
+					}
+				},
+				"paramsDisplayed": false,
+				"linkIndex": 1
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": ["/", "/physics", "/physics/physicsPlayer1"],
+			"2": ["/"],
+			"3": ["/"],
+			"4": ["/"],
+			"5": ["/"],
+			"6": ["/"],
+			"7": ["/"],
+			"8": ["/"]
+		},
+		"index": {
+			"1": 0,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": false,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": true,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}

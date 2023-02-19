@@ -1,0 +1,421 @@
+{
+	"nodes": {
+		"COP": {
+			"pos": [-200, -50],
+			"selection": ["image1"],
+			"nodes": {
+				"envMap": {
+					"pos": [50, 250]
+				},
+				"image1": {
+					"pos": [-200, 100]
+				},
+				"imageEnv": {
+					"pos": [50, 100]
+				}
+			}
+		},
+		"lights": {
+			"pos": [50, -250],
+			"nodes": {
+				"hemisphereLight1": {
+					"pos": [50, -50]
+				},
+				"merge1": {
+					"pos": [100, 300]
+				},
+				"polarTransform1": {
+					"pos": [300, 150]
+				},
+				"spotLight1": {
+					"pos": [300, -50]
+				}
+			}
+		},
+		"cameras": {
+			"pos": [50, -150],
+			"nodes": {
+				"emptyObject1": {
+					"pos": [50, 0]
+				},
+				"merge1": {
+					"pos": [-200, 400]
+				},
+				"perspectiveCamera_DEBUG": {
+					"pos": [-400, -50]
+				},
+				"perspectiveCamera_PLAYER_FOLLOW": {
+					"pos": [250, -200]
+				},
+				"polarTransform1": {
+					"pos": [250, 0]
+				},
+				"setChildren1": {
+					"pos": [150, 150]
+				},
+				"actor1": {
+					"pos": [150, 250],
+					"selection": ["setObjectPosition1"],
+					"nodes": {
+						"getObject1": {
+							"pos": [-50, 250]
+						},
+						"getObjectProperty1": {
+							"pos": [50, 250]
+						},
+						"onTick1": {
+							"pos": [-100, 0]
+						},
+						"setObjectPosition1": {
+							"pos": [400, 0]
+						}
+					}
+				},
+				"cameraControls1": {
+					"pos": [-400, 150],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [0, 0]
+						}
+					}
+				}
+			}
+		},
+		"physics": {
+			"pos": [50, -350],
+			"nodes": {
+				"material1": {
+					"pos": [0, 350]
+				},
+				"material2": {
+					"pos": [400, -50]
+				},
+				"material3": {
+					"pos": [-200, 2000]
+				},
+				"merge1": {
+					"pos": [350, 1400]
+				},
+				"merge2": {
+					"pos": [-400, 2150]
+				},
+				"merge3": {
+					"pos": [950, 1150]
+				},
+				"objectProperties1": {
+					"pos": [350, 1700]
+				},
+				"perspectiveCamera_PLAYER1": {
+					"pos": [600, -50]
+				},
+				"physicsGround1": {
+					"pos": [0, 100]
+				},
+				"sphere_PLAYER1": {
+					"pos": [400, -250]
+				},
+				"transform1": {
+					"pos": [-200, 1900]
+				},
+				"transform_PLAYER1": {
+					"pos": [400, 150]
+				},
+				"tube1": {
+					"pos": [-200, 1750]
+				},
+				"MAT": {
+					"pos": [-50, 2150],
+					"nodes": {
+						"meshPhysicalBuilder1": {
+							"pos": [0, 450],
+							"selection": ["noise2"],
+							"nodes": {
+								"abs1": {
+									"pos": [0, 300]
+								},
+								"abs2": {
+									"pos": [0, 450]
+								},
+								"globals1": {
+									"pos": [-350, 0]
+								},
+								"multAdd1": {
+									"pos": [100, 300]
+								},
+								"multAdd2": {
+									"pos": [100, 450]
+								},
+								"noise1": {
+									"pos": [-100, 300]
+								},
+								"noise2": {
+									"pos": [-100, 450]
+								},
+								"output1": {
+									"pos": [350, 50]
+								}
+							}
+						},
+						"meshStandardBuilder1": {
+							"pos": [0, 200],
+							"nodes": {
+								"checkers1": {
+									"pos": [50, 200]
+								},
+								"constant1": {
+									"pos": [50, -150]
+								},
+								"constant2": {
+									"pos": [0, 0]
+								},
+								"floatToVec2_1": {
+									"pos": [-100, 200]
+								},
+								"globals1": {
+									"pos": [-450, 0]
+								},
+								"mix1": {
+									"pos": [250, 0]
+								},
+								"output1": {
+									"pos": [400, 0]
+								},
+								"vec3ToFloat1": {
+									"pos": [-200, 200]
+								}
+							}
+						},
+						"meshStandardBuilder_PLAYER": {
+							"pos": [0, 0],
+							"nodes": {
+								"checkers1": {
+									"pos": [50, 200]
+								},
+								"constant1": {
+									"pos": [50, -150]
+								},
+								"constant2": {
+									"pos": [0, 0]
+								},
+								"floatToVec2_1": {
+									"pos": [-100, 200]
+								},
+								"globals1": {
+									"pos": [-450, 0]
+								},
+								"mix1": {
+									"pos": [250, 0]
+								},
+								"output1": {
+									"pos": [400, 0]
+								},
+								"vec3ToFloat1": {
+									"pos": [-200, 200]
+								}
+							}
+						}
+					}
+				},
+				"cameraControls_PLAYER1": {
+					"pos": [600, 150],
+					"selection": ["cameraOrbitControls1"],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [0, 0]
+						}
+					}
+				},
+				"physicsPlayer1": {
+					"pos": [500, 350],
+					"selection": ["onPlayerEvent1"],
+					"nodes": {
+						"onPlayerEvent1": {
+							"pos": [-200, 200]
+						},
+						"onTick1": {
+							"pos": [-200, 0]
+						},
+						"physicsPlayerUpdate1": {
+							"pos": [100, 0]
+						}
+					}
+				},
+				"physicsWorld1": {
+					"pos": [350, 1850],
+					"nodes": {
+						"onScenePlayState1": {
+							"pos": [-100, -100]
+						},
+						"onTick1": {
+							"pos": [-100, 100]
+						},
+						"physicsWorldReset1": {
+							"pos": [100, -100]
+						},
+						"physicsWorldStepSimulation1": {
+							"pos": [100, 100]
+						}
+					}
+				},
+				"subnet_dominos": {
+					"pos": [1200, 900],
+					"nodes": {
+						"add1": {
+							"pos": [1600, 450]
+						},
+						"attribPromote1": {
+							"pos": [1400, 2300]
+						},
+						"box1": {
+							"pos": [1200, 1450]
+						},
+						"color1": {
+							"pos": [1400, 2150]
+						},
+						"copy1": {
+							"pos": [1400, 1850]
+						},
+						"curveFromPoints1": {
+							"pos": [1550, 1400]
+						},
+						"material4": {
+							"pos": [1400, 2500]
+						},
+						"merge3": {
+							"pos": [1550, 1250]
+						},
+						"palette1": {
+							"pos": [1400, 1950]
+						},
+						"physicsRBDAttributes_dominos": {
+							"pos": [1400, 2700]
+						},
+						"resample1": {
+							"pos": [1550, 1500]
+						},
+						"subnetOutput1": {
+							"pos": [1400, 2900]
+						},
+						"tangent1": {
+							"pos": [1550, 1650]
+						},
+						"transform10": {
+							"pos": [2650, 850]
+						},
+						"transform2": {
+							"pos": [1350, 700]
+						},
+						"transform3": {
+							"pos": [1550, 700]
+						},
+						"transform4": {
+							"pos": [1750, 750]
+						},
+						"transform5": {
+							"pos": [1900, 800]
+						},
+						"transform6": {
+							"pos": [1200, 1600]
+						},
+						"transform7": {
+							"pos": [2150, 800]
+						},
+						"transform8": {
+							"pos": [2300, 850]
+						},
+						"transform9": {
+							"pos": [2500, 850]
+						},
+						"MAT": {
+							"pos": [850, 2550],
+							"selection": ["meshStandard_DOMINO"],
+							"nodes": {
+								"meshStandard_DOMINO": {
+									"pos": [0, 0]
+								}
+							}
+						}
+					}
+				},
+				"subnet_plank": {
+					"pos": [850, 900],
+					"selection": ["attribPromote1", "color1"],
+					"nodes": {
+						"attribPromote1": {
+							"pos": [1750, 1500]
+						},
+						"box1": {
+							"pos": [1350, 150]
+						},
+						"box2": {
+							"pos": [1750, 100]
+						},
+						"capsule1": {
+							"pos": [1050, 300]
+						},
+						"color1": {
+							"pos": [1750, 1350]
+						},
+						"color2": {
+							"pos": [1200, 1150]
+						},
+						"copy1": {
+							"pos": [1750, 650]
+						},
+						"material1": {
+							"pos": [1300, 1800]
+						},
+						"merge2": {
+							"pos": [1300, 1650]
+						},
+						"merge3": {
+							"pos": [1200, 900]
+						},
+						"palette1": {
+							"pos": [1750, 1100]
+						},
+						"physicsRBDAttributes_plank_boxes": {
+							"pos": [1750, 800]
+						},
+						"physicsRBDAttributes_plank_plank": {
+							"pos": [1350, 450]
+						},
+						"physicsRBDAttributes_plank_tube": {
+							"pos": [1050, 450]
+						},
+						"physicsRBDJoints_plank1": {
+							"pos": [1200, 1000]
+						},
+						"roundedBox1": {
+							"pos": [1750, 200]
+						},
+						"roundedBox2": {
+							"pos": [1350, 300]
+						},
+						"subnetOutput1": {
+							"pos": [1300, 1950]
+						},
+						"transform1": {
+							"pos": [1050, 750]
+						},
+						"transform2": {
+							"pos": [1350, 750]
+						},
+						"transform3": {
+							"pos": [1750, 500]
+						},
+						"MAT": {
+							"pos": [850, 1300],
+							"selection": ["meshStandard1"],
+							"nodes": {
+								"meshStandard1": {
+									"pos": [0, 0]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"type": "materialsNetwork",
+	"nodes": {
+		"meshStandard_DOMINO": {
+			"type": "meshStandard",
+			"params": {
+				"useVertexColors": true
+			}
+		}
+	}
+}
