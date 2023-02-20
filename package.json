@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc && vite build",
+		"deploy": "cp -rf dist/* ../polygonjs-editor-rails/public/",
 		"preview": "vite preview",
 		"polygon": "polygonjs-editor"
 	},

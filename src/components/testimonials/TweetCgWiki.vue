@@ -2,7 +2,7 @@
 	<Tweet
 		author="cgwiki"
 		content="houdini/touch designer in a browser, making interactive web 3d things. pretty cool."
-		thumbnail-url="images/testimonials/tweets/cgwiki.jpg"
+		thumbnail-url="/landing-page/images/testimonials/tweets/cgwiki.jpg"
 		tweet-url="https://twitter.com/thecgwiki/status/1621259701869752323"
 	>
 	</Tweet>

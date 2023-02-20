@@ -2,7 +2,7 @@
 	<Tweet
 		author="Bryan Chris Brown"
 		content="woah what!!! Incredible! :O"
-		thumbnail-url="images/testimonials/tweets/bryanchrisbrown.jpg"
+		thumbnail-url="/landing-page/images/testimonials/tweets/bryanchrisbrown.jpg"
 		tweet-url="https://twitter.com/BryanChrisBrown/status/1583535420025229312"
 	>
 	</Tweet>

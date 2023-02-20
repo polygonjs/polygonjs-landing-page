@@ -17,7 +17,7 @@
 							"camera": {
 								"position": {
 									"x": 300,
-									"y": -150
+									"y": 25
 								},
 								"zoom": 1
 							},
@@ -33,6 +33,13 @@
 									"position": {
 										"x": 0,
 										"y": 0
+									},
+									"zoom": 1
+								},
+								"88": {
+									"position": {
+										"x": 300,
+										"y": -150
 									},
 									"zoom": 1
 								},
@@ -89,18 +96,6 @@
 					"linkIndex": 1,
 					"serializedStack": [
 						{
-							"nodePath": "/cameras/perspectiveCamera_MAIN",
-							"expanded": true
-						},
-						{
-							"nodePath": "/cameras/cameraControls1",
-							"expanded": true
-						},
-						{
-							"nodePath": "/physics",
-							"expanded": true
-						},
-						{
 							"nodePath": "/physics/COP/imageEXR1",
 							"expanded": true
 						},
@@ -129,10 +124,10 @@
 				"panel_data": {
 					"camera": {
 						"position": {
-							"x": 138.60520953140013,
-							"y": -180.26152321286247
+							"x": 300,
+							"y": 25
 						},
-						"zoom": 0.8922221069335934
+						"zoom": 0.43522210693359314
 					},
 					"history": {
 						"2": {
@@ -140,21 +135,21 @@
 								"x": 2.8110114348998394,
 								"y": 86.9217037064156
 							},
-							"zoom": 0.9542221069335934
+							"zoom": 0.8962221069335934
 						},
 						"62": {
 							"position": {
-								"x": -515.3538088942087,
-								"y": -2408.176425515303
+								"x": 84.33999305649002,
+								"y": -1980.808428722851
 							},
 							"zoom": 0.43522210693359314
 						},
 						"88": {
 							"position": {
-								"x": 138.60520953140013,
-								"y": -180.26152321286247
+								"x": 292.1087111501471,
+								"y": -177.16406949989994
 							},
-							"zoom": 0.8922221069335934
+							"zoom": 0.6522221069335932
 						},
 						"522": {
 							"position": {
@@ -193,13 +188,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/cameras", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/physics/COP", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/physics/actor_to_instance",
-				"/physics",
-				"/physics/MAT",
 				"/physics/MAT/meshPhysicalBuilder_INSTANCES",
 				"/physics/MAT",
 				"/physics",
@@ -216,7 +208,10 @@
 				"/physics/COP",
 				"/physics",
 				"/",
-				"/cameras"
+				"/cameras",
+				"/",
+				"/physics",
+				"/physics/COP"
 			],
 			"2": ["/", "/"],
 			"3": ["/", "/"],

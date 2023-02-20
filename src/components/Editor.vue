@@ -11,11 +11,11 @@
 						>
 							Use the power of
 						</h6>
-						<h1
-							class="mt-0 mb-4 font-semibold tracking-normal text-white text-3xl sm:text-6xl"
+						<h2
+							class="mt-0 mb-4 font-semibold tracking-normal text-white text-4xl sm:text-4xl"
 						>
 							Non-Destructive Workflow
-						</h1>
+						</h2>
 						<div
 							class="text-center cursor-pointer pointer-events-auto hover:opacity-80"
 							@click="scrollToSection"
@@ -29,11 +29,11 @@
 				<div class="flex flex-wrap mt-0 max-w-6xl mx-auto">
 					<video
 						ref="videoElement"
-						poster="/videos/editor.v01.webp"
+						poster="/landing-page/videos/editor.v01.webp"
 						muted
 						loop
 					>
-						<source src="/videos/editor.v01.mp4" />
+						<source src="/landing-page/videos/editor.v01.mp4" />
 					</video>
 				</div>
 				<div class="flex flex-wrap justify-center mt-0">

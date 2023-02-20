@@ -10,7 +10,7 @@
 				>
 					<img
 						class="h-6 w-auto rounded-full"
-						src="/polygonjs.png"
+						src="/landing-page/polygonjs.png"
 						alt="Polygonjs"
 					/>
 					<span class="ml-2">Polygonjs</span>

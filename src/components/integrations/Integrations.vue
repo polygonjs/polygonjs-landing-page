@@ -11,11 +11,11 @@
 						>
 							Integrations
 						</h6>
-						<h1
-							class="mt-0 mb-4 font-semibold tracking-normal text-white text-3xl sm:text-6xl"
+						<h2
+							class="mt-0 mb-4 font-semibold tracking-normal text-white text-3xl sm:text-4xl"
 						>
 							Works with your favorite tech stack
-						</h1>
+						</h2>
 						<p
 							class="mt-0 text-md md:text-lg leading-8 text-gray-400"
 						>

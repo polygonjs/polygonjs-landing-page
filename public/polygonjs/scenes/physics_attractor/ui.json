@@ -74,6 +74,12 @@
 				"merge2": {
 					"pos": [600, 3000]
 				},
+				"palette1": {
+					"pos": [950, 1150]
+				},
+				"attribCreate1": {
+					"pos": [950, 1350]
+				},
 				"MAT": {
 					"pos": [-450, 1500],
 					"selection": ["meshPhysicalBuilder_INSTANCES"],
@@ -244,12 +250,6 @@
 							"pos": [-300, 50]
 						}
 					}
-				},
-				"palette1": {
-					"pos": [950, 1150]
-				},
-				"attribCreate1": {
-					"pos": [950, 1350]
 				}
 			}
 		},

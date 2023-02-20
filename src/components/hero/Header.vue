@@ -11,7 +11,7 @@
 					>
 						<img
 							class="h-8 sm:h-10 inline-block w-auto rounded-full"
-							src="/polygonjs.png"
+							src="/landing-page/polygonjs.png"
 							alt="Polygonjs"
 						/>
 						<span class="ml-2 text-gray-400">Polygonjs</span>
@@ -87,7 +87,7 @@
 							<div>
 								<img
 									class="h-8 w-auto rounded-full"
-									src="/polygonjs.png"
+									src="/landing-page/polygonjs.png"
 									alt="Polygonjs"
 								/>
 							</div>

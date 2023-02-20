@@ -2,7 +2,7 @@
 	<Tweet
 		author="Andersonmancini"
 		content="I'm speechless😍. Can't imagine all the amazing things we will be able to do with it. One life isn't enough to learn all things we have to haha."
-		thumbnail-url="images/testimonials/tweets/andersonmancini.jpg"
+		thumbnail-url="/landing-page/images/testimonials/tweets/andersonmancini.jpg"
 		tweet-url="https://twitter.com/Andersonmancini/status/1513903934691291138"
 	>
 	</Tweet>
