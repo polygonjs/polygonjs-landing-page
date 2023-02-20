@@ -53,13 +53,14 @@
 
 <script lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
+import { Vector2 } from "three";
 import Header from "./Header.vue";
 // import HeroGrid from "./HeroGrid.vue";
 // import HeroGradient from "./HeroGradient.vue";
 // import HeroSideImage from "./HeroSideImage.vue";
 // import HeroSideSceneRhino from "./HeroSideSceneRhino.vue";
 // import HeroPhysicsAttractorScene from "./HeroPhysicsAttractorScene.vue";
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 export default defineComponent({
 	components: {
 		ChevronRightIcon,
@@ -70,9 +71,36 @@ export default defineComponent({
 		// HeroPhysicsAttractorScene,
 	},
 	setup() {
-		const mobile = ref(false);
-		const isOpen = ref(false);
-		return { mobile, isOpen };
+		// const mobile = ref(false);
+		// const isOpen = ref(false);
+
+		// 		onMounted(_addPointerEvents)
+		// 		onUnmounted(_removePointerEvents)
+		// 		function _addPointerEvents(){
+		// 			document.body.addEventListener('pointermove',_onPointermove)
+		// 		}
+		// 		function _removePointerEvents(){
+		// 			document.body.removeEventListener('pointermove',_onPointermove)
+		// }
+		// let cursorPrevious:Vector2|undefined
+		// let cursorCurrent:Vector2=new Vector2()
+		// function _onPointermove(event:PointerEvent){
+		// 	cursorCurrent.set(event.clientX,event.clientY);
+		// 	if(!cursorPrevious){
+		// 		cursorPrevious = new Vector2().copy(cursorCurrent)
+		// 	}
+		// 	const dist = cursorPrevious.distanceTo(cursorCurrent)
+
+		// 	cursorPrevious.copy(cursorCurrent)
+		// }
+		// function animate(){
+
+		// }
+
+		return {
+			// mobile,
+			// isOpen
+		};
 	},
 });
 </script>
