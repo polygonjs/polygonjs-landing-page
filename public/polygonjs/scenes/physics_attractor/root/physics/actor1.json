@@ -12,6 +12,9 @@
 		},
 		"rayFromCursor1": {
 			"type": "rayFromCursor",
+			"params": {
+				"element": 1
+			},
 			"connection_points": {
 				"in": [],
 				"out": [

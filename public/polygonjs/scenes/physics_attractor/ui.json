@@ -22,6 +22,7 @@
 		},
 		"physics": {
 			"pos": [-100, 50],
+			"selection": ["actor1"],
 			"nodes": {
 				"copy2": {
 					"pos": [550, 1300]
@@ -154,7 +155,6 @@
 				},
 				"actor1": {
 					"pos": [-100, 1850],
-					"selection": ["setPhysicsRBDPosition1"],
 					"nodes": {
 						"onTick1": {
 							"pos": [100, 0]

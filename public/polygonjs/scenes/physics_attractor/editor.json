@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 300,
-									"y": 25
+									"x": -400,
+									"y": -150
 								},
 								"zoom": 1
 							},
@@ -64,6 +64,13 @@
 									},
 									"zoom": 1
 								},
+								"627": {
+									"position": {
+										"x": 300,
+										"y": 25
+									},
+									"zoom": 1
+								},
 								"879": {
 									"position": {
 										"x": 125,
@@ -96,6 +103,18 @@
 					"linkIndex": 1,
 					"serializedStack": [
 						{
+							"nodePath": "/physics/actor1/rayFromCursor1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/actor1/setPhysicsRBDPosition1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/actor1",
+							"expanded": true
+						},
+						{
 							"nodePath": "/physics/COP/imageEXR1",
 							"expanded": true
 						},
@@ -124,8 +143,8 @@
 				"panel_data": {
 					"camera": {
 						"position": {
-							"x": 300,
-							"y": 25
+							"x": -400,
+							"y": -150
 						},
 						"zoom": 0.43522210693359314
 					},
@@ -172,6 +191,13 @@
 							},
 							"zoom": 0.43522210693359314
 						},
+						"627": {
+							"position": {
+								"x": 300,
+								"y": 25
+							},
+							"zoom": 0.43522210693359314
+						},
 						"879": {
 							"position": {
 								"x": 18.050374724493544,
@@ -188,12 +214,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/physics/COP", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/physics/actor1", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/physics/MAT/meshPhysicalBuilder_INSTANCES",
-				"/physics/MAT",
 				"/physics",
 				"/",
 				"/physics",
@@ -211,7 +235,9 @@
 				"/cameras",
 				"/",
 				"/physics",
-				"/physics/COP"
+				"/physics/COP",
+				"/physics",
+				"/physics/actor1"
 			],
 			"2": ["/", "/"],
 			"3": ["/", "/"],
