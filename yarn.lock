@@ -139,48 +139,48 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.3.0.tgz#51f734e64511dbc3674cd347044d02f4dd26e86b"
   integrity sha512-4BC1NMoacEBzSXRwKjZ/X/gmnbp/HU5Qqat7E8xqorUtBFZS+bwfGH5/wqOC2K6GV0rgEobp3OjGRMa5fK9pFg==
 
-"@fortawesome/fontawesome-svg-core@^6.1.1":
+"@fortawesome/fontawesome-svg-core@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.3.0.tgz#b6a17d48d231ac1fad93e43fca7271676bf316cf"
   integrity sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.3.0"
 
-"@fortawesome/free-brands-svg-icons@^6.1.1":
+"@fortawesome/free-brands-svg-icons@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.3.0.tgz#436e5fcba4f4f0902edcceaec5c4ff887ba7328f"
   integrity sha512-xI0c+a8xnKItAXCN8rZgCNCJQiVAd2Y7p9e2ND6zN3J3ekneu96qrePieJ7yA7073C1JxxoM3vH1RU7rYsaj8w==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.3.0"
 
-"@fortawesome/free-regular-svg-icons@^6.1.1":
+"@fortawesome/free-regular-svg-icons@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.3.0.tgz#286f87f777e6c96af59151e86647c81083029ee2"
   integrity sha512-cZnwiVHZ51SVzWHOaNCIA+u9wevZjCuAGSvSYpNlm6A4H4Vhwh8481Bf/5rwheIC3fFKlgXxLKaw8Xeroz8Ntg==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.3.0"
 
-"@fortawesome/free-solid-svg-icons@^6.1.1":
+"@fortawesome/free-solid-svg-icons@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.3.0.tgz#d3bd33ae18bb15fdfc3ca136e2fea05f32768a65"
   integrity sha512-x5tMwzF2lTH8pyv8yeZRodItP2IVlzzmBuD1M7BjawWgg9XAvktqJJ91Qjgoaf8qJpHQ8FEU9VxRfOkLhh86QA==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.3.0"
 
-"@fortawesome/vue-fontawesome@^3.0.1":
+"@fortawesome/vue-fontawesome@3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.3.tgz#633e2998d11f7d4ed41f0d5ea461a22ec9b9d034"
   integrity sha512-KCPHi9QemVXGMrfuwf3nNnNo129resAIQWut9QTAMXmXqL2ErABC6ohd2yY5Ipq0CLWNbKHk8TMdTXL/Zf3ZhA==
 
-"@headlessui/vue@^1.7.10":
+"@headlessui/vue@1.7.10":
   version "1.7.10"
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.7.10.tgz#dc79fbbe97924647eb3fe475cdba892db7fe4157"
   integrity sha512-qAov7JULOBBes5CU+MiGpwMKoXxLHXS703WEZkOPxYjPD2p7f286ozlFxw7JjA2MmVgbnis2Wvgg/4hT7nRFIg==
 
-"@heroicons/vue@^2.0.15":
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.15.tgz#2c8b26549cca2cc91a319b09546ef6d7b57eac75"
-  integrity sha512-Ab98jXcuYPCDtwOmdr5REtUfJCrZf7cnOnh9bD99bM5h1yfTnCPBKjMmJ9gcmyGu51Dzf11Mx/A7rKxAXjccvg==
+"@heroicons/vue@2.0.16":
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.16.tgz#eb21f6ab32605570fa21a0172da4a6ab02670834"
+  integrity sha512-saVAExLlGu6epqmS543qeWd/UOJUxpTJyK9aXeFGqS3VIW8X7yyJQmUGT40A38gBEAxMOdTdH9jFSh8sjPFM7A==
 
 "@jridgewell/gen-mapping@^0.3.0":
   version "0.3.2"
@@ -303,7 +303,34 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@polygonjs/polygonjs@1.4.0", "@polygonjs/polygonjs@^1.2.67":
+"@polygonjs/polygonjs@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.4.1.tgz#39de094a7bc2fbda833f27f7d7579a15716830c2"
+  integrity sha512-cvZ64MRf5oHzm+GiCroH3UhoWgbzgULZOH6izMLB/5LObRPHv7L8VLlD8iTvoVKTbHS4diNv+RSXyYJlLJA8dg==
+  dependencies:
+    "@dimforge/rapier3d-compat" "0.11.1"
+    "@jscad/modeling" "2.11.0"
+    "@mediapipe/face_mesh" "0.4.1633559619"
+    "@mediapipe/hands" "0.4.1646424915"
+    "@types/mapbox-gl" "2.7.10"
+    "@types/three" "0.148.0"
+    chromotome "1.20.0"
+    gifuct-js "2.1.2"
+    gsap "3.11.1"
+    jsep "1.0.3"
+    lodash-es "4.17.21"
+    mapbox-gl "2.12.0"
+    opentype.js "1.3.4"
+    postprocessing "6.29.3"
+    potpack "2.0.0"
+    three "0.148.0"
+    three-gpu-pathtracer "0.0.8"
+    three-mesh-bvh "0.5.23"
+    three-subdivide "1.1.2"
+    tone "14.7.77"
+    xatlas-web "0.1.0"
+
+"@polygonjs/polygonjs@^1.2.67":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.4.0.tgz#cd56e1db2afbed58c7fe67731ffa86eec0542333"
   integrity sha512-Ft6mGaZ/30Kh30Y4ce6ud20fVC+Y80z+X8RWMUimTvw2uI/Q64BR+0ey0AOSscxrlWsqufyobfV7AzYRweH61Q==
@@ -330,7 +357,7 @@
     tone "14.7.77"
     xatlas-web "0.1.0"
 
-"@polygonjs/vue3@^1.2.67-2":
+"@polygonjs/vue3@1.2.67-2":
   version "1.2.67-2"
   resolved "https://registry.yarnpkg.com/@polygonjs/vue3/-/vue3-1.2.67-2.tgz#2a1ec005e1f328b488826340a07db105248c65db"
   integrity sha512-B6FiJicB0RUM+JB8n7s8xv1N2ufa85h1mbu02nTfeSIVODGudfmAC4fBA7J24bKMx3kV26pJPKggqhCPImb5Ow==
@@ -356,19 +383,19 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tailwindcss/aspect-ratio@^0.4.2":
+"@tailwindcss/aspect-ratio@0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.2.tgz#9ffd52fee8e3c8b20623ff0dcb29e5c21fb0a9ba"
   integrity sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==
 
-"@tailwindcss/forms@^0.5.3":
+"@tailwindcss/forms@0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.3.tgz#e4d7989686cbcaf416c53f1523df5225332a86e7"
   integrity sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
-"@tailwindcss/typography@^0.5.9":
+"@tailwindcss/typography@0.5.9":
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.9.tgz#027e4b0674929daaf7c921c900beee80dbad93e8"
   integrity sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==
@@ -491,39 +518,39 @@
   dependencies:
     "@types/node" "*"
 
-"@vitejs/plugin-vue@^4.0.0":
+"@vitejs/plugin-vue@4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-4.0.0.tgz#93815beffd23db46288c787352a8ea31a0c03e5e"
   integrity sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==
 
-"@volar/language-core@1.2.0-alpha.13":
-  version "1.2.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@volar/language-core/-/language-core-1.2.0-alpha.13.tgz#7eccaf6558c08ab1d29b311bbc7914622ae55319"
-  integrity sha512-rLrgkRE3QdbnjU7OL8K/PbKrnkOv7rSpPLpfNmLfebd7G6+aMi2ZRWrfE808gyc9Q14bmYRuwo7ciJHWB55sUw==
+"@volar/language-core@1.2.0-alpha.17":
+  version "1.2.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@volar/language-core/-/language-core-1.2.0-alpha.17.tgz#3e9fd2b7a3936e59c86d823d8d5f10fb72baf049"
+  integrity sha512-nTJfag+EsjWPaefp7JxQ3uJIe0pLdTEfR1ZmaJgn4yKA2FkturuLdlHk3Nj3HjhAhoRDfF7S1BZFDnMjZCAegw==
   dependencies:
-    "@volar/source-map" "1.2.0-alpha.13"
+    "@volar/source-map" "1.2.0-alpha.17"
 
-"@volar/source-map@1.2.0-alpha.13":
-  version "1.2.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-1.2.0-alpha.13.tgz#d69043615af79d9cd556943111a14885cd1fe9ff"
-  integrity sha512-0SSk8h5zeJWrL+L5hFwoRF4JuTJOlJ2grbboArH585/HR3NzkHk6vZXB9SWfZ5bhPOzjz4s5fKLkaBD5CVs67g==
+"@volar/source-map@1.2.0-alpha.17":
+  version "1.2.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-1.2.0-alpha.17.tgz#2c482438657afb6f281659e8d818cc0cf49f90a7"
+  integrity sha512-g0NO3HWSo5PaY4Vv8MuQ9qhIwyxCWFWI69b0fuwdXsHo9gJ4Ngf9BKgg7U0h3b9XtmNnj1efIpgIK1rtwC+nyw==
   dependencies:
     muggle-string "^0.2.2"
 
-"@volar/typescript@1.2.0-alpha.13":
-  version "1.2.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@volar/typescript/-/typescript-1.2.0-alpha.13.tgz#d692b8043eebd7f264d3f3f4e94a2be0782d671d"
-  integrity sha512-aSW6BWiFEU80zD4ElyOjsaXCwatJD+NkcywZjFZSX+zDOwFxDwUWcvtFpZ/VNGFsSOXRqe+lG55mHk1HIUu0hg==
+"@volar/typescript@1.2.0-alpha.17":
+  version "1.2.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@volar/typescript/-/typescript-1.2.0-alpha.17.tgz#756c509ef6f6a8eada2f8cf6c59a746f3d8f3a2a"
+  integrity sha512-1bJnlwfew0f738eqLjIoXEgNCFBAstzorn84GB96MLcdGPpEf2upQ/7FGSpgaJaFi9LTJBggkqBhuegxjqOQKg==
   dependencies:
-    "@volar/language-core" "1.2.0-alpha.13"
+    "@volar/language-core" "1.2.0-alpha.17"
 
-"@volar/vue-language-core@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@volar/vue-language-core/-/vue-language-core-1.1.2.tgz#1f3ce2d13efeea08584b94d487588cd94ecd1e54"
-  integrity sha512-xLqZDwVyfn3dh1mVreltUE9yjZ96WpJB5n5kzo+hRvDdvOTmT3OCi1aUG0Klf65uTQMntWbpr1omluJ/LSzZXA==
+"@volar/vue-language-core@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@volar/vue-language-core/-/vue-language-core-1.1.5.tgz#8c1f0fed82a0a0508a00c04ea07339959d7f3a57"
+  integrity sha512-HpouTNZuwVX+DicGik6y+g9m2fI0Xvng9K9Wh8xZCXzMFEhvjsxsbtWVmLSgnSV6mgyF8YTM3R6n/buR6kYBWA==
   dependencies:
-    "@volar/language-core" "1.2.0-alpha.13"
-    "@volar/source-map" "1.2.0-alpha.13"
+    "@volar/language-core" "1.2.0-alpha.17"
+    "@volar/source-map" "1.2.0-alpha.17"
     "@vue/compiler-dom" "^3.2.47"
     "@vue/compiler-sfc" "^3.2.47"
     "@vue/reactivity" "^3.2.47"
@@ -532,13 +559,13 @@
     muggle-string "^0.2.2"
     vue-template-compiler "^2.7.14"
 
-"@volar/vue-typescript@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@volar/vue-typescript/-/vue-typescript-1.1.2.tgz#9575f71f00d6a657ec9cc870cd4280a250a4728d"
-  integrity sha512-deje1Ude3luocEwWatK72R1fvz2U0NWveYzTauCBJMvNeGpTCrHS26cNRLrBmkRrxAIUwkxBCeHohX6CjuMtbQ==
+"@volar/vue-typescript@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@volar/vue-typescript/-/vue-typescript-1.1.5.tgz#bbe5b5d56d1b43370a159cf487558295e588b844"
+  integrity sha512-X8q2YJ/1bH36ZCvdYIc46O0QcWI3T6Uk+Uju5+ssiuscQ6Ie7v+gUXW9w/18a+Ms35DcEOOQBzE7Ex3A9KQzjQ==
   dependencies:
-    "@volar/typescript" "1.2.0-alpha.13"
-    "@volar/vue-language-core" "1.1.2"
+    "@volar/typescript" "1.2.0-alpha.17"
+    "@volar/vue-language-core" "1.1.5"
 
 "@vue/compiler-core@3.2.47":
   version "3.2.47"
@@ -880,7 +907,7 @@ automation-events@^5.0.1:
     "@babel/runtime" "^7.20.13"
     tslib "^2.5.0"
 
-autoprefixer@^10.4.13:
+autoprefixer@10.4.13:
   version "10.4.13"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.13.tgz#b5136b59930209a321e9fa3dca2e7c4d223e83a8"
   integrity sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==
@@ -2355,12 +2382,12 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
-polygonjs-editor@1.4.0-1:
-  version "1.4.0-1"
-  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.4.0-1.tgz#7ff18e3f22a476100705edb8fe4e2089d6fded43"
-  integrity sha512-O5D/ZVvrz3bGWpJzYv0WDPE5WXfdyswoz2yUQG0Jsvdxu/dj6kzj3EXdc0aOA0tC2MR4O4/7ZcKbdCElukBkpw==
+polygonjs-editor@1.4.1-1:
+  version "1.4.1-1"
+  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.4.1-1.tgz#88a7906f70b47e280bf4314c4b3eaea251400f65"
+  integrity sha512-0nSHsTKOcljbz4dvKP+SCWozQtrnb5AAJ0m4Zs3c9OvuJTQFdSFFx2xWEfcJmn3yUs+CbX4QNTU4s5zY6sorTw==
   dependencies:
-    "@polygonjs/polygonjs" "1.4.0"
+    "@polygonjs/polygonjs" "1.4.1"
     btoa "1.2.1"
     chalk "4.1.0"
     compression-webpack-plugin "10.0.0"
@@ -2440,7 +2467,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.0.9, postcss@^8.1.10, postcss@^8.4.21:
+postcss@8.4.21, postcss@^8.0.9, postcss@^8.1.10, postcss@^8.4.21:
   version "8.4.21"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.21.tgz#c639b719a57efc3187b13a1d765675485f4134f4"
   integrity sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==
@@ -2612,9 +2639,9 @@ rimraf@^3.0.0:
     glob "^7.1.3"
 
 rollup@^3.10.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.15.0.tgz#6f4105e8c4b8145229657b74ad660b02fbfacc05"
-  integrity sha512-F9hrCAhnp5/zx/7HYmftvsNBkMfLfk/dXUh73hPSM2E3CRgap65orDNJbLetoiUFwSAk6iHPLvBrZ5iHYvzqsg==
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.17.2.tgz#a4ecd29c488672a0606e41ef57474fad715750a9"
+  integrity sha512-qMNZdlQPCkWodrAZ3qnJtvCAl4vpQ8q77uEujVCCbC/6CLB7Lcmvjq7HyiOSnf4fxTT9XgsE36oLHJBH49xjqA==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2825,7 +2852,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwindcss@^3.2.7:
+tailwindcss@3.2.7:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.7.tgz#5936dd08c250b05180f0944500c01dce19188c07"
   integrity sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==
@@ -2990,7 +3017,7 @@ typescript@4.9.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
-typescript@^4.9.3:
+typescript@4.9.5:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
@@ -3040,10 +3067,10 @@ vary@^1, vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vite@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.1.2.tgz#6908882984e490c44c28e784a2c52de556f04b41"
-  integrity sha512-MWDb9Rfy3DI8omDQySbMK93nQqStwbsQWejXRY2EBzEWKmLAXWb1mkI9Yw2IJrc+oCvPCI1Os5xSSIBYY6DEAw==
+vite@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.1.3.tgz#001a038c3a7757d532787c0de429b8368136ded5"
+  integrity sha512-0Zqo4/Fr/swSOBmbl+HAAhOjrqNwju+yTtoe4hQX9UsARdcuc9njyOdr6xU0DDnV7YP0RT6mgTTOiRtZgxfCxA==
   dependencies:
     esbuild "^0.16.14"
     postcss "^8.4.21"
@@ -3069,15 +3096,15 @@ vue-template-compiler@^2.7.14:
     de-indent "^1.0.2"
     he "^1.2.0"
 
-vue-tsc@^1.0.11:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-1.1.2.tgz#c71fae2aabee94dd738da643578fcddf7c86ed60"
-  integrity sha512-XrIj+4ucpYkpuofxQitXAzhfWQtPvNIgwAdREyXioG3bur0QhSBJCPBv9bMTSEFOdYH06HiLU+MesoSOEyCq4w==
+vue-tsc@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-1.1.5.tgz#49f132f68f1c1abc83d5d784964c7892fbf9569b"
+  integrity sha512-DVAbFGP/AcoQGfo7T1iRz6TNDeLGzvTbpqH5KCgNb6EuLLnbFP9Ki9KYHMkYs+hLlNVlw9Kp5WXm7I/Ur70mhA==
   dependencies:
-    "@volar/vue-language-core" "1.1.2"
-    "@volar/vue-typescript" "1.1.2"
+    "@volar/vue-language-core" "1.1.5"
+    "@volar/vue-typescript" "1.1.5"
 
-vue@^3.2.13, vue@^3.2.45:
+vue@3.2.47, vue@^3.2.13:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
   integrity sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==
