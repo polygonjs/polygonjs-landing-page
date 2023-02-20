@@ -40,7 +40,7 @@
 import Rhino from "../../polygonjs/scenes/Rhino.vue";
 import { defineComponent, Ref, ref, computed } from "vue";
 import { Color } from "three";
-import { Number3 } from "@polygonjs/polygonjs/src/types/GlobalTypes";
+import { Number3 } from "@polygonjs/polygonjs/dist/src/types/GlobalTypes";
 // import { Integration, ICON_BY_INTEGRATION } from "../common/Integration";
 
 enum ColorName {
