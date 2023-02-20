@@ -1,0 +1,161 @@
+{
+	"type": "actor",
+	"nodes": {
+		"getObjectProperty1": {
+			"type": "getObjectProperty"
+		},
+		"multScalar1": {
+			"type": "multScalar",
+			"params": {
+				"value": {
+					"type": "vector3",
+					"default_value": [1, 1, 1],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.03
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "value",
+					"node": "negate2",
+					"output": "negate"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "mult",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"negate2": {
+			"type": "negate",
+			"params": {
+				"value": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "value",
+					"node": "normalize2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "negate",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"normalize2": {
+			"type": "normalize",
+			"params": {
+				"v": {
+					"type": "vector3",
+					"default_value": [0, 0, 1],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "v",
+					"node": "getObjectProperty1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "v",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"physicsRBDApplyImpulse1": {
+			"type": "physicsRBDApplyImpulse",
+			"params": {
+				"impulse": {
+					"overriden_options": {}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "impulse",
+					"node": "multScalar1",
+					"output": "val"
+				}
+			]
+		}
+	},
+	"inputs": ["physicsRBDAttributes1"]
+}

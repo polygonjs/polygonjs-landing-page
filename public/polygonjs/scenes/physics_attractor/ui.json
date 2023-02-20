@@ -1,0 +1,298 @@
+{
+	"nodes": {
+		"lights": {
+			"pos": [-100, -100],
+			"nodes": {
+				"hemisphereLight1": {
+					"pos": [-450, -100]
+				},
+				"merge1": {
+					"pos": [-300, 300]
+				},
+				"polarTransform1": {
+					"pos": [-200, 100]
+				},
+				"spotLight1": {
+					"pos": [-200, -100]
+				},
+				"areaLight1": {
+					"pos": [0, -50]
+				}
+			}
+		},
+		"physics": {
+			"pos": [-100, 50],
+			"selection": ["MAT"],
+			"nodes": {
+				"copy2": {
+					"pos": [550, 1300]
+				},
+				"delete2": {
+					"pos": [600, 900]
+				},
+				"fuse1": {
+					"pos": [600, 1050]
+				},
+				"icosahedron1": {
+					"pos": [600, 750]
+				},
+				"material1": {
+					"pos": [550, 1500]
+				},
+				"material2": {
+					"pos": [-100, 1450]
+				},
+				"merge1": {
+					"pos": [200, 2550]
+				},
+				"physicsRBDAttributes1": {
+					"pos": [550, 1600]
+				},
+				"physicsRBDAttributes2": {
+					"pos": [-100, 1600]
+				},
+				"sphere1": {
+					"pos": [350, 1150]
+				},
+				"sphere2": {
+					"pos": [-100, 1150]
+				},
+				"transform1": {
+					"pos": [-100, 1300]
+				},
+				"instance1": {
+					"pos": [950, 1550]
+				},
+				"objectProperties1": {
+					"pos": [950, 1700]
+				},
+				"hierarchy1": {
+					"pos": [550, 2050]
+				},
+				"objectProperties2": {
+					"pos": [550, 2150]
+				},
+				"merge2": {
+					"pos": [600, 3000]
+				},
+				"MAT": {
+					"pos": [-450, 1500],
+					"selection": ["meshPhysicalBuilder_INSTANCES"],
+					"nodes": {
+						"meshStandardBuilder_SMALL": {
+							"pos": [0, 800],
+							"nodes": {
+								"globals1": {
+									"pos": [-350, 0]
+								},
+								"output1": {
+									"pos": [250, 0]
+								}
+							}
+						},
+						"meshPhysicalBuilder_MAIN": {
+							"pos": [0, 600],
+							"nodes": {
+								"globals1": {
+									"pos": [-500, 0]
+								},
+								"output1": {
+									"pos": [200, 0]
+								},
+								"constant1": {
+									"pos": [-200, 150]
+								}
+							}
+						},
+						"meshPhysicalBuilder_INSTANCES": {
+							"pos": [0, 400],
+							"nodes": {
+								"globals1": {
+									"pos": [-300, 0]
+								},
+								"output1": {
+									"pos": [200, 0]
+								},
+								"instanceTransform1": {
+									"pos": [0, 0]
+								},
+								"attribute1": {
+									"pos": [-150, 300]
+								},
+								"attribute2": {
+									"pos": [-500, 450]
+								},
+								"mult1": {
+									"pos": [50, 350]
+								},
+								"abs1": {
+									"pos": [-150, 450]
+								},
+								"length1": {
+									"pos": [-350, 550]
+								},
+								"smoothstep1": {
+									"pos": [0, 600]
+								},
+								"fit1": {
+									"pos": [-200, 600]
+								},
+								"constant1": {
+									"pos": [50, 450]
+								},
+								"mix1": {
+									"pos": [250, 400]
+								}
+							}
+						}
+					}
+				},
+				"actor1": {
+					"pos": [-100, 1850],
+					"selection": ["setPhysicsRBDPosition1"],
+					"nodes": {
+						"onTick1": {
+							"pos": [100, 0]
+						},
+						"plane1": {
+							"pos": [-50, 400]
+						},
+						"rayFromCursor1": {
+							"pos": [-50, 250]
+						},
+						"rayIntersectPlane1": {
+							"pos": [150, 300]
+						},
+						"setPhysicsRBDPosition1": {
+							"pos": [400, 150],
+							"comment": "the [setPhysicsRBDPosition1](../setPhysicsRBDPosition1) is triggered every frame, and will update the position of the input object.\\n\\nThe position is calculated by sending [a ray from the cursor](../rayFromCursor1), and [getting the intersection of that ray](../rayIntersectPlane1) with [a plane facing the z axis](../plane1).\\nNote that you can click those 3 previous links to see which node does that specific part of the computation"
+						}
+					}
+				},
+				"actor2": {
+					"pos": [550, 1900],
+					"nodes": {
+						"getObjectProperty1": {
+							"pos": [-150, 200]
+						},
+						"multScalar1": {
+							"pos": [350, 200]
+						},
+						"negate2": {
+							"pos": [200, 200]
+						},
+						"normalize2": {
+							"pos": [100, 200]
+						},
+						"onTick1": {
+							"pos": [250, -50]
+						},
+						"physicsRBDApplyImpulse1": {
+							"pos": [500, 0],
+							"comment": "Those nodes will be executed `for every object` that are input of the actor node.\\n\\nSince they are triggered by an [onTick](../onTick1) node, they wil also be executed `on every frame`.\\n\\nWhat happens is basically this:\\n\\n- the [onTick](../onTick1) triggers nodes on its right.\\n\\n- The [physicsRBDApplyImpulse1](../physicsRBDApplyImpulse1) receives the trigger and... adds an impulse to the object. And that impulse is defines by its `impulse` input, which takes its current position, normalizes it, , inverts it and multiplies it by a small value. This will then push the object toward the center."
+						}
+					}
+				},
+				"physicsWorld1": {
+					"pos": [200, 2700],
+					"nodes": {
+						"onScenePlayState1": {
+							"pos": [-100, -200],
+							"comment": "This triggers resets the simulation when you pauses the scene. It is entirely optional, although it is recommended, as it provides a convenient way to reset the simulation. But this could use any other trigger."
+						},
+						"onTick1": {
+							"pos": [-100, 100]
+						},
+						"physicsWorldReset1": {
+							"pos": [200, -200]
+						},
+						"physicsWorldStepSimulation1": {
+							"pos": [200, 100],
+							"comment": "the [physicsWorldStepSimulation](../physicsWorldStepSimulation1) is the one that performs the computation. It is currently triggered on every frame, via the [onTick](../onTick1) node "
+						}
+					}
+				},
+				"actor_to_instance": {
+					"pos": [550, 2300],
+					"nodes": {
+						"onTick1": {
+							"pos": [-100, 0]
+						},
+						"setGeometryInstanceTransforms1": {
+							"pos": [350, 100]
+						},
+						"getChildrenProperties1": {
+							"pos": [-100, 350]
+						},
+						"getObject1": {
+							"pos": [-100, 150]
+						},
+						"getChildrenPhysicsRBDProperties1": {
+							"pos": [350, 450]
+						},
+						"setGeometryInstanceAttribute1": {
+							"pos": [600, 100]
+						}
+					}
+				},
+				"COP": {
+					"pos": [-450, 1650],
+					"selection": ["imageEXR1"],
+					"nodes": {
+						"imageEXR1": {
+							"pos": [-300, -100]
+						},
+						"envMap1": {
+							"pos": [-300, 50]
+						}
+					}
+				},
+				"palette1": {
+					"pos": [950, 1150]
+				},
+				"attribCreate1": {
+					"pos": [950, 1350]
+				}
+			}
+		},
+		"cameras": {
+			"pos": [-100, -250],
+			"nodes": {
+				"merge1": {
+					"pos": [-200, 400]
+				},
+				"perspectiveCamera_DEBUG": {
+					"pos": [-50, -100]
+				},
+				"perspectiveCamera_MAIN": {
+					"pos": [-550, -100]
+				},
+				"cameraControls1": {
+					"pos": [-50, 100],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [0, 0]
+						}
+					}
+				},
+				"cameraPostProcess1": {
+					"pos": [-550, 50],
+					"nodes": {
+						"OUT": {
+							"pos": [0, 150]
+						},
+						"chromaticAberration1": {
+							"pos": [0, -100]
+						},
+						"screenSpaceAmbientOcclusion1": {
+							"pos": [150, -50]
+						},
+						"Normal1": {
+							"pos": [-100, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

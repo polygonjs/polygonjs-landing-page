@@ -1,0 +1,198 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.2890666666666667,
+		"split_panel0": {
+			"split_ratio": 0.5543217692883486,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera_MAIN",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": false,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": 125,
+									"y": -300
+								},
+								"zoom": 1
+							},
+							"history": {
+								"2": {
+									"position": {
+										"x": 100,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"62": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"522": {
+									"position": {
+										"x": 0,
+										"y": -400
+									},
+									"zoom": 1
+								},
+								"551": {
+									"position": {
+										"x": -250,
+										"y": -225
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["sceneTree", "spreadsheet"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"mask": "*"
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"split_ratio": 0.3885971492873218,
+			"split_panel0": {
+				"panelTypes": ["network", "params", "viewer", "paramsStack"],
+				"currentPanelIndex": 3,
+				"panel_data": {
+					"linkIndex": 1,
+					"serializedStack": [
+						{
+							"nodePath": "/physics/MAT/meshPhysicalBuilder_INSTANCES/smoothstep1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/actor_to_instance/setGeometryInstanceAttribute1",
+							"expanded": true
+						}
+					]
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["network"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": {
+						"position": {
+							"x": 18.050374724493544,
+							"y": -343.34606581968546
+						},
+						"zoom": 0.8630000000000008
+					},
+					"history": {
+						"2": {
+							"position": {
+								"x": 2.8110114348998394,
+								"y": 86.9217037064156
+							},
+							"zoom": 0.9542221069335934
+						},
+						"62": {
+							"position": {
+								"x": 91.23302526281987,
+								"y": -1792.3988817498348
+							},
+							"zoom": 0.43522210693359314
+						},
+						"522": {
+							"position": {
+								"x": 0,
+								"y": -400
+							},
+							"zoom": 0.43522210693359314
+						},
+						"551": {
+							"position": {
+								"x": -250,
+								"y": -225
+							},
+							"zoom": 0.43522210693359314
+						},
+						"879": {
+							"position": {
+								"x": 18.050374724493544,
+								"y": -343.34606581968546
+							},
+							"zoom": 0.8630000000000008
+						}
+					},
+					"paramsDisplayed": false,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "horizontal"
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/physics/MAT/meshPhysicalBuilder_INSTANCES", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/",
+				"/physics",
+				"/physics/actor2",
+				"/physics",
+				"/physics/actor2",
+				"/physics",
+				"/physics/actor_to_instance",
+				"/physics",
+				"/physics/MAT",
+				"/physics/MAT/meshPhysicalBuilder_INSTANCES",
+				"/physics/MAT",
+				"/physics",
+				"/",
+				"/physics",
+				"/",
+				"/physics",
+				"/physics/actor_to_instance",
+				"/physics",
+				"/physics/MAT",
+				"/physics/MAT/meshPhysicalBuilder_INSTANCES"
+			],
+			"2": ["/", "/"],
+			"3": ["/", "/"],
+			"4": ["/", "/"],
+			"5": ["/", "/"],
+			"6": ["/", "/"],
+			"7": ["/", "/"],
+			"8": ["/", "/"]
+		},
+		"index": {
+			"1": 19,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": false,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": true,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}

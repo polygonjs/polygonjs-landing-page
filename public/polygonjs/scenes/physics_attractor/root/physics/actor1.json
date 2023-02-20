@@ -1,0 +1,94 @@
+{
+	"type": "actor",
+	"nodes": {
+		"onTick1": {
+			"type": "onTick"
+		},
+		"plane1": {
+			"type": "plane",
+			"params": {
+				"normal": [0, 0, 1]
+			}
+		},
+		"rayFromCursor1": {
+			"type": "rayFromCursor",
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "Ray",
+						"type": "Ray",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"rayIntersectPlane1": {
+			"type": "rayIntersectPlane",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "Ray",
+					"node": "rayFromCursor1",
+					"output": "Ray"
+				},
+				{
+					"index": 1,
+					"inputName": "Plane",
+					"node": "plane1",
+					"output": "Plane"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "Ray",
+						"type": "Ray",
+						"isArray": false
+					},
+					{
+						"name": "Plane",
+						"type": "Plane",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "position",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"setPhysicsRBDPosition1": {
+			"type": "setPhysicsRBDPosition",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"lerp": {
+					"raw_input": 0.12,
+					"overriden_options": {}
+				}
+			},
+			"maxInputsCount": 4,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "position",
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			]
+		}
+	},
+	"inputs": ["physicsRBDAttributes2"]
+}

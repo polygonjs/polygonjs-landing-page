@@ -1,0 +1,222 @@
+{
+	"type": "actor",
+	"nodes": {
+		"onTick1": {
+			"type": "onTick"
+		},
+		"setGeometryInstanceTransforms1": {
+			"type": "setGeometryInstanceTransforms",
+			"params": {
+				"lerp": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"attributeNeedsUpdate": {
+					"type": "boolean",
+					"default_value": true,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				{
+					"index": 1,
+					"inputName": "Object3D",
+					"node": "getObject1",
+					"output": "object3D"
+				},
+				{
+					"index": 2,
+					"inputName": "position",
+					"node": "getChildrenProperties1",
+					"output": "position"
+				},
+				{
+					"index": 3,
+					"inputName": "quaternion",
+					"node": "getChildrenProperties1",
+					"output": "quaternion"
+				},
+				{
+					"index": 4,
+					"inputName": "scale",
+					"node": "getChildrenProperties1",
+					"output": "scale"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Object3D",
+						"type": "Object3D",
+						"isArray": false
+					},
+					{
+						"name": "position",
+						"type": "Vector3[]",
+						"isArray": true
+					},
+					{
+						"name": "quaternion",
+						"type": "Quaternion[]",
+						"isArray": true
+					},
+					{
+						"name": "scale",
+						"type": "Vector3[]",
+						"isArray": true
+					},
+					{
+						"name": "mult",
+						"type": "float[]",
+						"isArray": true
+					},
+					{
+						"name": "lerp",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "attributeNeedsUpdate",
+						"type": "boolean",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Object3D",
+						"type": "Object3D",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"getChildrenProperties1": {
+			"type": "getChildrenProperties"
+		},
+		"getObject1": {
+			"type": "getObject",
+			"params": {
+				"getCurrentObject": 0,
+				"mask": "*/instances"
+			},
+			"maxInputsCount": 2
+		},
+		"getChildrenPhysicsRBDProperties1": {
+			"type": "getChildrenPhysicsRBDProperties"
+		},
+		"setGeometryInstanceAttribute1": {
+			"type": "setGeometryInstanceAttribute",
+			"params": {
+				"trigger": {
+					"overriden_options": {}
+				},
+				"attribName": "velocity",
+				"size": 3,
+				"lerp": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.08
+				},
+				"attributeNeedsUpdate": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1
+				}
+			},
+			"maxInputsCount": 5,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "setGeometryInstanceTransforms1",
+					"output": "trigger"
+				},
+				{
+					"index": 1,
+					"inputName": "Object3D",
+					"node": "setGeometryInstanceTransforms1",
+					"output": "Object3D"
+				},
+				{
+					"index": 2,
+					"inputName": "values",
+					"node": "getChildrenPhysicsRBDProperties1",
+					"output": "linVel"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Object3D",
+						"type": "Object3D",
+						"isArray": false
+					},
+					{
+						"name": "values",
+						"type": "Vector3[]",
+						"isArray": true
+					},
+					{
+						"name": "lerp",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "attributeNeedsUpdate",
+						"type": "boolean",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Object3D",
+						"type": "Object3D",
+						"isArray": false
+					}
+				]
+			}
+		}
+	},
+	"inputs": ["objectProperties2"]
+}

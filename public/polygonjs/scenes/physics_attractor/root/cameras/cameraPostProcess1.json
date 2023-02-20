@@ -1,0 +1,41 @@
+{
+	"type": "cameraPostProcess",
+	"nodes": {
+		"OUT": {
+			"type": "null",
+			"inputs": ["screenSpaceAmbientOcclusion1"],
+			"flags": {
+				"display": true
+			}
+		},
+		"chromaticAberration1": {
+			"type": "chromaticAberration",
+			"params": {
+				"amount": 0.0007
+			}
+		},
+		"screenSpaceAmbientOcclusion1": {
+			"type": "screenSpaceAmbientOcclusion",
+			"params": {
+				"samples": 16,
+				"rings": 15,
+				"distanceThreshold": 0.013,
+				"distanceFalloff": 5.109999999999999,
+				"rangeThreshold": 0.00058,
+				"rangeFalloff": 0.00068,
+				"luminanceInfluence": 0.35,
+				"minRadiusScale": 0.27,
+				"radius": 0.08,
+				"intensity": 2.75,
+				"bias": 0.03
+			}
+		},
+		"Normal1": {
+			"type": "Normal"
+		}
+	},
+	"inputs": ["perspectiveCamera_MAIN"],
+	"flags": {
+		"bypass": true
+	}
+}

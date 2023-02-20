@@ -1,8 +1,8 @@
 <template>
 	<div class="dark bg-gray-900">
 		<Hero></Hero>
-		<PlayerSection></PlayerSection>
 		<Editor></Editor>
+		<PlayerSection></PlayerSection>
 		<Integrations></Integrations>
 		<Examples></Examples>
 		<Footer></Footer>

@@ -1,0 +1,30 @@
+{
+	"type": "geo",
+	"nodes": {
+		"merge1": {
+			"type": "merge",
+			"inputs": ["cameraPostProcess1", "cameraControls1"],
+			"flags": {
+				"display": true
+			}
+		},
+		"perspectiveCamera_DEBUG": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [3.876943030706078, 1.9641684720483148, 3.7559781706499917],
+				"rotation": [-22.975240843456817, 37.7927840483117, 14.563959680327253]
+			}
+		},
+		"perspectiveCamera_MAIN": {
+			"type": "perspectiveCamera",
+			"params": {
+				"far": 1000,
+				"position": [0, 0.4, 6],
+				"rotation": [-3.8, 0, 0]
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

@@ -1,0 +1,153 @@
+{
+	"type": "geo",
+	"nodes": {
+		"copy2": {
+			"type": "copy",
+			"inputs": ["sphere1", "fuse1"]
+		},
+		"delete2": {
+			"type": "delete",
+			"params": {
+				"class": 1,
+				"invert": true,
+				"keepPoints": true
+			},
+			"inputs": ["icosahedron1"]
+		},
+		"fuse1": {
+			"type": "fuse",
+			"params": {
+				"dist": 0.47
+			},
+			"inputs": ["delete2"]
+		},
+		"icosahedron1": {
+			"type": "icosahedron",
+			"params": {
+				"detail": 1
+			}
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandardBuilder_SMALL"
+			},
+			"inputs": ["copy2"]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshPhysicalBuilder_MAIN"
+			},
+			"inputs": ["transform1"]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["actor1", "actor_to_instance"]
+		},
+		"physicsRBDAttributes1": {
+			"type": "physicsRBDAttributes",
+			"params": {
+				"colliderType": 1,
+				"radius": 0.2,
+				"density": 3.8,
+				"friction": 0.99,
+				"restitution": 0,
+				"linearDamping": 3.5,
+				"angularDamping": 1.9,
+				"canSleep": false
+			},
+			"inputs": ["material1"]
+		},
+		"physicsRBDAttributes2": {
+			"type": "physicsRBDAttributes",
+			"params": {
+				"RBDType": 2,
+				"colliderType": 1,
+				"radius": 0.7,
+				"density": 0.01,
+				"friction": 0.99,
+				"restitution": 0
+			},
+			"inputs": ["material2"]
+		},
+		"sphere1": {
+			"type": "sphere",
+			"params": {
+				"radius": 0.2
+			}
+		},
+		"sphere2": {
+			"type": "sphere",
+			"params": {
+				"radius": 0.7
+			}
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1
+			},
+			"inputs": ["sphere2"]
+		},
+		"instance1": {
+			"type": "instance",
+			"params": {
+				"attributesToCopy": "instance* color velocity",
+				"material": "../MAT/meshPhysicalBuilder_INSTANCES"
+			},
+			"inputs": ["sphere1", "attribCreate1"]
+		},
+		"objectProperties1": {
+			"type": "objectProperties",
+			"params": {
+				"tname": 1,
+				"name": "instances"
+			},
+			"inputs": ["instance1"]
+		},
+		"hierarchy1": {
+			"type": "hierarchy",
+			"inputs": ["actor2"]
+		},
+		"objectProperties2": {
+			"type": "objectProperties",
+			"params": {
+				"tvisible": 1,
+				"visible": 0
+			},
+			"inputs": ["hierarchy1"]
+		},
+		"merge2": {
+			"type": "merge",
+			"inputs": ["physicsWorld1", "objectProperties1"],
+			"flags": {
+				"display": true
+			}
+		},
+		"palette1": {
+			"type": "palette",
+			"params": {
+				"paletteName": "ducci_v",
+				"colorsCount": 4,
+				"color1": [0.7764705882352941, 0.37254901960784315, 0.4588235294117647],
+				"color2": [0.8274509803921568, 0.6, 0.054901960784313725],
+				"color3": [0, 0, 0],
+				"color4": [0.34901960784313724, 0.49411764705882355, 0.47843137254901963],
+				"color5": [0.49411764705882355, 0.49019607843137253, 0.0784313725490196]
+			},
+			"inputs": ["fuse1"]
+		},
+		"attribCreate1": {
+			"type": "attribCreate",
+			"params": {
+				"name": "velocity",
+				"size": 3
+			},
+			"inputs": ["palette1"]
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

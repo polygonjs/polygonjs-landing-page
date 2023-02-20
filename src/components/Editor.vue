@@ -9,18 +9,19 @@
 						<h6
 							class="mt-0 mb-2 text-xs font-normal tracking-widest text-yellow-200 uppercase"
 						>
-							You may want to try our
+							Use the power of
 						</h6>
 						<h1
 							class="mt-0 mb-4 text-4xl font-semibold tracking-normal text-white"
 						>
-							Powerful & Visual Editor
+							Non-Linear Editing
 						</h1>
 						<div
 							class="mt-0 text-md md:text-lg leading-8 text-gray-400"
 						>
 							<div>
-								Create Lights
+								Everything is created with nodes.
+								<span class="block md:inline">Lights</span>
 								<span class="block md:inline"
 									>+ Animations</span
 								>
