@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc && vite build",
-		"deploy": "cp -rf dist/* ../polygonjs-editor-rails/public/",
+		"deploy": "node config/updateIndex.js && cp -rf dist/* ../polygonjs-editor-rails/public/ && mv ../polygonjs-editor-rails/public/index.html ../polygonjs-editor-rails/app/views/layouts/layout_home.html.erb && xmessage 'landing-page deployed'",
 		"preview": "vite preview",
 		"polygon": "polygonjs-editor"
 	},
