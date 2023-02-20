@@ -1,5 +1,5 @@
 <template>
-	<div class="polygonjs-scene-container h-full">
+	<div class="polygonjs-scene-container">
 		<div
 			v-if="displayLoadingPoster"
 			ref="posterContainerRef"

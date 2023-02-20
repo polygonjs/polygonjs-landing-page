@@ -6,7 +6,7 @@
 			<div class="flex flex-wrap items-start justify-between pb-20">
 				<a
 					href="/"
-					class="flex items-center w-auto text-lg font-bold md:w-1/6"
+					class="flex items-center w-auto text-lg font-bold md:w-1/6 hidden md:visible"
 				>
 					<img
 						class="h-6 w-auto rounded-full"
@@ -80,22 +80,13 @@
 					</li> -->
 				</ul>
 				<ul class="flex items-center mt-0 md:mt-10 space-x-5 lg:mt-0">
-					<li>
+					<li v-for="icon of FOOTER_BOTTOM_ICONS">
 						<a
-							href="/twitter"
-							class="text-gray-600 hover:text-gray-900"
+							:href="icon.href"
+							class="text-gray-600 hover:text-gray-300"
 						>
-							<span class="sr-only">Twitter</span>
-							<TwitterIcon></TwitterIcon>
-						</a>
-					</li>
-					<li>
-						<a
-							href="/github"
-							class="text-gray-600 hover:text-gray-900"
-						>
-							<span class="sr-only">Github</span>
-							<GithubIcon></GithubIcon>
+							<span class="sr-only">{{ icon.name }}</span>
+							<component :is="icon.component"></component>
 						</a>
 					</li>
 				</ul>
@@ -108,6 +99,48 @@
 import { defineComponent, computed } from "vue";
 import TwitterIcon from "../icons/TwitterIcon.vue";
 import GithubIcon from "../icons/GithubIcon.vue";
+import YoutubeIcon from "../icons/YoutubeIcon.vue";
+import DiscordIcon from "../icons/DiscordIcon.vue";
+import DiscourseIcon from "../icons/DiscourseIcon.vue";
+
+type FooterIcon =
+	| typeof TwitterIcon
+	| typeof GithubIcon
+	| typeof YoutubeIcon
+	| typeof DiscordIcon
+	| typeof DiscourseIcon;
+interface FooterBottomIcon {
+	name: string;
+	href: string;
+	component: FooterIcon;
+}
+const FOOTER_BOTTOM_ICONS: FooterBottomIcon[] = [
+	{
+		name: "twitter",
+		href: "/twitter",
+		component: TwitterIcon,
+	},
+	{
+		name: "github",
+		href: "/github",
+		component: GithubIcon,
+	},
+	{
+		name: "youtube",
+		href: "/youtube",
+		component: YoutubeIcon,
+	},
+	{
+		name: "discord",
+		href: "/discord",
+		component: DiscordIcon,
+	},
+	{
+		name: "Discourse",
+		href: "/forum",
+		component: DiscourseIcon,
+	},
+];
 
 enum FooterSection {
 	DISCOVER = "Discover",
@@ -170,9 +203,15 @@ const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 };
 
 export default defineComponent({
-	components: { TwitterIcon, GithubIcon },
+	components: {
+		TwitterIcon,
+		GithubIcon,
+		YoutubeIcon,
+		DiscordIcon,
+		DiscourseIcon,
+	},
 	setup() {
-		return { FOOTER_SECTIONS, LINKS_BY_SECTION };
+		return { FOOTER_SECTIONS, LINKS_BY_SECTION, FOOTER_BOTTOM_ICONS };
 	},
 });
 </script>

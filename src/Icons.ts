@@ -35,9 +35,16 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // 	faExpandAlt,
 // 	faArrowPointer,
 // } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faVuejs, faGit } from "@fortawesome/free-brands-svg-icons";
+import {
+	faReact,
+	faVuejs,
+	faGit,
+	faYoutube,
+	faDiscord,
+	faDiscourse,
+} from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add(faReact, faVuejs, faGit);
+library.add(faReact, faVuejs, faGit, faYoutube, faDiscord, faDiscourse);
 
 export { FontAwesomeIcon };

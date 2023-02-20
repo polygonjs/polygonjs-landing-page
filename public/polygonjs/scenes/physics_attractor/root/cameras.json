@@ -3,7 +3,7 @@
 	"nodes": {
 		"merge1": {
 			"type": "merge",
-			"inputs": ["cameraPostProcess1", "cameraControls1"],
+			"inputs": ["perspectiveCamera_MAIN", "cameraControls1"],
 			"flags": {
 				"display": true
 			}
@@ -19,7 +19,7 @@
 			"type": "perspectiveCamera",
 			"params": {
 				"far": 1000,
-				"position": [0, 0.4, 6],
+				"position": [0, 0.4, 8],
 				"rotation": [-3.8, 0, 0]
 			}
 		}

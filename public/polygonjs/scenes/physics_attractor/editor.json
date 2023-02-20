@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 125,
-									"y": -300
+									"x": 300,
+									"y": -150
 								},
 								"zoom": 1
 							},
@@ -49,6 +49,20 @@
 										"y": -225
 									},
 									"zoom": 1
+								},
+								"559": {
+									"position": {
+										"x": 300,
+										"y": 100
+									},
+									"zoom": 1
+								},
+								"879": {
+									"position": {
+										"x": 125,
+										"y": -300
+									},
+									"zoom": 1
 								}
 							},
 							"paramsDisplayed": false,
@@ -75,6 +89,30 @@
 					"linkIndex": 1,
 					"serializedStack": [
 						{
+							"nodePath": "/cameras/perspectiveCamera_MAIN",
+							"expanded": true
+						},
+						{
+							"nodePath": "/cameras/cameraControls1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/COP/imageEXR1",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/MAT",
+							"expanded": true
+						},
+						{
+							"nodePath": "/physics/MAT/meshPhysicalBuilder_INSTANCES",
+							"expanded": true
+						},
+						{
 							"nodePath": "/physics/MAT/meshPhysicalBuilder_INSTANCES/smoothstep1",
 							"expanded": true
 						},
@@ -91,10 +129,10 @@
 				"panel_data": {
 					"camera": {
 						"position": {
-							"x": 18.050374724493544,
-							"y": -343.34606581968546
+							"x": 138.60520953140013,
+							"y": -180.26152321286247
 						},
-						"zoom": 0.8630000000000008
+						"zoom": 0.8922221069335934
 					},
 					"history": {
 						"2": {
@@ -106,10 +144,17 @@
 						},
 						"62": {
 							"position": {
-								"x": 91.23302526281987,
-								"y": -1792.3988817498348
+								"x": -515.3538088942087,
+								"y": -2408.176425515303
 							},
 							"zoom": 0.43522210693359314
+						},
+						"88": {
+							"position": {
+								"x": 138.60520953140013,
+								"y": -180.26152321286247
+							},
+							"zoom": 0.8922221069335934
 						},
 						"522": {
 							"position": {
@@ -125,12 +170,19 @@
 							},
 							"zoom": 0.43522210693359314
 						},
+						"559": {
+							"position": {
+								"x": 95.50671121221386,
+								"y": 58.64180676202078
+							},
+							"zoom": 0.43522210693359314
+						},
 						"879": {
 							"position": {
 								"x": 18.050374724493544,
 								"y": -343.34606581968546
 							},
-							"zoom": 0.8630000000000008
+							"zoom": 0.7040000000000006
 						}
 					},
 					"paramsDisplayed": false,
@@ -141,16 +193,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/physics/MAT/meshPhysicalBuilder_INSTANCES", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/cameras", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/",
-				"/physics",
-				"/physics/actor2",
-				"/physics",
-				"/physics/actor2",
-				"/physics",
 				"/physics/actor_to_instance",
 				"/physics",
 				"/physics/MAT",
@@ -164,7 +210,13 @@
 				"/physics/actor_to_instance",
 				"/physics",
 				"/physics/MAT",
-				"/physics/MAT/meshPhysicalBuilder_INSTANCES"
+				"/physics/MAT/meshPhysicalBuilder_INSTANCES",
+				"/physics/MAT",
+				"/physics",
+				"/physics/COP",
+				"/physics",
+				"/",
+				"/cameras"
 			],
 			"2": ["/", "/"],
 			"3": ["/", "/"],

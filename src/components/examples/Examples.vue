@@ -35,7 +35,7 @@
 					</div>
 					<ul
 						role="list"
-						class="mx-auto mt-20 grid max-w-2xl grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-y-16 gap-x-16 text-center lg:mx-0 lg:max-w-none"
+						class="mx-auto mt-20 grid max-w-2xl grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-y-16 gap-x-16 text-center lg:mx-0 lg:max-w-none"
 					>
 						<Example
 							v-for="exampleData in exampleDatas"

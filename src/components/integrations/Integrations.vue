@@ -12,7 +12,7 @@
 							Integrations
 						</h6>
 						<h1
-							class="mt-0 mb-4 text-4xl font-semibold tracking-normal text-white"
+							class="mt-0 mb-4 font-semibold tracking-normal text-white text-3xl sm:text-6xl"
 						>
 							Works with your favorite tech stack
 						</h1>
@@ -34,7 +34,7 @@
 					<a
 						v-for="integration of INTEGRATIONS"
 						:href="integrationRoute(integration)"
-						class="relative flex-none px-5 mt-2 md:mt-10 w-full max-w-full text-center md:w-1/2 md:flex-none lg:w-1/3 lg:flex-none hover:cursor-pointer hover:bg-gray-800 rounded-lg p-4"
+						class="relative flex-none px-5 mt-2 md:mt-10 w-full max-w-full text-center md:w-1/2 md:flex-none lg:w-1/3 lg:flex-none hover:cursor-pointer border-4 border-transparent hover:border-gray-800 rounded-lg p-4"
 					>
 						<div class="mb-4 text-white stroke-blue-400 mx-auto">
 							<component

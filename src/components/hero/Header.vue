@@ -5,13 +5,16 @@
 				class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
 			>
 				<div class="flex justify-start lg:w-0 lg:flex-1">
-					<a href="/">
+					<a
+						href="/"
+						class="flex items-center justify-center align-middle"
+					>
 						<img
-							class="h-8 w-auto sm:h-10 rounded-full inline"
+							class="h-8 sm:h-10 inline-block w-auto rounded-full"
 							src="/polygonjs.png"
 							alt="Polygonjs"
 						/>
-						<span class="ml-1 text-gray-200">Polygonjs</span>
+						<span class="ml-2 text-gray-400">Polygonjs</span>
 					</a>
 				</div>
 				<div class="-my-2 -mr-2 md:hidden">

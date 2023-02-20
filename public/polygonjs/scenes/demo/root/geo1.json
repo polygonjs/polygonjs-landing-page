@@ -1,0 +1,24 @@
+{
+	"type": "geo",
+	"nodes": {
+		"sphere1": {
+			"type": "sphere",
+			"params": {
+				"center": [0, 1, 0]
+			}
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandard1"
+			},
+			"inputs": ["sphere1"],
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

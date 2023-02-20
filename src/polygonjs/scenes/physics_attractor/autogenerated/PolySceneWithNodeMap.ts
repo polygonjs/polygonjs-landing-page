@@ -8,7 +8,6 @@ import { ActorSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Act
 import { AreaLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AreaLight";
 import { AttribCreateSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AttribCreate";
 import { CameraControlsSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraControls";
-import { CameraPostProcessSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraPostProcess";
 import { CopNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CopNetwork";
 import { CopySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Copy";
 import { DeleteSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Delete";
@@ -56,11 +55,6 @@ import { EnvMapCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/En
 import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/ImageEXR";
 // event
 import { CameraOrbitControlsEventNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/event/CameraOrbitControls";
-// post
-import { ChromaticAberrationPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/ChromaticAberration";
-import { NormalPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/Normal";
-import { NullPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/Null";
-import { ScreenSpaceAmbientOcclusionPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/ScreenSpaceAmbientOcclusion";
 
 export class PolySceneWithNodeMap_physics_attractor extends PolyScene {
   node(path: "/lights"): GeoObjNode;
@@ -153,15 +147,6 @@ export class PolySceneWithNodeMap_physics_attractor extends PolyScene {
   node(
     path: "/cameras/cameraControls1/cameraOrbitControls1"
   ): CameraOrbitControlsEventNode;
-  node(path: "/cameras/cameraPostProcess1"): CameraPostProcessSopNode;
-  node(path: "/cameras/cameraPostProcess1/OUT"): NullPostNode;
-  node(
-    path: "/cameras/cameraPostProcess1/chromaticAberration1"
-  ): ChromaticAberrationPostNode;
-  node(
-    path: "/cameras/cameraPostProcess1/screenSpaceAmbientOcclusion1"
-  ): ScreenSpaceAmbientOcclusionPostNode;
-  node(path: "/cameras/cameraPostProcess1/Normal1"): NormalPostNode;
   node(
     path: string
   ): any /* we need any for now as otherwise an error occurs when adding plugins to the overloaded methods */ {
@@ -1237,32 +1222,4 @@ export interface PolySceneProps_physics_attractor {
   "cameras-cameraControls1-cameraOrbitControls1--targetx"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--targety"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--targetz"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1--useOtherNode"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-cameraPostProcess1--node"?: ParamValueSerializedTypeMap["node_path"];
-  "cameras-cameraPostProcess1--prependRenderPass"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-cameraPostProcess1--depthBuffer"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-cameraPostProcess1--stencilBuffer"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-cameraPostProcess1--sampling"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-cameraPostProcess1--tTextureType"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-cameraPostProcess1--textureType"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-cameraPostProcess1-chromaticAberration1--amount"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-chromaticAberration1--direction"?: ParamValueSerializedTypeMap["vector2"];
-  "cameras-cameraPostProcess1-chromaticAberration1--direction-directionx"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-chromaticAberration1--direction-directiony"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-chromaticAberration1--directionx"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-chromaticAberration1--directiony"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--main"?: ParamValueSerializedTypeMap["folder"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--samples"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--rings"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--distanceThreshold"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--distanceFalloff"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--rangeThreshold"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--rangeFalloff"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--luminanceInfluence"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--minRadiusScale"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--radius"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--intensity"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--bias"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--debug"?: ParamValueSerializedTypeMap["folder"];
-  "cameras-cameraPostProcess1-screenSpaceAmbientOcclusion1--blendFunction"?: ParamValueSerializedTypeMap["integer"];
 }

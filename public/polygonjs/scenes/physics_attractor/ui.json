@@ -22,7 +22,6 @@
 		},
 		"physics": {
 			"pos": [-100, 50],
-			"selection": ["MAT"],
 			"nodes": {
 				"copy2": {
 					"pos": [550, 1300]
@@ -237,7 +236,6 @@
 				},
 				"COP": {
 					"pos": [-450, 1650],
-					"selection": ["imageEXR1"],
 					"nodes": {
 						"imageEXR1": {
 							"pos": [-300, -100]
@@ -272,23 +270,6 @@
 					"nodes": {
 						"cameraOrbitControls1": {
 							"pos": [0, 0]
-						}
-					}
-				},
-				"cameraPostProcess1": {
-					"pos": [-550, 50],
-					"nodes": {
-						"OUT": {
-							"pos": [0, 150]
-						},
-						"chromaticAberration1": {
-							"pos": [0, -100]
-						},
-						"screenSpaceAmbientOcclusion1": {
-							"pos": [150, -50]
-						},
-						"Normal1": {
-							"pos": [-100, 0]
 						}
 					}
 				}

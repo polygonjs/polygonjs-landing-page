@@ -27,17 +27,11 @@ import { MeshPhysicalBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine
 import { MeshStandardBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandardBuilder";
 // obj
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
-// post
-import { NormalPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/Normal";
-import { ChromaticAberrationPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/ChromaticAberration";
-import { NullPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/Null";
-import { ScreenSpaceAmbientOcclusionPostNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/post/ScreenSpaceAmbientOcclusion";
 // sop
 import { ActorSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Actor";
 import { AreaLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AreaLight";
 import { AttribCreateSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AttribCreate";
 import { CameraControlsSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraControls";
-import { CameraPostProcessSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraPostProcess";
 import { CopNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CopNetwork";
 import { CopySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Copy";
 import { DeleteSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Delete";
@@ -85,15 +79,10 @@ export const requiredImports_physics_attractor = {
     MeshPhysicalBuilderMatNode,
     MeshStandardBuilderMatNode,
     GeoObjNode,
-    NormalPostNode,
-    ChromaticAberrationPostNode,
-    NullPostNode,
-    ScreenSpaceAmbientOcclusionPostNode,
     ActorSopNode,
     AreaLightSopNode,
     AttribCreateSopNode,
     CameraControlsSopNode,
-    CameraPostProcessSopNode,
     CopNetworkSopNode,
     CopySopNode,
     DeleteSopNode,
