@@ -21,11 +21,18 @@ function _videoUrl(exampleName: string) {
 	const short = removeSpaces(exampleName).toLowerCase();
 	return `${EXAMPLES_ROOT_URL}/${short}/video.mp4`;
 }
+export function exampleNameToId(exampleName: string): string {
+	return exampleName
+		.replace(/[^A-Za-z0-9\/]/g, "")
+		.toLowerCase()
+		.replace(/\//g, ":");
+}
+
 export function createExampleData(
 	exampleName: string,
 	label: string
 ): ExampleData {
-	const href = `/docs/examples/${exampleName}`;
+	const href = `/examples/${exampleNameToId(exampleName)}`;
 	const data: ExampleData = {
 		name: exampleName,
 		thumbnailUrl: _thumbnailUrl(exampleName),

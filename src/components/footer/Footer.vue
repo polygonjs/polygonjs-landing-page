@@ -194,7 +194,7 @@ const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 		{ label: "Threejs", href: "/docs/integrations/threejs" },
 		{
 			label: "React Three Fiber",
-			href: "/docs/integrations/reactthreefiber",
+			href: "/docs/integrations/react_three_fiber",
 		},
 		{ label: "Webflow", href: "/docs/integrations/webflow" },
 		{ label: "Mapbox", href: "/docs/integrations/mapbox" },
