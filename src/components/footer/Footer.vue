@@ -186,6 +186,7 @@ const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 		{ label: "Twitter", href: "/twitter" },
 		{ label: "Github", href: "/github" },
 		{ label: "Youtube", href: "/youtube" },
+		{ label: "Affiliates", href: "/affiliates" },
 		{ label: "About", href: "/about" },
 	],
 	[FooterSection.INTEGRATIONS]: [
