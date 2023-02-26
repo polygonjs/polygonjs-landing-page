@@ -162,6 +162,7 @@ interface FooterLink {
 const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 	[FooterSection.DISCOVER]: [
 		{ label: "Documentation", href: "/docs" },
+		{ label: "Changelog", href: "/docs/changelog" },
 		{ label: "Tutorials", href: "/docs/tutorials" },
 		{ label: "Install", href: "/docs/install" },
 		{ label: "Marketplace", href: "/market" },
