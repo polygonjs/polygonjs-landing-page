@@ -21,7 +21,43 @@
 								},
 								"zoom": 1
 							},
-							"history": {},
+							"history": {
+								"2": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"36": {
+									"position": {
+										"x": 100,
+										"y": -125
+									},
+									"zoom": 1
+								},
+								"198": {
+									"position": {
+										"x": 0,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"892": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"988": {
+									"position": {
+										"x": 300,
+										"y": 0
+									},
+									"zoom": 1
+								}
+							},
 							"paramsDisplayed": false,
 							"linkIndex": 1
 						}
@@ -32,7 +68,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": null,
+					"active_folder": 991,
 					"linkIndex": 1
 				}
 			},
@@ -44,22 +80,72 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 62.54553192632958,
-						"y": 223.1583293886238
+						"x": -279.78264025019706,
+						"y": -46.9565270349981
 					},
 					"zoom": 1.0222221069335933
 				},
-				"history": {},
+				"history": {
+					"2": {
+						"position": {
+							"x": -33.32404410345822,
+							"y": 245.65833192622705
+						},
+						"zoom": 1.0222221069335933
+					},
+					"36": {
+						"position": {
+							"x": 68.69564864333461,
+							"y": -231.63044680864152
+						},
+						"zoom": 1.0222221069335933
+					},
+					"198": {
+						"position": {
+							"x": -138.91305914520274,
+							"y": -86.19565625614439
+						},
+						"zoom": 1.0222221069335933
+					},
+					"892": {
+						"position": {
+							"x": -279.78264025019706,
+							"y": -46.9565270349981
+						},
+						"zoom": 1.0222221069335933
+					},
+					"988": {
+						"position": {
+							"x": 336.76778063864793,
+							"y": 278.03076146704376
+						},
+						"zoom": 0.9792221069335932
+					}
+				},
 				"paramsDisplayed": false,
 				"linkIndex": 1
 			}
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/geo1/MAT", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
-			"1": ["/"],
+			"1": [
+				"/",
+				"/cameras",
+				"/",
+				"/geo1",
+				"/geo1/MAT",
+				"/geo1",
+				"/geo1/MAT",
+				"/geo1/MAT/rayMarchingBuilder1",
+				"/geo1/MAT",
+				"/geo1",
+				"/geo1/MAT",
+				"/geo1/MAT/rayMarchingBuilder1",
+				"/geo1/MAT"
+			],
 			"2": ["/"],
 			"3": ["/"],
 			"4": ["/"],
@@ -69,7 +155,7 @@
 			"8": ["/"]
 		},
 		"index": {
-			"1": 17,
+			"1": 12,
 			"2": 0,
 			"3": 0,
 			"4": 0,

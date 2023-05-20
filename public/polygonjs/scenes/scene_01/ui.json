@@ -3,65 +3,75 @@
 		"geo1": {
 			"pos": [-50, -350],
 			"nodes": {
-				"sphere1": {
-					"pos": [0, 50]
+				"boxLines1": {
+					"pos": [100, 0]
+				},
+				"box1": {
+					"pos": [-150, -150]
 				},
 				"material1": {
-					"pos": [0, 200]
+					"pos": [-150, 100]
 				},
 				"MAT": {
-					"pos": [-200, 200],
-					"selection": ["meshStandard1"],
+					"pos": [-350, 100],
 					"nodes": {
-						"meshStandard1": {
-							"pos": [0, 0]
-						}
-					}
-				}
-			}
-		},
-		"ground": {
-			"pos": [-50, -450],
-			"nodes": {
-				"material1": {
-					"pos": [0, 300]
-				},
-				"MAT": {
-					"pos": [-200, 300],
-					"nodes": {
-						"meshStandardBuilder1": {
-							"pos": [0, 200],
+						"rayMarchingBuilder1": {
+							"pos": [100, -50],
 							"nodes": {
 								"globals1": {
-									"pos": [-450, 0]
+									"pos": [-900, -100]
 								},
 								"output1": {
-									"pos": [400, 0]
+									"pos": [300, 0]
 								},
-								"vec3ToFloat1": {
-									"pos": [-200, 200]
+								"SDFContext1": {
+									"pos": [100, 0]
 								},
-								"floatToVec2_1": {
+								"SDFMaterial1": {
 									"pos": [-100, 200]
 								},
-								"checkers1": {
-									"pos": [50, 200]
+								"SDFSphere1": {
+									"pos": [-300, -200]
 								},
-								"mix1": {
-									"pos": [250, 0]
+								"SDFSphere2": {
+									"pos": [-300, 0]
+								},
+								"SDFUnion1": {
+									"pos": [-100, -100]
+								},
+								"floatToVec3_1": {
+									"pos": [-500, 0]
+								},
+								"cos1": {
+									"pos": [-700, 0]
 								},
 								"constant1": {
-									"pos": [50, -150]
+									"pos": [-300, 200]
 								},
-								"constant2": {
-									"pos": [0, 0]
+								"SDFBoxFrame1": {
+									"pos": [-150, -400]
+								},
+								"rotate1": {
+									"pos": [-450, -550]
+								},
+								"align1": {
+									"pos": [-450, -450]
+								},
+								"vectorAlign1": {
+									"pos": [-550, -350]
+								},
+								"SDFTransform1": {
+									"pos": [-300, -450]
+								},
+								"quatToAngle1": {
+									"pos": [-450, -300]
 								}
 							}
 						}
 					}
 				},
-				"box1": {
-					"pos": [0, 100]
+				"merge1": {
+					"pos": [-50, 350]
 				}
 			}
 		},
@@ -100,17 +110,13 @@
 		},
 		"cameras": {
 			"pos": [-50, -150],
+			"selection": ["cameraFrameMode1"],
 			"nodes": {
 				"perspectiveCamera1": {
 					"pos": [0, -50]
 				},
-				"cameraControls1": {
-					"pos": [0, 150],
-					"nodes": {
-						"cameraOrbitControls1": {
-							"pos": [0, 0]
-						}
-					}
+				"cameraFrameMode1": {
+					"pos": [0, 150]
 				}
 			}
 		}

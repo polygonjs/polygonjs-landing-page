@@ -1,14 +1,22 @@
 <script setup lang="ts">
 import VideoAuto from './components/utils/VideoAuto.vue';
 import Separator from './components/features/Separator.vue';
+// features
 import WhatIsPolygonjs from './components/features/WhatIsPolygonjs.vue';
-import NonDestructiveWorkflow from './components/features/NonDestructiveWorkflow.vue';
-import QuickLinks from './components/features/QuickLinks.vue';
-// import Scene01 from "./polygonjs/scenes/Scene01.vue";
+import NodeBasedWorkflow from './components/features/NodeBasedWorkflow.vue';
+import Footer from './components/features/Footer.vue';
+// quotes
+import QuoteFHAS from './components/quotes/QuoteFHAS.vue';
+import QuoteAndersonMancini from './components/quotes/QuoteAndersonMancini.vue';
+import QuoteBryanChrisBrown from './components/quotes/QuoteBryanChrisBrown.vue';
+import QuoteCGWiki from './components/quotes/QuoteCGWiki.vue';
+// scenes
+import Scene01 from './polygonjs/scenes/Scene01.vue';
 </script>
 
 <template>
-	<article>
+	<Scene01 />
+	<article class="relative z-10">
 		<h1 class="flex items-center space-x-2">
 			<img class="inline-block rounded-full h-10 w-10" src="/polygonjs.png" />
 			<span>Polygonjs</span>
@@ -41,11 +49,17 @@ import QuickLinks from './components/features/QuickLinks.vue';
 		</p>
 		<Separator />
 		<WhatIsPolygonjs />
+		<QuoteFHAS />
 		<Separator />
-		<NonDestructiveWorkflow />
+		<QuoteCGWiki />
+		<!-- <Separator />
+		<QuoteBryanChrisBrown /> -->
+		<NodeBasedWorkflow />
 		<VideoAuto filePath="/landing-page/videos/editor.v01"></VideoAuto>
 		<Separator />
-		<QuickLinks />
+		<QuoteAndersonMancini />
+		<Separator />
+		<Footer />
 	</article>
 </template>
 

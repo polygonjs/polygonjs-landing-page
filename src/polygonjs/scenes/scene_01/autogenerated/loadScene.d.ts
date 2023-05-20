@@ -10,7 +10,6 @@ export interface LoadSceneOptions {
   sceneData?: SceneJsonExporterData;
   onProgress?: OnProgressCallback;
   domElement?: HTMLElement | string;
-  moduleImportSuffix?: string;
   loadModules?: boolean;
   runRegister?: boolean;
   configureSceneData?: ConfigureSceneData;
