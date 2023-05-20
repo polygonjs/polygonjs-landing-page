@@ -1,14 +1,6 @@
 <template>
-	<div class="relative aspect-w-2 aspect-h-1">
-		<div class="h-full">
-			<PolygonjsScene
-				:loadFunction="loadFunction"
-				:sceneName="'scene_01'"
-				@sceneready="onSceneReady"
-				:displayLoadingProgressBar="false"
-				:displayLoadingPoster="false"
-			></PolygonjsScene>
-		</div>
+	<div class="absolute inset-0 z-0">
+		<PolygonjsScene :loadFunction="loadFunction" :sceneName="'scene_01'" @sceneready="onSceneReady" />
 	</div>
 </template>
 

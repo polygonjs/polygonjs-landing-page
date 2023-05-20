@@ -1,15 +1,17 @@
 <template>
-	<div class="relative aspect-w-2 aspect-h-1">
-		<div class="h-full">
-			<PolygonjsScene
-				:loadFunction="loadFunction"
-				:sceneName="'scene_01'"
-				@sceneready="onSceneReady"
-				:displayLoadingProgressBar="false"
-				:displayLoadingPoster="false"
-			></PolygonjsScene>
-		</div>
-	</div>
+	<section>
+		<p>
+			<span class="block bg-red-900 relative aspect-w-2 aspect-h-1">
+				<span class="h-full">
+					<PolygonjsScene
+						:loadFunction="loadFunction"
+						:sceneName="'scene_01'"
+						@sceneready="onSceneReady"
+					></PolygonjsScene>
+				</span>
+			</span>
+		</p>
+	</section>
 </template>
 
 <script lang="ts">

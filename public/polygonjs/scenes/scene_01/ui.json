@@ -19,52 +19,169 @@
 							"pos": [100, -50],
 							"nodes": {
 								"globals1": {
-									"pos": [-900, -100]
+									"pos": [-1450, -200]
 								},
 								"output1": {
-									"pos": [300, 0]
+									"pos": [1400, -50]
 								},
 								"SDFContext1": {
-									"pos": [100, 0]
+									"pos": [1200, -50]
 								},
 								"SDFMaterial1": {
-									"pos": [-100, 200]
+									"pos": [900, 800]
 								},
 								"SDFSphere1": {
-									"pos": [-300, -200]
+									"pos": [-500, -500]
 								},
 								"SDFSphere2": {
-									"pos": [-300, 0]
+									"pos": [-300, 450]
 								},
 								"SDFUnion1": {
-									"pos": [-100, -100]
+									"pos": [250, -100]
 								},
 								"floatToVec3_1": {
-									"pos": [-500, 0]
+									"pos": [-850, 550]
 								},
 								"cos1": {
-									"pos": [-700, 0]
+									"pos": [-1100, 550]
 								},
 								"constant1": {
-									"pos": [-300, 200]
+									"pos": [250, 800]
 								},
 								"SDFBoxFrame1": {
-									"pos": [-150, -400]
+									"pos": [-350, -700]
 								},
 								"rotate1": {
-									"pos": [-450, -550]
+									"pos": [-550, -750]
 								},
-								"align1": {
-									"pos": [-450, -450]
+								"floatToVec3_2": {
+									"pos": [-800, -700]
 								},
-								"vectorAlign1": {
-									"pos": [-550, -350]
+								"multAdd1": {
+									"pos": [-1050, -800]
 								},
-								"SDFTransform1": {
-									"pos": [-300, -450]
+								"multAdd2": {
+									"pos": [-1050, -650]
 								},
-								"quatToAngle1": {
-									"pos": [-450, -300]
+								"multAdd3": {
+									"pos": [-750, -550]
+								},
+								"globals2": {
+									"pos": [-800, -900]
+								},
+								"normalize1": {
+									"pos": [-700, -700]
+								},
+								"multAdd4": {
+									"pos": [-1200, 550]
+								},
+								"multAdd5": {
+									"pos": [-950, 550]
+								},
+								"SDFRhombus1": {
+									"pos": [-650, 650]
+								},
+								"SDFOctahedron1": {
+									"pos": [-350, 150]
+								},
+								"rotate2": {
+									"pos": [-500, 300]
+								},
+								"floatToVec3_3": {
+									"pos": [-800, 150]
+								},
+								"multAdd6": {
+									"pos": [-1000, 100]
+								},
+								"multAdd7": {
+									"pos": [-1000, 250]
+								},
+								"multAdd8": {
+									"pos": [-1000, 350]
+								},
+								"globals3": {
+									"pos": [-850, 450]
+								},
+								"normalize2": {
+									"pos": [-700, 150]
+								},
+								"add1": {
+									"pos": [-650, 500]
+								},
+								"mix1": {
+									"pos": [-100, 200]
+								},
+								"globals4": {
+									"pos": [-800, 950]
+								},
+								"multAdd9": {
+									"pos": [-650, 950]
+								},
+								"sin1": {
+									"pos": [-500, 950]
+								},
+								"fit1": {
+									"pos": [-350, 950]
+								},
+								"clamp1": {
+									"pos": [-200, 950]
+								},
+								"easing1": {
+									"pos": [-50, 950]
+								},
+								"globals5": {
+									"pos": [350, 1250]
+								},
+								"multAdd10": {
+									"pos": [450, 1250]
+								},
+								"hsvToRgb1": {
+									"pos": [700, 1250]
+								},
+								"floatToVec3_4": {
+									"pos": [550, 1250]
+								},
+								"multAdd11": {
+									"pos": [700, -250]
+								},
+								"multAdd12": {
+									"pos": [-150, -600]
+								},
+								"multAdd13": {
+									"pos": [-200, 150]
+								},
+								"globals6": {
+									"pos": [-500, -150]
+								},
+								"smoothstep1": {
+									"pos": [-200, -150]
+								},
+								"fitFrom01_1": {
+									"pos": [-100, -150]
+								},
+								"multAdd14": {
+									"pos": [-350, -150]
+								},
+								"add2": {
+									"pos": [0, -50]
+								},
+								"globals7": {
+									"pos": [-600, -1050]
+								},
+								"smoothstep2": {
+									"pos": [-50, -1050]
+								},
+								"fitFrom01_2": {
+									"pos": [50, -1050]
+								},
+								"multAdd15": {
+									"pos": [-200, -1050]
+								},
+								"add3": {
+									"pos": [200, -900]
+								},
+								"vec3ToFloat1": {
+									"pos": [-400, -1200]
 								}
 							}
 						}
@@ -92,7 +209,6 @@
 		},
 		"lights": {
 			"pos": [-50, -250],
-			"selection": ["hemisphereLight1"],
 			"nodes": {
 				"hemisphereLight1": {
 					"pos": [50, -50]
@@ -105,18 +221,52 @@
 				},
 				"merge1": {
 					"pos": [100, 300]
+				},
+				"null1": {
+					"pos": [-100, 50]
 				}
 			}
 		},
 		"cameras": {
 			"pos": [-50, -150],
-			"selection": ["cameraFrameMode1"],
 			"nodes": {
 				"perspectiveCamera1": {
 					"pos": [0, -50]
 				},
 				"cameraFrameMode1": {
 					"pos": [0, 150]
+				},
+				"actor1": {
+					"pos": [0, 450],
+					"nodes": {
+						"onTick1": {
+							"pos": [-100, 0]
+						},
+						"setObjectRotation1": {
+							"pos": [400, 50]
+						},
+						"cursor1": {
+							"pos": [-350, 300]
+						},
+						"vec2ToFloat1": {
+							"pos": [-200, 300]
+						},
+						"multAdd1": {
+							"pos": [0, 200]
+						},
+						"floatToVec3_1": {
+							"pos": [150, 300]
+						},
+						"euler1": {
+							"pos": [300, 250]
+						},
+						"multAdd2": {
+							"pos": [0, 350]
+						}
+					}
+				},
+				"hierarchy1": {
+					"pos": [0, 300]
 				}
 			}
 		}

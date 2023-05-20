@@ -5,13 +5,16 @@ import { PolyScene } from "@polygonjs/polygonjs/dist/src/engine/scene/PolyScene"
 import { CopNetworkObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/CopNetwork";
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
 // sop
+import { ActorSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Actor";
 import { BoxLinesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/BoxLines";
 import { BoxSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Box";
 import { CameraFrameModeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraFrameMode";
 import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/HemisphereLight";
+import { HierarchySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Hierarchy";
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
 import { MaterialsNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/MaterialsNetwork";
 import { MergeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Merge";
+import { NullSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Null";
 import { PerspectiveCameraSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PerspectiveCamera";
 import { PolarTransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PolarTransform";
 import { SpotLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/SpotLight";
@@ -39,9 +42,12 @@ export class PolySceneWithNodeMap_scene_01 extends PolyScene {
   node(path: "/lights/spotLight1"): SpotLightSopNode;
   node(path: "/lights/polarTransform1"): PolarTransformSopNode;
   node(path: "/lights/merge1"): MergeSopNode;
+  node(path: "/lights/null1"): NullSopNode;
   node(path: "/cameras"): GeoObjNode;
   node(path: "/cameras/perspectiveCamera1"): PerspectiveCameraSopNode;
   node(path: "/cameras/cameraFrameMode1"): CameraFrameModeSopNode;
+  node(path: "/cameras/actor1"): ActorSopNode;
+  node(path: "/cameras/hierarchy1"): HierarchySopNode;
   node(
     path: string
   ): any /* we need any for now as otherwise an error occurs when adding plugins to the overloaded methods */ {
@@ -513,4 +519,11 @@ export interface PolySceneProps_scene_01 {
   "cameras-perspectiveCamera1--updateTransformFromCamera"?: ParamValueSerializedTypeMap["button"];
   "cameras-cameraFrameMode1--frameMode"?: ParamValueSerializedTypeMap["integer"];
   "cameras-cameraFrameMode1--expectedAspectRatio"?: ParamValueSerializedTypeMap["float"];
+  "cameras-actor1--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor1--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-actor1--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-hierarchy1--mode"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-hierarchy1--levels"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-hierarchy1--objectMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-hierarchy1--addChildMode"?: ParamValueSerializedTypeMap["integer"];
 }

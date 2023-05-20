@@ -26,7 +26,10 @@
 		},
 		"merge1": {
 			"type": "merge",
-			"inputs": ["hemisphereLight1", "polarTransform1"],
+			"inputs": ["hemisphereLight1", "polarTransform1"]
+		},
+		"null1": {
+			"type": "null",
 			"flags": {
 				"display": true
 			}

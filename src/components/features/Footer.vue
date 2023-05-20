@@ -22,11 +22,14 @@
 
 		<div v-for="section of FOOTER_SECTIONS">
 			<p class="space-x-2">
-				<span class="font-bold">{{ section }}:</span>
+				<span class="block lg:inline font-bold">{{ section }}:</span>
 				<a
 					v-for="link of LINKS_BY_SECTION[section] || []"
 					:href="link.href"
-					:class="['border-b-4 hover:opacity-80', `border-${link.color}-400`]"
+					:class="[
+						'block lg:inline border-b-4 hover:opacity-80',
+						`border-${link.color}-400 dark:border-${link.color}-700`,
+					]"
 				>
 					<Component
 						class="inline mr-1"
@@ -114,25 +117,30 @@ interface FooterLink {
 	href: string;
 	color: TailwindColor;
 }
-const START = 5;
-let currentColorIndex = START;
+const MIN = 5;
+let currentColorIndex = TAILWIND_COLORS.length - 1;
 function nextColor() {
-	currentColorIndex++;
+	currentColorIndex--;
+	if (currentColorIndex < MIN) {
+		currentColorIndex = TAILWIND_COLORS.length - 1;
+	}
 	const color = TAILWIND_COLORS[currentColorIndex];
 	if (color) {
 		return color;
 	} else {
-		currentColorIndex = START;
-		return TAILWIND_COLORS[currentColorIndex];
+		// currentColorIndex = START;
+		return TAILWIND_COLORS[0];
 	}
 }
 
 const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 	[FooterSection.DISCOVER]: [
-		{label: 'Documentation', href: '/docs', color: nextColor()},
+		{label: 'Demo', href: '/demo', color: TailwindColor.ORANGE},
+		{label: 'Documentation', href: '/docs', color: TailwindColor.SKY},
 		{label: 'Changelog', href: '/docs/changelog', color: nextColor()},
-		{label: 'Tutorials', href: '/docs/tutorials', color: nextColor()},
+		{label: 'Tutorials', href: '/docs/tutorials', color: TailwindColor.LIME},
 		{label: 'Install', href: '/docs/install', color: nextColor()},
+		{label: 'Pricing', href: '/pricing', color: nextColor()},
 		{label: 'Marketplace', href: '/market', color: nextColor()},
 	],
 	[FooterSection.EXAMPLES]: [
@@ -149,7 +157,7 @@ const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 		},
 		{label: 'Physics', href: '/docs/examples-category/Physics', color: nextColor()},
 		{label: 'Effects', href: '/docs/examples-category/Effects', color: nextColor()},
-		{label: 'View All ->', href: '/docs/examples', color: nextColor()},
+		{label: 'View All ->', href: '/docs/examples', color: TailwindColor.PURPLE},
 	],
 	[FooterSection.COMMUNITY]: [
 		{label: 'Discord', href: '/discord', color: nextColor()},

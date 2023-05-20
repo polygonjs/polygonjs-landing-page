@@ -4,18 +4,20 @@
 		"perspectiveCamera1": {
 			"type": "perspectiveCamera",
 			"params": {
-				"position": [0, 0, 3.8]
+				"position": [0, 0, 2.8]
 			}
 		},
 		"cameraFrameMode1": {
 			"type": "cameraFrameMode",
 			"params": {
-				"frameMode": 2
+				"frameMode": 2,
+				"expectedAspectRatio": 2
 			},
-			"inputs": ["perspectiveCamera1"],
-			"flags": {
-				"display": true
-			}
+			"inputs": ["perspectiveCamera1"]
+		},
+		"hierarchy1": {
+			"type": "hierarchy",
+			"inputs": ["cameraFrameMode1"]
 		}
 	},
 	"params": {

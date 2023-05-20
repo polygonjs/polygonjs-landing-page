@@ -9,8 +9,8 @@
 			use cases appear regularly.
 		</p>
 		<p>
-			3D for the web is notoriously difficult to create, as it requires knowledge in both 3D and well, web. Making
-			something barely functional is one thing, but
+			Those experiences are notoriously difficult to create, as they require knowledge in both 3D and well, web.
+			Crafting one that's functional can already be a challenge, and
 			<span class="bg-amber-300 dark:bg-amber-800"
 				>making it beautiful and performant is a whole different game.</span
 			>

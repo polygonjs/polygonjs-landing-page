@@ -92,6 +92,379 @@ int DefaultSDFMaterial(){
 
 
 
+// /geo1/MAT/rayMarchingBuilder1/fitFrom01_1
+//
+//
+// FIT
+//
+//
+float fit(float val, float srcMin, float srcMax, float destMin, float destMax){
+	float src_range = srcMax - srcMin;
+	float dest_range = destMax - destMin;
+
+	float r = (val - srcMin) / src_range;
+	return (r * dest_range) + destMin;
+}
+vec2 fit(vec2 val, vec2 srcMin, vec2 srcMax, vec2 destMin, vec2 destMax){
+	return vec2(
+		fit(val.x, srcMin.x, srcMax.x, destMin.x, destMax.x),
+		fit(val.y, srcMin.y, srcMax.y, destMin.y, destMax.y)
+	);
+}
+vec3 fit(vec3 val, vec3 srcMin, vec3 srcMax, vec3 destMin, vec3 destMax){
+	return vec3(
+		fit(val.x, srcMin.x, srcMax.x, destMin.x, destMax.x),
+		fit(val.y, srcMin.y, srcMax.y, destMin.y, destMax.y),
+		fit(val.z, srcMin.z, srcMax.z, destMin.z, destMax.z)
+	);
+}
+vec4 fit(vec4 val, vec4 srcMin, vec4 srcMax, vec4 destMin, vec4 destMax){
+	return vec4(
+		fit(val.x, srcMin.x, srcMax.x, destMin.x, destMax.x),
+		fit(val.y, srcMin.y, srcMax.y, destMin.y, destMax.y),
+		fit(val.z, srcMin.z, srcMax.z, destMin.z, destMax.z),
+		fit(val.w, srcMin.w, srcMax.w, destMin.w, destMax.w)
+	);
+}
+
+//
+//
+// FIT TO 01
+// fits the range [srcMin, srcMax] to [0, 1]
+//
+float fitTo01(float val, float srcMin, float srcMax){
+	float size = srcMax - srcMin;
+	return (val - srcMin) / size;
+}
+vec2 fitTo01(vec2 val, vec2 srcMin, vec2 srcMax){
+	return vec2(
+		fitTo01(val.x, srcMin.x, srcMax.x),
+		fitTo01(val.y, srcMin.y, srcMax.y)
+	);
+}
+vec3 fitTo01(vec3 val, vec3 srcMin, vec3 srcMax){
+	return vec3(
+		fitTo01(val.x, srcMin.x, srcMax.x),
+		fitTo01(val.y, srcMin.y, srcMax.y),
+		fitTo01(val.z, srcMin.z, srcMax.z)
+	);
+}
+vec4 fitTo01(vec4 val, vec4 srcMin, vec4 srcMax){
+	return vec4(
+		fitTo01(val.x, srcMin.x, srcMax.x),
+		fitTo01(val.y, srcMin.y, srcMax.y),
+		fitTo01(val.z, srcMin.z, srcMax.z),
+		fitTo01(val.w, srcMin.w, srcMax.w)
+	);
+}
+
+//
+//
+// FIT FROM 01
+// fits the range [0, 1] to [destMin, destMax]
+//
+float fitFrom01(float val, float destMin, float destMax){
+	return fit(val, 0.0, 1.0, destMin, destMax);
+}
+vec2 fitFrom01(vec2 val, vec2 srcMin, vec2 srcMax){
+	return vec2(
+		fitFrom01(val.x, srcMin.x, srcMax.x),
+		fitFrom01(val.y, srcMin.y, srcMax.y)
+	);
+}
+vec3 fitFrom01(vec3 val, vec3 srcMin, vec3 srcMax){
+	return vec3(
+		fitFrom01(val.x, srcMin.x, srcMax.x),
+		fitFrom01(val.y, srcMin.y, srcMax.y),
+		fitFrom01(val.z, srcMin.z, srcMax.z)
+	);
+}
+vec4 fitFrom01(vec4 val, vec4 srcMin, vec4 srcMax){
+	return vec4(
+		fitFrom01(val.x, srcMin.x, srcMax.x),
+		fitFrom01(val.y, srcMin.y, srcMax.y),
+		fitFrom01(val.z, srcMin.z, srcMax.z),
+		fitFrom01(val.w, srcMin.w, srcMax.w)
+	);
+}
+
+//
+//
+// FIT FROM 01 TO VARIANCE
+// fits the range [0, 1] to [center - variance, center + variance]
+//
+float fitFrom01ToVariance(float val, float center, float variance){
+	return fitFrom01(val, center - variance, center + variance);
+}
+vec2 fitFrom01ToVariance(vec2 val, vec2 center, vec2 variance){
+	return vec2(
+		fitFrom01ToVariance(val.x, center.x, variance.x),
+		fitFrom01ToVariance(val.y, center.y, variance.y)
+	);
+}
+vec3 fitFrom01ToVariance(vec3 val, vec3 center, vec3 variance){
+	return vec3(
+		fitFrom01ToVariance(val.x, center.x, variance.x),
+		fitFrom01ToVariance(val.y, center.y, variance.y),
+		fitFrom01ToVariance(val.z, center.z, variance.z)
+	);
+}
+vec4 fitFrom01ToVariance(vec4 val, vec4 center, vec4 variance){
+	return vec4(
+		fitFrom01ToVariance(val.x, center.x, variance.x),
+		fitFrom01ToVariance(val.y, center.y, variance.y),
+		fitFrom01ToVariance(val.z, center.z, variance.z),
+		fitFrom01ToVariance(val.w, center.w, variance.w)
+	);
+}
+
+// /geo1/MAT/rayMarchingBuilder1/rotate1
+
+
+// https://stackoverflow.com/questions/23793698/how-to-implement-slerp-in-glsl-hlsl
+// vec4 quatSlerp(vec4 p0, vec4 p1, float t)
+// {
+// 	float dotp = dot(normalize(p0), normalize(p1));
+// 	if ((dotp > 0.9999) || (dotp < -0.9999))
+// 	{
+// 		if (t<=0.5)
+// 			return p0;
+// 		return p1;
+// 	}
+// 	float theta = acos(dotp);
+// 	vec4 P = ((p0*sin((1.0-t)*theta) + p1*sin(t*theta)) / sin(theta));
+// 	P.w = 1.0;
+// 	return P;
+// }
+
+// https://devcry.heiho.net/html/2017/20170521-slerp.html
+// float lerp(float a, float b, float t) {
+// 	return (1.0 - t) * a + t * b;
+// }
+// vec4 quatSlerp(vec4 p0, vec4 p1, float t){
+// 	vec4 qb = p1;
+
+// 	// cos(a) = dot product
+// 	float cos_a = p0.x * qb.x + p0.y * qb.y + p0.z * qb.z + p0.w * qb.w;
+// 	if (cos_a < 0.0f) {
+// 		cos_a = -cos_a;
+// 		qb = -qb;
+// 	}
+
+// 	// close to zero, cos(a) ~= 1
+// 	// do linear interpolation
+// 	if (cos_a > 0.999) {
+// 		return vec4(
+// 			lerp(p0.x, qb.x, t),
+// 			lerp(p0.y, qb.y, t),
+// 			lerp(p0.z, qb.z, t),
+// 			lerp(p0.w, qb.w, t)
+// 		);
+// 	}
+
+// 	float alpha = acos(cos_a);
+// 	return (p0 * sin(1.0 - t) + p1 * sin(t * alpha)) / sin(alpha);
+// }
+
+// https://stackoverflow.com/questions/62943083/interpolate-between-two-quaternions-the-long-way
+vec4 quatSlerp(vec4 q1, vec4 q2, float t){
+	float angle = acos(dot(q1, q2));
+	float denom = sin(angle);
+	//check if denom is zero
+	return (q1*sin((1.0-t)*angle)+q2*sin(t*angle))/denom;
+}
+// TO CHECK:
+// this page https://www.reddit.com/r/opengl/comments/704la7/glsl_quaternion_library/
+// has a link to a potentially nice pdf:
+// http://web.mit.edu/2.998/www/QuaternionReport1.pdf
+
+// https://github.com/mattatz/ShibuyaCrowd/blob/master/source/shaders/common/quaternion.glsl
+vec4 quatMult(vec4 q1, vec4 q2)
+{
+	return vec4(
+	q1.w * q2.x + q1.x * q2.w + q1.z * q2.y - q1.y * q2.z,
+	q1.w * q2.y + q1.y * q2.w + q1.x * q2.z - q1.z * q2.x,
+	q1.w * q2.z + q1.z * q2.w + q1.y * q2.x - q1.x * q2.y,
+	q1.w * q2.w - q1.x * q2.x - q1.y * q2.y - q1.z * q2.z
+	);
+}
+// http://glmatrix.net/docs/quat.js.html#line97
+//   let ax = a[0], ay = a[1], az = a[2], aw = a[3];
+
+//   let bx = b[0], by = b[1], bz = b[2], bw = b[3];
+
+//   out[0] = ax * bw + aw * bx + ay * bz - az * by;
+
+//   out[1] = ay * bw + aw * by + az * bx - ax * bz;
+
+//   out[2] = az * bw + aw * bz + ax * by - ay * bx;
+
+//   out[3] = aw * bw - ax * bx - ay * by - az * bz;
+
+//   return out
+
+
+
+// http://www.neilmendoza.com/glsl-rotation-about-an-arbitrary-axis/
+mat4 rotationMatrix(vec3 axis, float angle)
+{
+	axis = normalize(axis);
+	float s = sin(angle);
+	float c = cos(angle);
+	float oc = 1.0 - c;
+
+ 	return mat4(oc * axis.x * axis.x + c, oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s, 0.0, oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c, oc * axis.y * axis.z - axis.x * s,  0.0, oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c, 0.0, 0.0, 0.0, 0.0, 1.0);
+}
+
+// https://www.geeks3d.com/20141201/how-to-rotate-a-vertex-by-a-quaternion-in-glsl/
+vec4 quatFromAxisAngle(vec3 axis, float angle)
+{
+	vec4 qr;
+	float half_angle = (angle * 0.5); // * 3.14159 / 180.0;
+	float sin_half_angle = sin(half_angle);
+	qr.x = axis.x * sin_half_angle;
+	qr.y = axis.y * sin_half_angle;
+	qr.z = axis.z * sin_half_angle;
+	qr.w = cos(half_angle);
+	return qr;
+}
+vec3 rotateWithAxisAngle(vec3 position, vec3 axis, float angle)
+{
+	vec4 q = quatFromAxisAngle(axis, angle);
+	vec3 v = position.xyz;
+	return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);
+}
+// vec3 applyQuaternionToVector( vec4 q, vec3 v ){
+// 	return v + 2.0 * cross( q.xyz, cross( q.xyz, v ) + q.w * v );
+// }
+vec3 rotateWithQuat( vec3 v, vec4 q )
+{
+	// vec4 qv = multQuat( quat, vec4(vec, 0.0) );
+	// return multQuat( qv, vec4(-quat.x, -quat.y, -quat.z, quat.w) ).xyz;
+	return v + 2.0 * cross( q.xyz, cross( q.xyz, v ) + q.w * v );
+}
+// https://github.com/glslify/glsl-look-at/blob/gh-pages/index.glsl
+// mat3 rotation_matrix(vec3 origin, vec3 target, float roll) {
+// 	vec3 rr = vec3(sin(roll), cos(roll), 0.0);
+// 	vec3 ww = normalize(target - origin);
+// 	vec3 uu = normalize(cross(ww, rr));
+// 	vec3 vv = normalize(cross(uu, ww));
+
+// 	return mat3(uu, vv, ww);
+// }
+// mat3 rotation_matrix(vec3 target, float roll) {
+// 	vec3 rr = vec3(sin(roll), cos(roll), 0.0);
+// 	vec3 ww = normalize(target);
+// 	vec3 uu = normalize(cross(ww, rr));
+// 	vec3 vv = normalize(cross(uu, ww));
+
+// 	return mat3(uu, vv, ww);
+// }
+
+float vectorAngle(vec3 start, vec3 dest){
+	start = normalize(start);
+	dest = normalize(dest);
+
+	float cosTheta = dot(start, dest);
+	vec3 c1 = cross(start, dest);
+	// We use the dot product of the cross with the Y axis.
+	// This is a little arbitrary, but can still give a good sense of direction
+	vec3 y_axis = vec3(0.0, 1.0, 0.0);
+	float d1 = dot(c1, y_axis);
+	float angle = acos(cosTheta) * sign(d1);
+	return angle;
+}
+
+// http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-17-quaternions/#i-need-an-equivalent-of-glulookat-how-do-i-orient-an-object-towards-a-point-
+vec4 vectorAlign(vec3 start, vec3 dest){
+	start = normalize(start);
+	dest = normalize(dest);
+
+	float cosTheta = dot(start, dest);
+	vec3 axis;
+
+	// if (cosTheta < -1 + 0.001f){
+	// 	// special case when vectors in opposite directions:
+	// 	// there is no ideal rotation axis
+	// 	// So guess one; any will do as long as it's perpendicular to start
+	// 	axis = cross(vec3(0.0f, 0.0f, 1.0f), start);
+	// 	if (length2(axis) < 0.01 ) // bad luck, they were parallel, try again!
+	// 		axis = cross(vec3(1.0f, 0.0f, 0.0f), start);
+
+	// 	axis = normalize(axis);
+	// 	return gtx::quaternion::angleAxis(glm::radians(180.0f), axis);
+	// }
+	if(cosTheta > (1.0 - 0.0001) || cosTheta < (-1.0 + 0.0001) ){
+		axis = normalize(cross(start, vec3(0.0, 1.0, 0.0)));
+		if (length(axis) < 0.001 ){ // bad luck, they were parallel, try again!
+			axis = normalize(cross(start, vec3(1.0, 0.0, 0.0)));
+		}
+	} else {
+		axis = normalize(cross(start, dest));
+	}
+
+	float angle = acos(cosTheta);
+
+	return quatFromAxisAngle(axis, angle);
+}
+vec4 vectorAlignWithUp(vec3 start, vec3 dest, vec3 up){
+	vec4 rot1 = vectorAlign(start, dest);
+	up = normalize(up);
+
+	// Recompute desiredUp so that it's perpendicular to the direction
+	// You can skip that part if you really want to force desiredUp
+	// vec3 right = normalize(cross(dest, up));
+	// up = normalize(cross(right, dest));
+
+	// Because of the 1rst rotation, the up is probably completely screwed up.
+	// Find the rotation between the up of the rotated object, and the desired up
+	vec3 newUp = rotateWithQuat(vec3(0.0, 1.0, 0.0), rot1);//rot1 * vec3(0.0, 1.0, 0.0);
+	vec4 rot2 = vectorAlign(up, newUp);
+
+	// return rot1;
+	return rot2;
+	// return multQuat(rot1, rot2);
+	// return rot2 * rot1;
+
+}
+
+// https://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
+float quatToAngle(vec4 q){
+	return 2.0 * acos(q.w);
+}
+vec3 quatToAxis(vec4 q){
+	return vec3(
+		q.x / sqrt(1.0-q.w*q.w),
+		q.y / sqrt(1.0-q.w*q.w),
+		q.z / sqrt(1.0-q.w*q.w)
+	);
+}
+
+vec4 align(vec3 dir, vec3 up){
+	vec3 start_dir = vec3(0.0, 0.0, 1.0);
+	vec3 start_up = vec3(0.0, 1.0, 0.0);
+	vec4 rot1 = vectorAlign(start_dir, dir);
+	up = normalize(up);
+
+	// Recompute desiredUp so that it's perpendicular to the direction
+	// You can skip that part if you really want to force desiredUp
+	vec3 right = normalize(cross(dir, up));
+	if(length(right)<0.001){
+		right = vec3(1.0, 0.0, 0.0);
+	}
+	up = normalize(cross(right, dir));
+
+	// Because of the 1rst rotation, the up is probably completely screwed up.
+	// Find the rotation between the up of the rotated object, and the desired up
+	vec3 newUp = rotateWithQuat(start_up, rot1);//rot1 * vec3(0.0, 1.0, 0.0);
+	vec4 rot2 = vectorAlign(normalize(newUp), up);
+
+	// return rot1;
+	return quatMult(rot1, rot2);
+	// return rot2 * rot1;
+
+}
+
 // /geo1/MAT/rayMarchingBuilder1/SDFBoxFrame1
 float dot2( in vec2 v ) { return dot(v,v); }
 float dot2( in vec3 v ) { return dot(v,v); }
@@ -394,253 +767,25 @@ float SDFOnion( in float sdf, in float thickness )
 	return abs(sdf)-thickness;
 }
 
+// /geo1/MAT/rayMarchingBuilder1/easing1
+
+float sineInOut(float t) {
+  return -0.5 * (cos(PI * t) - 1.0);
+}
+
+
+
+// /geo1/MAT/rayMarchingBuilder1/hsvToRgb1
+// https://github.com/hughsk/glsl-hsv2rgb
+// https://stackoverflow.com/questions/15095909/from-rgb-to-hsv-in-opengl-glsl
+vec3 hsv2rgb(vec3 c) {
+	vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+	return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+}
+
 // /geo1/MAT/rayMarchingBuilder1/SDFMaterial1
 const int _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1 = 1;
-
-
-// https://stackoverflow.com/questions/23793698/how-to-implement-slerp-in-glsl-hlsl
-// vec4 quatSlerp(vec4 p0, vec4 p1, float t)
-// {
-// 	float dotp = dot(normalize(p0), normalize(p1));
-// 	if ((dotp > 0.9999) || (dotp < -0.9999))
-// 	{
-// 		if (t<=0.5)
-// 			return p0;
-// 		return p1;
-// 	}
-// 	float theta = acos(dotp);
-// 	vec4 P = ((p0*sin((1.0-t)*theta) + p1*sin(t*theta)) / sin(theta));
-// 	P.w = 1.0;
-// 	return P;
-// }
-
-// https://devcry.heiho.net/html/2017/20170521-slerp.html
-// float lerp(float a, float b, float t) {
-// 	return (1.0 - t) * a + t * b;
-// }
-// vec4 quatSlerp(vec4 p0, vec4 p1, float t){
-// 	vec4 qb = p1;
-
-// 	// cos(a) = dot product
-// 	float cos_a = p0.x * qb.x + p0.y * qb.y + p0.z * qb.z + p0.w * qb.w;
-// 	if (cos_a < 0.0f) {
-// 		cos_a = -cos_a;
-// 		qb = -qb;
-// 	}
-
-// 	// close to zero, cos(a) ~= 1
-// 	// do linear interpolation
-// 	if (cos_a > 0.999) {
-// 		return vec4(
-// 			lerp(p0.x, qb.x, t),
-// 			lerp(p0.y, qb.y, t),
-// 			lerp(p0.z, qb.z, t),
-// 			lerp(p0.w, qb.w, t)
-// 		);
-// 	}
-
-// 	float alpha = acos(cos_a);
-// 	return (p0 * sin(1.0 - t) + p1 * sin(t * alpha)) / sin(alpha);
-// }
-
-// https://stackoverflow.com/questions/62943083/interpolate-between-two-quaternions-the-long-way
-vec4 quatSlerp(vec4 q1, vec4 q2, float t){
-	float angle = acos(dot(q1, q2));
-	float denom = sin(angle);
-	//check if denom is zero
-	return (q1*sin((1.0-t)*angle)+q2*sin(t*angle))/denom;
-}
-// TO CHECK:
-// this page https://www.reddit.com/r/opengl/comments/704la7/glsl_quaternion_library/
-// has a link to a potentially nice pdf:
-// http://web.mit.edu/2.998/www/QuaternionReport1.pdf
-
-// https://github.com/mattatz/ShibuyaCrowd/blob/master/source/shaders/common/quaternion.glsl
-vec4 quatMult(vec4 q1, vec4 q2)
-{
-	return vec4(
-	q1.w * q2.x + q1.x * q2.w + q1.z * q2.y - q1.y * q2.z,
-	q1.w * q2.y + q1.y * q2.w + q1.x * q2.z - q1.z * q2.x,
-	q1.w * q2.z + q1.z * q2.w + q1.y * q2.x - q1.x * q2.y,
-	q1.w * q2.w - q1.x * q2.x - q1.y * q2.y - q1.z * q2.z
-	);
-}
-// http://glmatrix.net/docs/quat.js.html#line97
-//   let ax = a[0], ay = a[1], az = a[2], aw = a[3];
-
-//   let bx = b[0], by = b[1], bz = b[2], bw = b[3];
-
-//   out[0] = ax * bw + aw * bx + ay * bz - az * by;
-
-//   out[1] = ay * bw + aw * by + az * bx - ax * bz;
-
-//   out[2] = az * bw + aw * bz + ax * by - ay * bx;
-
-//   out[3] = aw * bw - ax * bx - ay * by - az * bz;
-
-//   return out
-
-
-
-// http://www.neilmendoza.com/glsl-rotation-about-an-arbitrary-axis/
-mat4 rotationMatrix(vec3 axis, float angle)
-{
-	axis = normalize(axis);
-	float s = sin(angle);
-	float c = cos(angle);
-	float oc = 1.0 - c;
-
- 	return mat4(oc * axis.x * axis.x + c, oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s, 0.0, oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c, oc * axis.y * axis.z - axis.x * s,  0.0, oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c, 0.0, 0.0, 0.0, 0.0, 1.0);
-}
-
-// https://www.geeks3d.com/20141201/how-to-rotate-a-vertex-by-a-quaternion-in-glsl/
-vec4 quatFromAxisAngle(vec3 axis, float angle)
-{
-	vec4 qr;
-	float half_angle = (angle * 0.5); // * 3.14159 / 180.0;
-	float sin_half_angle = sin(half_angle);
-	qr.x = axis.x * sin_half_angle;
-	qr.y = axis.y * sin_half_angle;
-	qr.z = axis.z * sin_half_angle;
-	qr.w = cos(half_angle);
-	return qr;
-}
-vec3 rotateWithAxisAngle(vec3 position, vec3 axis, float angle)
-{
-	vec4 q = quatFromAxisAngle(axis, angle);
-	vec3 v = position.xyz;
-	return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);
-}
-// vec3 applyQuaternionToVector( vec4 q, vec3 v ){
-// 	return v + 2.0 * cross( q.xyz, cross( q.xyz, v ) + q.w * v );
-// }
-vec3 rotateWithQuat( vec3 v, vec4 q )
-{
-	// vec4 qv = multQuat( quat, vec4(vec, 0.0) );
-	// return multQuat( qv, vec4(-quat.x, -quat.y, -quat.z, quat.w) ).xyz;
-	return v + 2.0 * cross( q.xyz, cross( q.xyz, v ) + q.w * v );
-}
-// https://github.com/glslify/glsl-look-at/blob/gh-pages/index.glsl
-// mat3 rotation_matrix(vec3 origin, vec3 target, float roll) {
-// 	vec3 rr = vec3(sin(roll), cos(roll), 0.0);
-// 	vec3 ww = normalize(target - origin);
-// 	vec3 uu = normalize(cross(ww, rr));
-// 	vec3 vv = normalize(cross(uu, ww));
-
-// 	return mat3(uu, vv, ww);
-// }
-// mat3 rotation_matrix(vec3 target, float roll) {
-// 	vec3 rr = vec3(sin(roll), cos(roll), 0.0);
-// 	vec3 ww = normalize(target);
-// 	vec3 uu = normalize(cross(ww, rr));
-// 	vec3 vv = normalize(cross(uu, ww));
-
-// 	return mat3(uu, vv, ww);
-// }
-
-float vectorAngle(vec3 start, vec3 dest){
-	start = normalize(start);
-	dest = normalize(dest);
-
-	float cosTheta = dot(start, dest);
-	vec3 c1 = cross(start, dest);
-	// We use the dot product of the cross with the Y axis.
-	// This is a little arbitrary, but can still give a good sense of direction
-	vec3 y_axis = vec3(0.0, 1.0, 0.0);
-	float d1 = dot(c1, y_axis);
-	float angle = acos(cosTheta) * sign(d1);
-	return angle;
-}
-
-// http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-17-quaternions/#i-need-an-equivalent-of-glulookat-how-do-i-orient-an-object-towards-a-point-
-vec4 vectorAlign(vec3 start, vec3 dest){
-	start = normalize(start);
-	dest = normalize(dest);
-
-	float cosTheta = dot(start, dest);
-	vec3 axis;
-
-	// if (cosTheta < -1 + 0.001f){
-	// 	// special case when vectors in opposite directions:
-	// 	// there is no ideal rotation axis
-	// 	// So guess one; any will do as long as it's perpendicular to start
-	// 	axis = cross(vec3(0.0f, 0.0f, 1.0f), start);
-	// 	if (length2(axis) < 0.01 ) // bad luck, they were parallel, try again!
-	// 		axis = cross(vec3(1.0f, 0.0f, 0.0f), start);
-
-	// 	axis = normalize(axis);
-	// 	return gtx::quaternion::angleAxis(glm::radians(180.0f), axis);
-	// }
-	if(cosTheta > (1.0 - 0.0001) || cosTheta < (-1.0 + 0.0001) ){
-		axis = normalize(cross(start, vec3(0.0, 1.0, 0.0)));
-		if (length(axis) < 0.001 ){ // bad luck, they were parallel, try again!
-			axis = normalize(cross(start, vec3(1.0, 0.0, 0.0)));
-		}
-	} else {
-		axis = normalize(cross(start, dest));
-	}
-
-	float angle = acos(cosTheta);
-
-	return quatFromAxisAngle(axis, angle);
-}
-vec4 vectorAlignWithUp(vec3 start, vec3 dest, vec3 up){
-	vec4 rot1 = vectorAlign(start, dest);
-	up = normalize(up);
-
-	// Recompute desiredUp so that it's perpendicular to the direction
-	// You can skip that part if you really want to force desiredUp
-	// vec3 right = normalize(cross(dest, up));
-	// up = normalize(cross(right, dest));
-
-	// Because of the 1rst rotation, the up is probably completely screwed up.
-	// Find the rotation between the up of the rotated object, and the desired up
-	vec3 newUp = rotateWithQuat(vec3(0.0, 1.0, 0.0), rot1);//rot1 * vec3(0.0, 1.0, 0.0);
-	vec4 rot2 = vectorAlign(up, newUp);
-
-	// return rot1;
-	return rot2;
-	// return multQuat(rot1, rot2);
-	// return rot2 * rot1;
-
-}
-
-// https://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
-float quatToAngle(vec4 q){
-	return 2.0 * acos(q.w);
-}
-vec3 quatToAxis(vec4 q){
-	return vec3(
-		q.x / sqrt(1.0-q.w*q.w),
-		q.y / sqrt(1.0-q.w*q.w),
-		q.z / sqrt(1.0-q.w*q.w)
-	);
-}
-
-vec4 align(vec3 dir, vec3 up){
-	vec3 start_dir = vec3(0.0, 0.0, 1.0);
-	vec3 start_up = vec3(0.0, 1.0, 0.0);
-	vec4 rot1 = vectorAlign(start_dir, dir);
-	up = normalize(up);
-
-	// Recompute desiredUp so that it's perpendicular to the direction
-	// You can skip that part if you really want to force desiredUp
-	vec3 right = normalize(cross(dir, up));
-	if(length(right)<0.001){
-		right = vec3(1.0, 0.0, 0.0);
-	}
-	up = normalize(cross(right, dir));
-
-	// Because of the 1rst rotation, the up is probably completely screwed up.
-	// Find the rotation between the up of the rotated object, and the desired up
-	vec3 newUp = rotateWithQuat(start_up, rot1);//rot1 * vec3(0.0, 1.0, 0.0);
-	vec4 rot2 = vectorAlign(normalize(newUp), up);
-
-	// return rot1;
-	return quatMult(rot1, rot2);
-	// return rot2 * rot1;
-
-}
 
 struct EnvMapProps {
 	vec3 tint;
@@ -675,6 +820,18 @@ vec3 envMapSampleWithFresnel(vec3 rayDir, EnvMapProps envMapProps, vec3 n, vec3 
 	float fresnelFactor = (1.-envMapProps.fresnel) + envMapProps.fresnel*fresnel;
 	return env * envMapIntensity * envMapProps.tint * envMapProps.intensity * fresnelFactor;
 }
+#define RAYMARCHED_REFRACTIONS 1
+#define RAYMARCHED_REFRACTIONS_SAMPLE_ENV_MAP_ON_LAST 1
+#define RAYMARCHED_REFRACTIONS_START_OUTSIDE_MEDIUM 1
+
+
+
+
+
+
+
+// /geo1/MAT/rayMarchingBuilder1/globals7
+uniform float time;
 
 
 
@@ -688,11 +845,142 @@ SDFContext GetDist(vec3 p) {
 
 
 
+	// /geo1/MAT/rayMarchingBuilder1/globals7
+	float v_POLY_globals7_time = time;
+	vec3 v_POLY_globals7_position = p;
+	
+	// /geo1/MAT/rayMarchingBuilder1/globals2
+	vec3 v_POLY_globals2_position = p;
+	
+	// /geo1/MAT/rayMarchingBuilder1/globals1
+	vec3 v_POLY_globals1_position = p;
+	float v_POLY_globals1_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/globals6
+	float v_POLY_globals6_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/globals3
+	vec3 v_POLY_globals3_position = p;
+	
+	// /geo1/MAT/rayMarchingBuilder1/globals4
+	float v_POLY_globals4_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/vec3ToFloat1
+	float v_POLY_vec3ToFloat1_x = v_POLY_globals7_position.x;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd1
+	float v_POLY_multAdd1_val = (0.57*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd2
+	float v_POLY_multAdd2_val = (0.69*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd3
+	float v_POLY_multAdd3_val = (0.22*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd4
+	float v_POLY_multAdd4_val = (0.52*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd6
+	float v_POLY_multAdd6_val = (0.72*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd7
+	float v_POLY_multAdd7_val = (0.89*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd8
+	float v_POLY_multAdd8_val = (0.3*(v_POLY_globals1_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd14
+	float v_POLY_multAdd14_val = (0.18*(v_POLY_globals6_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd9
+	float v_POLY_multAdd9_val = (0.35*(v_POLY_globals4_time + 4.2)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd15
+	float v_POLY_multAdd15_val = (0.18*(v_POLY_globals7_time + v_POLY_vec3ToFloat1_x)) + 0.1;
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_2
+	vec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_multAdd1_val, v_POLY_multAdd2_val, 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/cos1
+	float v_POLY_cos1_val = cos(v_POLY_multAdd4_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_3
+	vec3 v_POLY_floatToVec3_3_vec3 = vec3(v_POLY_multAdd6_val, v_POLY_multAdd7_val, 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/smoothstep1
+	float v_POLY_smoothstep1_val = smoothstep(0.0, 1.0, v_POLY_multAdd14_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/sin1
+	float v_POLY_sin1_val = sin(v_POLY_multAdd9_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/smoothstep2
+	float v_POLY_smoothstep2_val = smoothstep(0.0, 1.0, v_POLY_multAdd15_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/normalize1
+	vec3 v_POLY_normalize1_normalized = normalize(v_POLY_floatToVec3_2_vec3);
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd5
+	float v_POLY_multAdd5_val = (1.3*(v_POLY_cos1_val + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/normalize2
+	vec3 v_POLY_normalize2_normalized = normalize(v_POLY_floatToVec3_3_vec3);
+	
+	// /geo1/MAT/rayMarchingBuilder1/fitFrom01_1
+	float v_POLY_fitFrom01_1_val = fitFrom01(v_POLY_smoothstep1_val, 0.4, 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/fit1
+	float v_POLY_fit1_val = fit(v_POLY_sin1_val, -1.0, 1.0, -1.0, 2.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/fitFrom01_2
+	float v_POLY_fitFrom01_2_val = fitFrom01(v_POLY_smoothstep2_val, 0.12, 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/rotate1
+	vec3 v_POLY_rotate1_val = rotateWithAxisAngle(v_POLY_globals2_position, v_POLY_normalize1_normalized, v_POLY_multAdd3_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_1
+	vec3 v_POLY_floatToVec3_1_vec3 = vec3(v_POLY_multAdd5_val, 0.0, 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/clamp1
+	float v_POLY_clamp1_val = clamp(v_POLY_fit1_val, 0.0, 1.0);
+	
 	// /geo1/MAT/rayMarchingBuilder1/SDFBoxFrame1
-	float v_POLY_SDFBoxFrame1_float = sdBoxFrame(p - vec3(0.0, 0.0, 0.0), vec3(1.0, 1.0, 1.0)*1.0, 0.1);
+	float v_POLY_SDFBoxFrame1_float = sdBoxFrame(v_POLY_rotate1_val - vec3(0.0, 0.0, 0.0), vec3(1.0, 1.0, 1.0)*1.0, 0.07);
+	
+	// /geo1/MAT/rayMarchingBuilder1/add1
+	vec3 v_POLY_add1_sum = (v_POLY_globals3_position + v_POLY_floatToVec3_1_vec3 + vec3(0.0, 0.0, 0.0));
+	
+	// /geo1/MAT/rayMarchingBuilder1/easing1
+	float v_POLY_easing1_out = sineInOut(v_POLY_clamp1_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd12
+	float v_POLY_multAdd12_val = (1.0*(v_POLY_SDFBoxFrame1_float + -0.03)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/rotate2
+	vec3 v_POLY_rotate2_val = rotateWithAxisAngle(v_POLY_add1_sum, v_POLY_normalize2_normalized, v_POLY_multAdd8_val);
+	
+	// /geo1/MAT/rayMarchingBuilder1/add3
+	float v_POLY_add3_sum = (v_POLY_fitFrom01_2_val + v_POLY_multAdd12_val + 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/SDFOctahedron1
+	float v_POLY_SDFOctahedron1_float = sdOctahedron(v_POLY_rotate2_val - vec3(0.0, 0.0, 0.0), 0.5);
+	
+	// /geo1/MAT/rayMarchingBuilder1/SDFSphere2
+	float v_POLY_SDFSphere2_float = sdSphere(v_POLY_rotate2_val - vec3(0.1, 0.0, 0.0), 0.36);
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd13
+	float v_POLY_multAdd13_val = (1.0*(v_POLY_SDFOctahedron1_float + -0.04)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/mix1
+	float v_POLY_mix1_mix = mix(v_POLY_multAdd13_val, v_POLY_SDFSphere2_float, v_POLY_easing1_out);
+	
+	// /geo1/MAT/rayMarchingBuilder1/add2
+	float v_POLY_add2_sum = (v_POLY_fitFrom01_1_val + v_POLY_mix1_mix + 0.0);
+	
+	// /geo1/MAT/rayMarchingBuilder1/SDFUnion1
+	float v_POLY_SDFUnion1_union = SDFSmoothUnion(v_POLY_add3_sum, v_POLY_add2_sum, 0.3);
 	
 	// /geo1/MAT/rayMarchingBuilder1/SDFContext1
-	SDFContext v_POLY_SDFContext1_SDFContext = SDFContext(v_POLY_SDFBoxFrame1_float, 0, _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1, _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1, 0.);
+	SDFContext v_POLY_SDFContext1_SDFContext = SDFContext(v_POLY_SDFUnion1_union, 0, _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1, _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1, 0.);
 	
 	// /geo1/MAT/rayMarchingBuilder1/output1
 	sdfContext = v_POLY_SDFContext1_SDFContext;
@@ -973,12 +1261,32 @@ vec3 applyMaterialWithoutRefraction(vec3 p, vec3 n, vec3 rayDir, int mat, inout 
 	// /geo1/MAT/rayMarchingBuilder1/constant1
 	vec3 v_POLY_constant1_val = vec3(1.0, 1.0, 1.0);
 	
+	// /geo1/MAT/rayMarchingBuilder1/globals5
+	float v_POLY_globals5_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd10
+	float v_POLY_multAdd10_val = (0.12*(v_POLY_globals5_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_4
+	vec3 v_POLY_floatToVec3_4_vec3 = vec3(v_POLY_multAdd10_val, 0.92, 0.92);
+	
+	// /geo1/MAT/rayMarchingBuilder1/hsvToRgb1
+	vec3 v_POLY_hsvToRgb1_rgb = hsv2rgb(v_POLY_floatToVec3_4_vec3);
+	
 	// /geo1/MAT/rayMarchingBuilder1/SDFMaterial1
 	if(mat == _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1){
 		col = vec3(0., 0., 0.);
-		vec3 diffuse = v_POLY_constant1_val * vec3(1.0, 1.0, 1.0) * GetLight(p, n, sdfContext);
-		col += diffuse;
 		col += vec3(0.0, 0.0, 0.0);
+		vec3 rayDir = normalize(reflect(rayDir, n));
+		EnvMapProps envMapProps;
+		envMapProps.tint = vec3(1.0, 1.0, 1.0);
+		envMapProps.intensity = 0.07;
+		envMapProps.roughness = 0.0;
+		envMapProps.fresnel = 0.0;
+		envMapProps.fresnelPower = 5.0;
+		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
+	
+	;
 	}
 
 
@@ -997,12 +1305,32 @@ vec3 applyMaterialWithoutReflection(vec3 p, vec3 n, vec3 rayDir, int mat, inout 
 	// /geo1/MAT/rayMarchingBuilder1/constant1
 	vec3 v_POLY_constant1_val = vec3(1.0, 1.0, 1.0);
 	
+	// /geo1/MAT/rayMarchingBuilder1/globals5
+	float v_POLY_globals5_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd10
+	float v_POLY_multAdd10_val = (0.12*(v_POLY_globals5_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_4
+	vec3 v_POLY_floatToVec3_4_vec3 = vec3(v_POLY_multAdd10_val, 0.92, 0.92);
+	
+	// /geo1/MAT/rayMarchingBuilder1/hsvToRgb1
+	vec3 v_POLY_hsvToRgb1_rgb = hsv2rgb(v_POLY_floatToVec3_4_vec3);
+	
 	// /geo1/MAT/rayMarchingBuilder1/SDFMaterial1
 	if(mat == _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1){
 		col = vec3(0., 0., 0.);
-		vec3 diffuse = v_POLY_constant1_val * vec3(1.0, 1.0, 1.0) * GetLight(p, n, sdfContext);
-		col += diffuse;
 		col += vec3(0.0, 0.0, 0.0);
+		vec3 rayDir = normalize(reflect(rayDir, n));
+		EnvMapProps envMapProps;
+		envMapProps.tint = vec3(1.0, 1.0, 1.0);
+		envMapProps.intensity = 0.07;
+		envMapProps.roughness = 0.0;
+		envMapProps.fresnel = 0.0;
+		envMapProps.fresnelPower = 5.0;
+		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
+	
+	;
 	}
 
 
@@ -1127,12 +1455,45 @@ vec3 applyMaterial(vec3 p, vec3 n, vec3 rayDir, int mat, inout SDFContext sdfCon
 	// /geo1/MAT/rayMarchingBuilder1/constant1
 	vec3 v_POLY_constant1_val = vec3(1.0, 1.0, 1.0);
 	
+	// /geo1/MAT/rayMarchingBuilder1/globals5
+	float v_POLY_globals5_time = time;
+	
+	// /geo1/MAT/rayMarchingBuilder1/multAdd10
+	float v_POLY_multAdd10_val = (0.12*(v_POLY_globals5_time + 0.0)) + 0.0;
+	
+	// /geo1/MAT/rayMarchingBuilder1/floatToVec3_4
+	vec3 v_POLY_floatToVec3_4_vec3 = vec3(v_POLY_multAdd10_val, 0.92, 0.92);
+	
+	// /geo1/MAT/rayMarchingBuilder1/hsvToRgb1
+	vec3 v_POLY_hsvToRgb1_rgb = hsv2rgb(v_POLY_floatToVec3_4_vec3);
+	
 	// /geo1/MAT/rayMarchingBuilder1/SDFMaterial1
 	if(mat == _GEO1_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1){
 		col = vec3(0., 0., 0.);
-		vec3 diffuse = v_POLY_constant1_val * vec3(1.0, 1.0, 1.0) * GetLight(p, n, sdfContext);
-		col += diffuse;
 		col += vec3(0.0, 0.0, 0.0);
+		vec3 rayDir = normalize(reflect(rayDir, n));
+		EnvMapProps envMapProps;
+		envMapProps.tint = vec3(1.0, 1.0, 1.0);
+		envMapProps.intensity = 0.07;
+		envMapProps.roughness = 0.0;
+		envMapProps.fresnel = 0.0;
+		envMapProps.fresnelPower = 5.0;
+		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
+	
+		vec3 refractedColor = vec3(0.);
+		float ior = 1.45;
+		float biasMult = 2.0;
+		vec3 baseValue = v_POLY_constant1_val;
+		vec3 tint = v_POLY_hsvToRgb1_rgb;
+		float absorption = 1.7;
+			
+	
+		vec4 refractedData = GetRefractedData(p, n, rayDir, ior, biasMult, 0.0, 2.3639, 3, sdfContext);
+		refractedColor = applyRefractionAbsorption(refractedData.rgb, baseValue, tint, refractedData.w, absorption);
+				;
+	
+		col += refractedColor * 1.0;
+	;
 	}
 
 

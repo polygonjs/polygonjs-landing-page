@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<div class="epigraph border-l-4 border-teal-400 dark:border-teal-700 pl-4">
+		<div class="epigraph border-l-4 border-orange-400 dark:border-orange-700 pl-4">
 			<blockquote>
 				<p>
 					{{ content }}
