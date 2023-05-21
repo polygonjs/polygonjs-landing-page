@@ -1,7 +1,7 @@
 {
 	"nodes": {
 		"geo1": {
-			"pos": [-50, -350],
+			"pos": [-50, -450],
 			"nodes": {
 				"tube1": {
 					"pos": [0, 50]
@@ -194,6 +194,7 @@
 				},
 				"physicsPlayer1": {
 					"pos": [1300, 250],
+					"selection": ["setPlayerInput1"],
 					"nodes": {
 						"physicsPlayerUpdate1": {
 							"pos": [100, 0]
@@ -293,20 +294,66 @@
 			}
 		},
 		"env": {
-			"pos": [150, -250],
-			"selection": ["jitter1"],
+			"pos": [-50, -350],
 			"nodes": {
 				"circle1": {
-					"pos": [-50, -100]
-				},
-				"copy1": {
-					"pos": [-200, 300]
+					"pos": [-50, -400]
 				},
 				"jitter1": {
 					"pos": [-50, 50]
 				},
-				"roundedBox1": {
-					"pos": [-300, 50]
+				"copy2": {
+					"pos": [-50, -250]
+				},
+				"merge1": {
+					"pos": [-50, -100]
+				},
+				"sphere1": {
+					"pos": [-450, -50]
+				},
+				"instance1": {
+					"pos": [-300, 350]
+				},
+				"MAT": {
+					"pos": [-600, 350],
+					"nodes": {
+						"meshLambertBuilder_INSTANCES": {
+							"pos": [0, 0],
+							"selection": ["floatToVec3_1"],
+							"nodes": {
+								"instanceTransform1": {
+									"pos": [0, 0]
+								},
+								"output1": {
+									"pos": [400, 0]
+								},
+								"globals1": {
+									"pos": [-400, 0]
+								},
+								"attribute1": {
+									"pos": [-250, 300]
+								},
+								"round1": {
+									"pos": [-150, 300]
+								},
+								"floatToVec2_1": {
+									"pos": [-50, 300]
+								},
+								"random1": {
+									"pos": [50, 300]
+								},
+								"floatToVec3_1": {
+									"pos": [150, 300]
+								},
+								"hsvToRgb1": {
+									"pos": [250, 300]
+								}
+							}
+						}
+					}
+				},
+				"attribId1": {
+					"pos": [-50, 200]
 				}
 			}
 		}

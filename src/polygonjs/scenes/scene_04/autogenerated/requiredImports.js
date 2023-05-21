@@ -5,6 +5,7 @@ import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/
 // event
 import { CameraOrbitControlsEventNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/event/CameraOrbitControls";
 // mat
+import { MeshLambertBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshLambertBuilder";
 import { MeshStandardMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandard";
 import { MeshStandardBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandardBuilder";
 // obj
@@ -12,6 +13,7 @@ import { CopNetworkObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/ob
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
 // sop
 import { AreaLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AreaLight";
+import { AttribIdSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AttribId";
 import { BoxSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Box";
 import { CameraControlsSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraControls";
 import { CameraFrameModeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraFrameMode";
@@ -21,6 +23,7 @@ import { CopySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Copy
 import { DeleteSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Delete";
 import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/HemisphereLight";
 import { HexagonsSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Hexagons";
+import { InstanceSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Instance";
 import { JitterSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Jitter";
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
 import { MaterialsNetworkSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/MaterialsNetwork";
@@ -30,7 +33,6 @@ import { PhysicsPlayerSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes
 import { PhysicsRBDAttributesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PhysicsRBDAttributes";
 import { PhysicsWorldSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PhysicsWorld";
 import { PolarTransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PolarTransform";
-import { RoundedBoxSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/RoundedBox";
 import { SphereSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Sphere";
 import { SpotLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/SpotLight";
 import { TransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Transform";
@@ -55,11 +57,13 @@ export const requiredImports_scene_04 = {
     ImageCopNode,
     ImageEXRCopNode,
     CameraOrbitControlsEventNode,
+    MeshLambertBuilderMatNode,
     MeshStandardMatNode,
     MeshStandardBuilderMatNode,
     CopNetworkObjNode,
     GeoObjNode,
     AreaLightSopNode,
+    AttribIdSopNode,
     BoxSopNode,
     CameraControlsSopNode,
     CameraFrameModeSopNode,
@@ -69,6 +73,7 @@ export const requiredImports_scene_04 = {
     DeleteSopNode,
     HemisphereLightSopNode,
     HexagonsSopNode,
+    InstanceSopNode,
     JitterSopNode,
     MaterialSopNode,
     MaterialsNetworkSopNode,
@@ -78,7 +83,6 @@ export const requiredImports_scene_04 = {
     PhysicsRBDAttributesSopNode,
     PhysicsWorldSopNode,
     PolarTransformSopNode,
-    RoundedBoxSopNode,
     SphereSopNode,
     SpotLightSopNode,
     TransformSopNode,

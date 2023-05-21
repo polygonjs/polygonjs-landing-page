@@ -55,6 +55,7 @@
 		},
 		"setPlayerInput1": {
 			"type": "setPlayerInput",
+			"maxInputsCount": 2,
 			"inputs": [
 				{
 					"index": 0,

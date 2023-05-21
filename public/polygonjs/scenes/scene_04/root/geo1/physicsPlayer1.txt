@@ -56,7 +56,7 @@ class CustomActorEvaluator extends ActorEvaluator {
 
 	// /geo1/physicsPlayer1/setPlayerInput1
 	setPlayerInput1() {
-		setPlayerInput(this.object3D);
+		setPlayerInput(this.object3D, true);
 	}
 }
 return CustomActorEvaluator;
