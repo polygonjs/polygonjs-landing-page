@@ -1,0 +1,297 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.4981333333333333,
+		"split_panel0": {
+			"split_ratio": 0.5543217692883486,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/geo1/geo1:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": false,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": 0,
+									"y": 0
+								},
+								"zoom": 1
+							},
+							"history": {
+								"2": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"36": {
+									"position": {
+										"x": 100,
+										"y": -125
+									},
+									"zoom": 1
+								},
+								"89": {
+									"position": {
+										"x": 100,
+										"y": -200
+									},
+									"zoom": 1
+								},
+								"92": {
+									"position": {
+										"x": -50,
+										"y": 50
+									},
+									"zoom": 1
+								},
+								"145": {
+									"position": {
+										"x": 0,
+										"y": -50
+									},
+									"zoom": 1
+								},
+								"198": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"286": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"393": {
+									"position": {
+										"x": 0,
+										"y": -200
+									},
+									"zoom": 1
+								},
+								"436": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"938": {
+									"position": {
+										"x": 0,
+										"y": 100
+									},
+									"zoom": 1
+								},
+								"941": {
+									"position": {
+										"x": 250,
+										"y": -100
+									},
+									"zoom": 1
+								},
+								"965": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"1858": {
+									"position": {
+										"x": 25,
+										"y": -25
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["params"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"active_folder": null,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panelTypes": ["network", "params", "viewer"],
+			"currentPanelIndex": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": 0,
+						"y": 0
+					},
+					"zoom": 0.5898421073254232
+				},
+				"history": {
+					"2": {
+						"position": {
+							"x": 16.0768574242206,
+							"y": 233.8437527140919
+						},
+						"zoom": 1.063222106933593
+					},
+					"36": {
+						"position": {
+							"x": -1195.6974952683481,
+							"y": -145.40727993183071
+						},
+						"zoom": 0.5898421073254232
+					},
+					"89": {
+						"position": {
+							"x": 100,
+							"y": -200
+						},
+						"zoom": 1.063222106933593
+					},
+					"92": {
+						"position": {
+							"x": -270.3972232780536,
+							"y": -121.28261862038211
+						},
+						"zoom": 0.9565938000000003
+					},
+					"145": {
+						"position": {
+							"x": 0,
+							"y": -50
+						},
+						"zoom": 1.063222106933593
+					},
+					"198": {
+						"position": {
+							"x": 232.31270154113454,
+							"y": -170.23724282973825
+						},
+						"zoom": 1.063222106933593
+					},
+					"286": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 1.063222106933593
+					},
+					"393": {
+						"position": {
+							"x": 0,
+							"y": -200
+						},
+						"zoom": 1.063222106933593
+					},
+					"436": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.6832221069335929
+					},
+					"938": {
+						"position": {
+							"x": -543.3957884762881,
+							"y": -211.84404157106428
+						},
+						"zoom": 0.5878421073254232
+					},
+					"941": {
+						"position": {
+							"x": 190.7924751624398,
+							"y": -177.96575099207382
+						},
+						"zoom": 0.9858421073254238
+					},
+					"965": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.5898421073254232
+					},
+					"1858": {
+						"position": {
+							"x": -96.9681872591416,
+							"y": -62.42501553707351
+						},
+						"zoom": 0.6968421073254233
+					}
+				},
+				"paramsDisplayed": false,
+				"linkIndex": 1
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/geo1/cameraControls_PLAYER1", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/geo1/MAT/meshStandardBuilder_BLOCKS",
+				"/geo1/MAT",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/",
+				"/lights",
+				"/",
+				"/geo1",
+				"/geo1/physicsPlayer1",
+				"/geo1",
+				"/geo1/cameraControls_PLAYER1",
+				"/geo1",
+				"/",
+				"/env",
+				"/",
+				"/cameras",
+				"/",
+				"/geo1",
+				"/geo1/cameraControls_PLAYER1"
+			],
+			"2": ["/", "/"],
+			"3": ["/", "/"],
+			"4": ["/", "/"],
+			"5": ["/", "/"],
+			"6": ["/", "/"],
+			"7": ["/", "/"],
+			"8": ["/", "/"]
+		},
+		"index": {
+			"1": 19,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": false,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": true,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}

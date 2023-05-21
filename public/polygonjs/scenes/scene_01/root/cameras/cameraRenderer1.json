@@ -1,0 +1,18 @@
+{
+	"type": "cameraRenderer",
+	"nodes": {
+		"WebGLRenderer1": {
+			"type": "WebGLRenderer",
+			"params": {
+				"physicallyCorrectLights": 0,
+				"sortObjects": 0,
+				"tpixelRatio": 1,
+				"pixelRatio": 0.1
+			}
+		}
+	},
+	"params": {
+		"node": "WebGLRenderer1"
+	},
+	"inputs": ["actor_rotate"]
+}

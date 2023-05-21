@@ -2,8 +2,12 @@
 import VideoAuto from './components/utils/VideoAuto.vue';
 import Separator from './components/utils/Separator.vue';
 // features
+import MainTitle from './components/features/MainTitle.vue';
 import WhatIsPolygonjs from './components/features/WhatIsPolygonjs.vue';
 import NodeBasedWorkflow from './components/features/NodeBasedWorkflow.vue';
+import FullyProcedural from './components/features/FullyProcedural.vue';
+import WithYourFavoriteStack from './components/features/WithYourFavoriteStack.vue';
+import JustForFun from './components/features/JustForFun.vue';
 import Footer from './components/features/Footer.vue';
 // quotes
 import QuoteFHAS from './components/quotes/QuoteFHAS.vue';
@@ -12,52 +16,30 @@ import QuoteBryanChrisBrown from './components/quotes/QuoteBryanChrisBrown.vue';
 import QuoteCGWiki from './components/quotes/QuoteCGWiki.vue';
 // scenes
 import Scene01 from './polygonjs/scenes/Scene01.vue';
+import Scene02 from './polygonjs/scenes/Scene02.vue';
+import Scene03 from './polygonjs/scenes/Scene03.vue';
+import Scene04 from './polygonjs/scenes/Scene04.vue';
 </script>
 
 <template>
 	<article class="relative z-10">
-		<h1 class="flex items-center space-x-2">
-			<img class="inline-block rounded-full h-10 w-10" src="/polygonjs.png" />
-			<span>Polygonjs</span>
-		</h1>
-		<p class="subtitle">Node-Based Design & Animation Tool for the Web</p>
-		<p class="block lg:flex items-center space-x-0 lg:space-x-2 max-w-full w-full">
-			<a
-				href="/docs"
-				class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-sky-400 hover:bg-sky-400 dark:border-sky-700 dark:hover:bg-sky-700"
-				>Docs & Tutorials</a
-			>
-			<span class="hidden lg:inline text-sm">&bull;</span>
-			<a
-				href="/demo"
-				class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-orange-400 hover:bg-orange-400 dark:border-orange-700 dark:hover:bg-orange-700"
-				>Live Demo</a
-			>
-			<span class="hidden lg:inline text-sm">&bull;</span>
-			<a
-				href="/market"
-				class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-purple-400 hover:bg-purple-400 dark:border-purple-700 dark:hover:bg-purple-700"
-				>Marketplace</a
-			>
-			<span class="hidden lg:inline text-sm">&bull;</span>
-			<a
-				href="/pricing"
-				class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-teal-400 hover:bg-teal-400 dark:border-teal-700 dark:hover:bg-teal-700"
-				>Pricing</a
-			>
-		</p>
+		<MainTitle />
 		<Scene01 />
 		<WhatIsPolygonjs />
 		<QuoteFHAS />
-		<Separator />
+		<!-- <Separator /> -->
+		<Scene02 />
 		<!-- <Separator />
 		<QuoteBryanChrisBrown /> -->
 		<NodeBasedWorkflow />
-		<VideoAuto filePath="/landing-page/videos/editor.v01"></VideoAuto>
+		<VideoAuto filePath="/landing-page/videos/editor.v01" />
 		<QuoteCGWiki />
-		<Separator />
+		<FullyProcedural />
+		<Scene03 />
+		<WithYourFavoriteStack />
+		<JustForFun />
+		<Scene04 />
 		<QuoteAndersonMancini />
-		<Separator />
 		<Footer />
 	</article>
 </template>

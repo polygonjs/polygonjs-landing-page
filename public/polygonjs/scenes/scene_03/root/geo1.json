@@ -1,0 +1,327 @@
+{
+	"type": "geo",
+	"nodes": {
+		"CADBoolean1": {
+			"type": "CADBoolean",
+			"params": {
+				"operation": 1
+			},
+			"inputs": ["switch_top_fillet", "merge5"]
+		},
+		"CADBoolean2": {
+			"type": "CADBoolean",
+			"params": {
+				"operation": 1
+			},
+			"inputs": ["switch_side_holes", "copy2"]
+		},
+		"CADBox3": {
+			"type": "CADBox",
+			"params": {
+				"sizes": [4, 1, 2]
+			}
+		},
+		"CADFillet1": {
+			"type": "CADFillet",
+			"params": {
+				"group": "frontEdges"
+			},
+			"inputs": ["CADGroup1"]
+		},
+		"CADFillet2": {
+			"type": "CADFillet",
+			"params": {
+				"group": "backEdges",
+				"radius": 0.312564
+			},
+			"inputs": ["CADGroup3"]
+		},
+		"CADFillet3": {
+			"type": "CADFillet",
+			"params": {
+				"group": "bottomEdges",
+				"mode": 0,
+				"radius": 0.035788
+			},
+			"inputs": ["CADGroup4"]
+		},
+		"CADFillet4": {
+			"type": "CADFillet",
+			"params": {
+				"group": "topEdges",
+				"mode": 0,
+				"radius": 0.053292
+			},
+			"inputs": ["CADGroup5"]
+		},
+		"CADGroup1": {
+			"type": "CADGroup",
+			"params": {
+				"name": "frontEdges",
+				"byBoundingObject": true
+			},
+			"inputs": ["CADBox3", "boxLines1"]
+		},
+		"CADGroup3": {
+			"type": "CADGroup",
+			"params": {
+				"name": "backEdges",
+				"byBoundingObject": true
+			},
+			"inputs": ["CADFillet1", "boxLines2"]
+		},
+		"CADGroup4": {
+			"type": "CADGroup",
+			"params": {
+				"name": "bottomEdges",
+				"byBoundingObject": true
+			},
+			"inputs": ["switch_side_fillet", "boxLines3"]
+		},
+		"CADGroup5": {
+			"type": "CADGroup",
+			"params": {
+				"name": "topEdges",
+				"byBoundingObject": true
+			},
+			"inputs": ["CADFillet3", "boxLines4"]
+		},
+		"CADMirror1": {
+			"type": "CADMirror",
+			"params": {
+				"axis": [1, 0, 0]
+			},
+			"inputs": ["transform1"]
+		},
+		"CADTube1": {
+			"type": "CADTube",
+			"params": {
+				"radius": 0.07,
+				"height": 0.527903,
+				"center": [0, "-0.5*ch(\"height\")", 0]
+			}
+		},
+		"CADTube2": {
+			"type": "CADTube",
+			"params": {
+				"radius": 0.119841,
+				"center": [0, 0, "-0.5*ch(\"height\")"],
+				"axis": [0, 0, 1]
+			}
+		},
+		"boxLines1": {
+			"type": "boxLines",
+			"params": {
+				"sizes": [1.5, 0.7, 2.3],
+				"center": [1.9475394371841808, 0, 0]
+			}
+		},
+		"boxLines2": {
+			"type": "boxLines",
+			"params": {
+				"sizes": [1.5, 0.7, 2.3],
+				"center": [-1.4145370445852117, 0, 0]
+			}
+		},
+		"boxLines3": {
+			"type": "boxLines",
+			"params": {
+				"sizes": [4.5, 0.7, 2.3],
+				"center": [-0.08354225283322192, -0.4712450674061117, 0]
+			}
+		},
+		"boxLines4": {
+			"type": "boxLines",
+			"params": {
+				"sizes": [4.5, 0.7, 2.3],
+				"center": [-0.08354225283322192, 0.4180941951223607, 0]
+			}
+		},
+		"copy1": {
+			"type": "copy",
+			"params": {
+				"count": 8,
+				"t": [0.15, 0, 0]
+			},
+			"inputs": ["CADTube1"]
+		},
+		"copy2": {
+			"type": "copy",
+			"inputs": ["CADTube2", "transform3"]
+		},
+		"hexagons1": {
+			"type": "hexagons",
+			"params": {
+				"size": [2.0999999999999996, 1.5999999999999999],
+				"hexagonRadius": 0.35065
+			}
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/meshStandard1"
+			},
+			"inputs": ["merge7"],
+			"flags": {
+				"display": true
+			}
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["CADFillet1", "boxLines1"]
+		},
+		"merge2": {
+			"type": "merge",
+			"inputs": ["CADFillet2", "boxLines2"]
+		},
+		"merge3": {
+			"type": "merge",
+			"inputs": ["CADFillet3", "boxLines3"]
+		},
+		"merge4": {
+			"type": "merge",
+			"inputs": ["CADFillet4", "boxLines4"]
+		},
+		"merge5": {
+			"type": "merge",
+			"inputs": ["transform1", "CADMirror1"]
+		},
+		"merge7": {
+			"type": "merge",
+			"params": {
+				"compact": true
+			},
+			"inputs": ["CADTriangulate1"]
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"t": [-1.425161766973393, 0, 1.0289526802217042]
+			},
+			"inputs": ["copy1"]
+		},
+		"transform2": {
+			"type": "transform",
+			"params": {
+				"t": ["-$CEX", "-$CEY", "-$CEZ"]
+			},
+			"inputs": ["hexagons1"]
+		},
+		"transform3": {
+			"type": "transform",
+			"params": {
+				"t": [0.7592166896941637, 0.8, 0]
+			},
+			"inputs": ["transform2"]
+		},
+		"switch_top_holes": {
+			"type": "switch",
+			"params": {
+				"input": 1
+			},
+			"inputs": ["switch_side_holes", "CADBoolean2"]
+		},
+		"switch_side_holes": {
+			"type": "switch",
+			"params": {
+				"input": 1
+			},
+			"inputs": ["switch_top_fillet", "CADBoolean1"]
+		},
+		"switch_top_fillet": {
+			"type": "switch",
+			"params": {
+				"input": 1
+			},
+			"inputs": ["CADGroup5", "CADFillet4"]
+		},
+		"switch_side_fillet": {
+			"type": "switch",
+			"params": {
+				"input": 1
+			},
+			"inputs": ["CADGroup3", "CADFillet2"]
+		},
+		"CADTriangulate1": {
+			"type": "CADTriangulate",
+			"params": {
+				"linearTolerance": 0.44056,
+				"angularTolerance": 0.42058,
+				"curveAbscissa": 0.06094,
+				"curveTolerance": 0.1009,
+				"edgesColor": [0.002428215868235294, 0.002428215868235294, 0.002428215868235294]
+			},
+			"inputs": ["switch_top_holes"]
+		}
+	},
+	"params": {
+		"CADLinearTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADAngularTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADCurveAbscissa": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADCurveTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADDisplayEdges": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADEdgesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADDisplayMeshes": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADMeshesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGFacetAngle": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGLinesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGMeshesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

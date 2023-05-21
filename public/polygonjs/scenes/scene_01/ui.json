@@ -188,7 +188,7 @@
 					}
 				},
 				"merge1": {
-					"pos": [-50, 350]
+					"pos": [-50, 400]
 				}
 			}
 		},
@@ -236,7 +236,10 @@
 				"cameraFrameMode1": {
 					"pos": [0, 150]
 				},
-				"actor1": {
+				"hierarchy1": {
+					"pos": [0, 300]
+				},
+				"actor_rotate": {
 					"pos": [0, 450],
 					"nodes": {
 						"onTick1": {
@@ -265,8 +268,16 @@
 						}
 					}
 				},
-				"hierarchy1": {
-					"pos": [0, 300]
+				"actor_perf_check": {
+					"pos": [0, 750]
+				},
+				"cameraRenderer1": {
+					"pos": [0, 600],
+					"nodes": {
+						"WebGLRenderer1": {
+							"pos": [0, 0]
+						}
+					}
 				}
 			}
 		}

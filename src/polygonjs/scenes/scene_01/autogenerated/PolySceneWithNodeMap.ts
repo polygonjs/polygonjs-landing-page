@@ -9,6 +9,7 @@ import { ActorSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Act
 import { BoxLinesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/BoxLines";
 import { BoxSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Box";
 import { CameraFrameModeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraFrameMode";
+import { CameraRendererSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraRenderer";
 import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/HemisphereLight";
 import { HierarchySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Hierarchy";
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
@@ -24,6 +25,8 @@ import { RayMarchingBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/
 import { EnvMapCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/EnvMap";
 import { ImageCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/Image";
 import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/ImageEXR";
+// rop
+import { WebGLRendererRopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/rop/WebGLRenderer";
 
 export class PolySceneWithNodeMap_scene_01 extends PolyScene {
   node(path: "/geo1"): GeoObjNode;
@@ -46,8 +49,11 @@ export class PolySceneWithNodeMap_scene_01 extends PolyScene {
   node(path: "/cameras"): GeoObjNode;
   node(path: "/cameras/perspectiveCamera1"): PerspectiveCameraSopNode;
   node(path: "/cameras/cameraFrameMode1"): CameraFrameModeSopNode;
-  node(path: "/cameras/actor1"): ActorSopNode;
   node(path: "/cameras/hierarchy1"): HierarchySopNode;
+  node(path: "/cameras/actor_rotate"): ActorSopNode;
+  node(path: "/cameras/actor_perf_check"): ActorSopNode;
+  node(path: "/cameras/cameraRenderer1"): CameraRendererSopNode;
+  node(path: "/cameras/cameraRenderer1/WebGLRenderer1"): WebGLRendererRopNode;
   node(
     path: string
   ): any /* we need any for now as otherwise an error occurs when adding plugins to the overloaded methods */ {
@@ -519,11 +525,40 @@ export interface PolySceneProps_scene_01 {
   "cameras-perspectiveCamera1--updateTransformFromCamera"?: ParamValueSerializedTypeMap["button"];
   "cameras-cameraFrameMode1--frameMode"?: ParamValueSerializedTypeMap["integer"];
   "cameras-cameraFrameMode1--expectedAspectRatio"?: ParamValueSerializedTypeMap["float"];
-  "cameras-actor1--objectsMask"?: ParamValueSerializedTypeMap["string"];
-  "cameras-actor1--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-actor1--node"?: ParamValueSerializedTypeMap["node_path"];
   "cameras-hierarchy1--mode"?: ParamValueSerializedTypeMap["integer"];
   "cameras-hierarchy1--levels"?: ParamValueSerializedTypeMap["integer"];
   "cameras-hierarchy1--objectMask"?: ParamValueSerializedTypeMap["string"];
   "cameras-hierarchy1--addChildMode"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-actor_rotate--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor_rotate--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-actor_rotate--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-actor_perf_check--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor_perf_check--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-actor_perf_check--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-cameraRenderer1--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-cameraRenderer1-WebGLRenderer1--common"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraRenderer1-WebGLRenderer1--toneMapping"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraRenderer1-WebGLRenderer1--toneMappingExposure"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraRenderer1-WebGLRenderer1--outputEncoding"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraRenderer1-WebGLRenderer1--physicallyCorrectLights"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--sortObjects"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--tpixelRatio"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--pixelRatio"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraRenderer1-WebGLRenderer1--shadow"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraRenderer1-WebGLRenderer1--tshadowMap"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--shadowMapAutoUpdate"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--shadowMapNeedsUpdate"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--shadowMapType"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraRenderer1-WebGLRenderer1--advanced"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraRenderer1-WebGLRenderer1--alpha"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--antialias"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--premultipliedAlpha"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--stencil"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--depth"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--logarithmicDepthBuffer"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--preserveDrawingBuffer"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--tprecision"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--precision"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraRenderer1-WebGLRenderer1--tpowerPreference"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--powerPreference"?: ParamValueSerializedTypeMap["integer"];
 }

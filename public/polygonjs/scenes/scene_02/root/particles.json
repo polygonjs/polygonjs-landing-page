@@ -1,0 +1,173 @@
+{
+	"type": "geo",
+	"nodes": {
+		"instance1": {
+			"type": "instance",
+			"params": {
+				"attributesToCopy": "instance* id idn restP",
+				"material": "../MAT/meshBasicBuilder_INSTANCES"
+			},
+			"inputs": ["sphere1", "restAttributes1"]
+		},
+		"point1": {
+			"type": "point",
+			"params": {
+				"updateZ": true,
+				"z": "@P.z + 0.2*rand(@id)"
+			},
+			"inputs": ["attribId1"]
+		},
+		"restAttributes1": {
+			"type": "restAttributes",
+			"params": {
+				"tnormal": false
+			},
+			"inputs": ["point1"]
+		},
+		"scatter1": {
+			"type": "scatter",
+			"params": {
+				"pointsCount": 1000,
+				"addIdAttribute": 0,
+				"addIdnAttribute": 0
+			},
+			"inputs": ["merge2"]
+		},
+		"sphere1": {
+			"type": "sphere",
+			"params": {
+				"radius": 0.03
+			}
+		},
+		"text1": {
+			"type": "text",
+			"params": {
+				"font": "models/droid_sans_regular.typeface.json?timestamp=1684613084006",
+				"text": "We Love 3D",
+				"type": 1,
+				"splitPerLetter": 1,
+				"justifyMode": 2
+			}
+		},
+		"sort1": {
+			"type": "sort",
+			"inputs": ["merge1"]
+		},
+		"attribId1": {
+			"type": "attribId",
+			"inputs": ["sort1"]
+		},
+		"delete1": {
+			"type": "delete",
+			"params": {
+				"class": 1,
+				"byExpression": 1,
+				"expression": "@name=='D'"
+			},
+			"inputs": ["text1"]
+		},
+		"delete2": {
+			"type": "delete",
+			"params": {
+				"class": 1,
+				"invert": 1,
+				"byExpression": true,
+				"expression": "@name=='D'"
+			},
+			"inputs": ["text1"]
+		},
+		"scatter2": {
+			"type": "scatter",
+			"params": {
+				"pointsCount": 300,
+				"addIdAttribute": false,
+				"addIdnAttribute": false
+			},
+			"inputs": ["delete2"]
+		},
+		"merge1": {
+			"type": "merge",
+			"params": {
+				"compact": 1
+			},
+			"inputs": ["scatter1", "scatter2"]
+		},
+		"merge2": {
+			"type": "merge",
+			"params": {
+				"compact": 1
+			},
+			"inputs": ["delete1"]
+		}
+	},
+	"params": {
+		"CADLinearTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADAngularTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADCurveAbscissa": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADCurveTolerance": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADDisplayEdges": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADEdgesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADDisplayMeshes": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADMeshesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CADWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGFacetAngle": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGLinesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGMeshesColor": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"CSGWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	}
+}

@@ -8,8 +8,9 @@ const manifest = {
     "geo1/MAT/rayMarchingBuilder1": "1684604082554",
     COP: "1675552563896",
     lights: "1684601815224",
-    cameras: "1684603252470",
-    "cameras/actor1": "1684604259842",
+    cameras: "1684606799857",
+    "cameras/actor_rotate": "1684606786734",
+    "cameras/cameraRenderer1": "1684606786734",
   },
   shaders: {
     "/geo1/MAT/rayMarchingBuilder1": {
@@ -17,7 +18,10 @@ const manifest = {
       fragment: "1684540520673",
     },
   },
-  jsFunctionBodies: { "/cameras/actor1": "1684604259842" },
+  jsFunctionBodies: {
+    "/cameras/actor_rotate": "1684606786734",
+    "/cameras/actor_perf_check": "1684606786734",
+  },
 };
 
 export const loadSceneData_scene_01 = async (options = {}) => {

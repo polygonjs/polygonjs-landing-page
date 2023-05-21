@@ -7,8 +7,9 @@
 		"geo1/MAT/rayMarchingBuilder1": "1684604082554",
 		"COP": "1675552563896",
 		"lights": "1684601815224",
-		"cameras": "1684603252470",
-		"cameras/actor1": "1684604259842"
+		"cameras": "1684606799857",
+		"cameras/actor_rotate": "1684606786734",
+		"cameras/cameraRenderer1": "1684606786734"
 	},
 	"shaders": {
 		"/geo1/MAT/rayMarchingBuilder1": {
@@ -17,6 +18,7 @@
 		}
 	},
 	"jsFunctionBodies": {
-		"/cameras/actor1": "1684604259842"
+		"/cameras/actor_rotate": "1684606786734",
+		"/cameras/actor_perf_check": "1684606786734"
 	}
 }

@@ -1,0 +1,41 @@
+{
+	"type": "actor",
+	"nodes": {
+		"onScenePause1": {
+			"type": "onScenePause"
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"particlesSystemReset1": {
+			"type": "particlesSystemReset",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onScenePause1",
+					"output": "trigger"
+				}
+			]
+		},
+		"particlesSystemStepSimulation1": {
+			"type": "particlesSystemStepSimulation",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				}
+			]
+		}
+	},
+	"inputs": ["instance1"],
+	"persisted_config": {
+		"variableNames": [],
+		"variables": [],
+		"functionNames": ["particlesSystemReset", "particlesSystemStepSimulation"],
+		"serializedParamConfigs": [],
+		"eventDatas": []
+	}
+}

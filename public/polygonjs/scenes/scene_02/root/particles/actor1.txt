@@ -1,0 +1,88 @@
+// insert defines
+class CustomActorEvaluator extends ActorEvaluator {
+	// insert members
+
+	// /particles/actor1/rayFromCursor1
+	v_POLY_rayFromCursor1_Ray = computed(() => globalsRayFromCursor());
+
+	// /particles/actor1/plane1
+	v_POLY_plane1_Plane = computed(() => planeSet(VAR__plane1_normal.set(0, 0, 1), 0.0, VAR__plane1__1));
+
+	// /particles/actor1/onTick1
+	v_POLY_onTick1_time = computed(() => globalsTime());
+	v_POLY_onTick1_delta = computed(() => globalsTimeDelta());
+
+	// /particles/actor1/rayIntersectPlane1
+	v_POLY_rayIntersectPlane1_position = computed(() =>
+		rayIntersectPlane(this.v_POLY_rayFromCursor1_Ray.value, this.v_POLY_plane1_Plane.value, VAR__rayIntersectPlane1_)
+	);
+
+	// /particles/actor1/divide2
+	v_POLY_divide2_divide = computed(() => divideNumber(1.0, this.v_POLY_onTick1_delta.value, 1.0));
+
+	// /particles/actor1/previousValue1
+	v_POLY_previousValue1_prev = computed(() =>
+		previousValueVector3(
+			"/particles/actor1/previousValue1",
+			1.0,
+			VAR__previousValue1_current.copy(this.v_POLY_rayIntersectPlane1_position.value)
+		)
+	);
+
+	// /particles/actor1/null1
+	v_POLY_null1_out = computed(() => VAR__null1_in.copy(this.v_POLY_rayIntersectPlane1_position.value));
+
+	// /particles/actor1/subtract2
+	v_POLY_subtract2_sub = computed(() =>
+		subtractVector(
+			VAR__subtract2_sub0.copy(this.v_POLY_rayIntersectPlane1_position.value),
+			VAR__subtract2_sub1.copy(this.v_POLY_previousValue1_prev.value),
+			VAR__subtract2_sub2.set(0, 0, 0)
+		)
+	);
+
+	// /particles/actor1/multScalar1
+	v_POLY_multScalar1_val = computed(() =>
+		multScalarVector3(
+			VAR__multScalar1_value.copy(this.v_POLY_subtract2_sub.value),
+			this.v_POLY_divide2_divide.value,
+			VAR__multScalar1__1
+		)
+	);
+
+	constructor(scene, object3D) {
+		super(scene, object3D);
+		// insert after constructor
+	}
+	// insert body
+
+	onTick() {
+		this.onTick1();
+	}
+	// /particles/actor1/onTick1
+	onTick1() {
+		this.setParam2(0);
+	}
+
+	// /particles/actor1/setParam2
+	setParam2() {
+		setParamVector3(
+			"/particles/particlesSystemGpu1",
+			"velocity",
+			VAR__setParam2_val.copy(this.v_POLY_multScalar1_val.value),
+			1.0
+		);
+		this.setParam1(0);
+	}
+
+	// /particles/actor1/setParam1
+	setParam1() {
+		setParamVector3(
+			"/particles/particlesSystemGpu1",
+			"cursor",
+			VAR__setParam1_val.copy(this.v_POLY_null1_out.value),
+			1.0
+		);
+	}
+}
+return CustomActorEvaluator;

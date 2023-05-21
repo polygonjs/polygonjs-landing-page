@@ -18,6 +18,21 @@
 		"hierarchy1": {
 			"type": "hierarchy",
 			"inputs": ["cameraFrameMode1"]
+		},
+		"actor_perf_check": {
+			"type": "actor",
+			"inputs": ["cameraRenderer1"],
+			"flags": {
+				"bypass": true,
+				"display": true
+			},
+			"persisted_config": {
+				"variableNames": [],
+				"variables": [],
+				"functionNames": [],
+				"serializedParamConfigs": [],
+				"eventDatas": []
+			}
 		}
 	},
 	"params": {

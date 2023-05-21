@@ -1,0 +1,36 @@
+// insert defines
+class CustomActorEvaluator extends ActorEvaluator {
+	// insert members
+	constructor(scene, object3D) {
+		super(scene, object3D);
+		// insert after constructor
+	}
+	// insert body
+
+	onScenePause() {
+		this.onScenePause1();
+	}
+	onTick() {
+		this.onTick1();
+	}
+	// /particles/actor_particles1/onScenePause1
+	onScenePause1() {
+		this.particlesSystemReset1(0);
+	}
+
+	// /particles/actor_particles1/onTick1
+	onTick1() {
+		this.particlesSystemStepSimulation1(0);
+	}
+
+	// /particles/actor_particles1/particlesSystemReset1
+	particlesSystemReset1() {
+		particlesSystemReset(this.object3D);
+	}
+
+	// /particles/actor_particles1/particlesSystemStepSimulation1
+	particlesSystemStepSimulation1() {
+		particlesSystemStepSimulation(this.object3D);
+	}
+}
+return CustomActorEvaluator;

@@ -1,0 +1,10 @@
+// insert defines
+class CustomActorEvaluator extends ActorEvaluator {
+	// insert members
+	constructor(scene, object3D) {
+		super(scene, object3D);
+		// insert after constructor
+	}
+	// insert body
+}
+return CustomActorEvaluator;

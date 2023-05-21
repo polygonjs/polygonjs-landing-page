@@ -7,11 +7,14 @@ import { RayMarchingBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/
 // obj
 import { CopNetworkObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/CopNetwork";
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
+// rop
+import { WebGLRendererRopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/rop/WebGLRenderer";
 // sop
 import { ActorSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Actor";
 import { BoxSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Box";
 import { BoxLinesSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/BoxLines";
 import { CameraFrameModeSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraFrameMode";
+import { CameraRendererSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/CameraRenderer";
 import { HemisphereLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/HemisphereLight";
 import { HierarchySopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Hierarchy";
 import { MaterialSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Material";
@@ -38,10 +41,12 @@ export const requiredImports_scene_01 = {
     RayMarchingBuilderMatNode,
     CopNetworkObjNode,
     GeoObjNode,
+    WebGLRendererRopNode,
     ActorSopNode,
     BoxSopNode,
     BoxLinesSopNode,
     CameraFrameModeSopNode,
+    CameraRendererSopNode,
     HemisphereLightSopNode,
     HierarchySopNode,
     MaterialSopNode,

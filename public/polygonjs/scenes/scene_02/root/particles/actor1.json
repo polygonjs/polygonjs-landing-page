@@ -1,0 +1,543 @@
+{
+	"type": "actor",
+	"nodes": {
+		"divide2": {
+			"type": "divide",
+			"params": {
+				"div0": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"div1": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"div2": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				null,
+				{
+					"index": 1,
+					"inputName": "div1",
+					"node": "onTick1",
+					"output": "delta"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "div0",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "div1",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "div2",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "divide",
+						"type": "float",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"multScalar1": {
+			"type": "multScalar",
+			"params": {
+				"value": {
+					"type": "vector3",
+					"default_value": [1, 1, 1],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "value",
+					"node": "subtract2",
+					"output": "sub"
+				},
+				{
+					"index": 1,
+					"inputName": "mult",
+					"node": "divide2",
+					"output": "divide"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "mult",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"null1": {
+			"type": "null",
+			"params": {
+				"in": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "in",
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "in",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "out",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"onTick1": {
+			"type": "onTick"
+		},
+		"plane1": {
+			"type": "plane",
+			"params": {
+				"normal": [0, 0, 1]
+			}
+		},
+		"previousValue1": {
+			"type": "previousValue",
+			"params": {
+				"current": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"offset": {
+					"type": "integer",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"maxInputsCount": 2,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "current",
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "current",
+						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "offset",
+						"type": "int",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "prev",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"rayFromCursor1": {
+			"type": "rayFromCursor"
+		},
+		"rayIntersectPlane1": {
+			"type": "rayIntersectPlane",
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "Ray",
+					"node": "rayFromCursor1",
+					"output": "Ray"
+				},
+				{
+					"index": 1,
+					"inputName": "Plane",
+					"node": "plane1",
+					"output": "Plane"
+				}
+			]
+		},
+		"setParam1": {
+			"type": "setParam",
+			"params": {
+				"param": "../../particlesSystemGpu1/cursor",
+				"type": 6,
+				"lerp": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"val": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "setParam2",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "val",
+					"node": "null1",
+					"output": "out"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "val",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"setParam2": {
+			"type": "setParam",
+			"params": {
+				"param": "../../particlesSystemGpu1/velocity",
+				"type": 6,
+				"lerp": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"val": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "trigger",
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"inputName": "val",
+					"node": "multScalar1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "val",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"subtract2": {
+			"type": "subtract",
+			"params": {
+				"sub0": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sub1": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sub2": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "sub0",
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"inputName": "sub1",
+					"node": "previousValue1",
+					"output": "prev"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sub0",
+						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "sub1",
+						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "sub2",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "sub",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		}
+	},
+	"inputs": ["particlesSystemGpu1"],
+	"flags": {
+		"display": true
+	},
+	"persisted_config": {
+		"variableNames": [
+			"VAR__plane1_normal",
+			"VAR__plane1__1",
+			"VAR__rayIntersectPlane1_",
+			"VAR__previousValue1_current",
+			"VAR__null1_in",
+			"VAR__subtract2_sub0",
+			"VAR__subtract2_sub1",
+			"VAR__subtract2_sub2",
+			"VAR__multScalar1_value",
+			"VAR__multScalar1__1",
+			"VAR__setParam2_val",
+			"VAR__setParam1_val"
+		],
+		"variables": [
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Plane",
+				"data": {
+					"normal": [1, 0, 0],
+					"constant": 0
+				}
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			},
+			{
+				"type": "Vector3",
+				"data": [0, 0, 0]
+			}
+		],
+		"functionNames": [
+			"globalsRayFromCursor",
+			"planeSet",
+			"globalsTime",
+			"globalsTimeDelta",
+			"rayIntersectPlane",
+			"divideNumber",
+			"previousValueVector3",
+			"subtractVector",
+			"multScalarVector3",
+			"setParamVector3"
+		],
+		"serializedParamConfigs": [],
+		"eventDatas": [
+			{
+				"type": "pointermove",
+				"emitter": "canvas",
+				"jsType": "rayFromCursor"
+			},
+			{
+				"type": "touchmove",
+				"emitter": "canvas",
+				"jsType": "rayFromCursor"
+			}
+		]
+	}
+}

@@ -32,10 +32,10 @@ export default defineComponent({
 				entries.forEach((entry) => {
 					const isVisible: boolean = entry.isIntersecting;
 					if (isVisible) {
-						console.log('play');
+						// console.log('play');
 						video.play();
 					} else {
-						console.log('pause');
+						// console.log('pause');
 						video.pause();
 					}
 				});

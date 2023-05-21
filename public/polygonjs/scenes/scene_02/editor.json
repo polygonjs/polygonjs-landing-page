@@ -1,0 +1,175 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.5,
+		"split_panel0": {
+			"split_ratio": 0.5543217692883486,
+			"split_panel0": {
+				"panelTypes": ["viewer"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera1",
+					"isViewerInitLayoutData": true,
+					"linkIndex": 1,
+					"overlayedNetwork": {
+						"allowed": false,
+						"displayed": false,
+						"initLayoutData": {
+							"camera": {
+								"position": {
+									"x": 450,
+									"y": -1000
+								},
+								"zoom": 1
+							},
+							"history": {
+								"2": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"816": {
+									"position": {
+										"x": 450,
+										"y": -1000
+									},
+									"zoom": 1
+								},
+								"869": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"1063": {
+									"position": {
+										"x": 325,
+										"y": -275
+									},
+									"zoom": 1
+								},
+								"2143": {
+									"position": {
+										"x": 0,
+										"y": -50
+									},
+									"zoom": 1
+								}
+							},
+							"paramsDisplayed": false,
+							"linkIndex": 1
+						}
+					}
+				}
+			},
+			"split_panel1": {
+				"panelTypes": ["params"],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"active_folder": 1066,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panelTypes": ["network", "params", "viewer"],
+			"currentPanelIndex": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": 75.67526728062549,
+						"y": -1035.047802216205
+					},
+					"zoom": 0.6647599066162105
+				},
+				"history": {
+					"2": {
+						"position": {
+							"x": 15.58900489133147,
+							"y": 206.5278927303953
+						},
+						"zoom": 1.0222221069335933
+					},
+					"816": {
+						"position": {
+							"x": 75.67526728062549,
+							"y": -1035.047802216205
+						},
+						"zoom": 0.6647599066162105
+					},
+					"869": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.8692221069335933
+					},
+					"1063": {
+						"position": {
+							"x": 383.7167155068498,
+							"y": -670.3422526619114
+						},
+						"zoom": 0.7842221069335932
+					},
+					"2143": {
+						"position": {
+							"x": -152.60871286374385,
+							"y": -216.30436658228498
+						},
+						"zoom": 1.0222221069335933
+					}
+				},
+				"paramsDisplayed": false,
+				"linkIndex": 1
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": ["/particles", "/", "/", "/", "/", "/", "/", "/"],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/",
+				"/particles",
+				"/",
+				"/cameras",
+				"/",
+				"/particles",
+				"/particles/MAT",
+				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
+				"/particles/MAT",
+				"/particles"
+			],
+			"2": ["/"],
+			"3": ["/"],
+			"4": ["/"],
+			"5": ["/"],
+			"6": ["/"],
+			"7": ["/"],
+			"8": ["/"]
+		},
+		"index": {
+			"1": 9,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": true,
+		"checkRemoteAssetsUse": true,
+		"minimizeFilesCount": false,
+		"compressJs": false,
+		"createZip": false,
+		"runPostExportCommand": false
+	},
+	"paramsModal": []
+}
