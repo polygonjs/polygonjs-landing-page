@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 100,
-									"y": -275
+									"x": -50,
+									"y": 50
 								},
 								"zoom": 1
 							},
@@ -75,7 +75,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": null,
+					"active_folder": 1343,
 					"linkIndex": 1
 				}
 			},
@@ -87,8 +87,8 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": -64.54757965050455,
-						"y": -281.68213521423365
+						"x": -295.568469123088,
+						"y": -28.515088767245825
 					},
 					"zoom": 1.1972221069335913
 				},
@@ -142,12 +142,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/ground", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/lights", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/",
-				"/geo1",
 				"/",
 				"/geo1",
 				"/",
@@ -165,7 +163,9 @@
 				"/",
 				"/lights",
 				"/",
-				"/ground"
+				"/ground",
+				"/",
+				"/lights"
 			],
 			"2": ["/"],
 			"3": ["/"],

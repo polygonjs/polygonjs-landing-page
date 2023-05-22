@@ -7,10 +7,11 @@
 						:loadFunction="loadFunction"
 						:sceneName="'scene_03'"
 						@sceneready="onSceneReady"
+						:posterExtension="'webp'"
 					></PolygonjsScene>
 				</span>
 			</span>
-			<span class="text-sm flex lg:space-x-1">
+			<span class="text-sm flex space-x-1">
 				<span @click="toggleTopHoles" :class="['cursor-pointer border-b-4', toggleTopHolesClassObjects]">{{
 					toggleTopHolesLabel
 				}}</span>
@@ -28,7 +29,7 @@
 					:class="['cursor-pointer border-b-4', switchDisplayModeClassObjects]"
 					>{{ displayModeLabel }}</span
 				>
-				<span v-show="cookingInProgress">
+				<span :class="cookingInProgress ? 'opacity-100' : 'opacity-0'">
 					<ArrowPathIcon class="animate-spin inline pointer-events-none w-4 h-4"></ArrowPathIcon>
 				</span>
 			</span>

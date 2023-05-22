@@ -3,14 +3,14 @@
 		<h2>What's next?</h2>
 		<p>
 			If you haven't yet, you could start by going through the
-			<a class="border-b-4 border-sky-400 hover:bg-sky-700 dark:border-sky-700" href="/docs">Documentation</a>. Or
-			you can go straight to the
+			<a class="border-b-4 border-sky-400 hover:bg-sky-700 dark:border-sky-700" href="/docs">Documentation</a> or
+			watch
 			<a class="border-b-4 border-lime-400 hover:bg-lime-700 dark:border-lime-700" href="/docs/tutorials"
 				>Video Tutorials</a
 			>.
 		</p>
 		<p>
-			Or if you want to play with our editor, go to the
+			And if you feel like diving in, try the
 			<a class="border-b-4 border-orange-400 hover:bg-orange-700 dark:border-orange-700" href="/demo"
 				>Live Demo</a
 			>

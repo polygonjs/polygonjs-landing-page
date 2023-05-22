@@ -1,4 +1,4 @@
 [
-	"./three/js/libs/occt/polygonjs-occt.wasm?v=1-4-12",
+	"./three/js/libs/occt/polygonjs-occt.wasm?v=1-4-15",
 	"https://raw.githubusercontent.com/polygonjs/polygonjs-assets/master/textures/piz_compressed.exr"
 ]

@@ -27,12 +27,9 @@ import Scene04 from './polygonjs/scenes/Scene04.vue';
 		<Scene01 />
 		<WhatIsPolygonjs />
 		<QuoteFHAS />
-		<!-- <Separator /> -->
 		<Scene02 />
-		<!-- <Separator />
-		<QuoteBryanChrisBrown /> -->
 		<NodeBasedWorkflow />
-		<VideoAuto filePath="/landing-page/videos/editor.v01" />
+		<VideoAuto filePath="/landing-page/videos/editor.v01" :widths="[640, 920, 1200, 1874]" />
 		<QuoteCGWiki />
 		<FullyProcedural />
 		<Scene03 />

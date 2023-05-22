@@ -4,8 +4,7 @@
 		"areaLight1": {
 			"type": "areaLight",
 			"params": {
-				"width": 3.1,
-				"showHelper": true
+				"width": 3.1
 			}
 		},
 		"hemisphereLight1": {

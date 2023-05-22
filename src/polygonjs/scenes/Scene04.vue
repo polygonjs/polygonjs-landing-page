@@ -7,6 +7,7 @@
 				@sceneready="onSceneReady"
 				:displayLoadingProgressBar="true"
 				:displayLoadingPoster="true"
+				:posterExtension="'webp'"
 			></PolygonjsScene>
 		</div>
 	</div>
