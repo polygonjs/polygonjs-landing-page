@@ -1,6 +1,5 @@
 // cop
 import { EnvMapCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/EnvMap";
-import { ImageCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/Image";
 import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/ImageEXR";
 // mat
 import { RayMarchingBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/RayMarchingBuilder";
@@ -38,7 +37,6 @@ import { smootherstep } from "@polygonjs/polygonjs/dist/src/engine/functions/smo
 export const requiredImports_scene_01 = {
   nodes: [
     EnvMapCopNode,
-    ImageCopNode,
     ImageEXRCopNode,
     RayMarchingBuilderMatNode,
     CopNetworkObjNode,

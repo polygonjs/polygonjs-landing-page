@@ -35,7 +35,6 @@
 			"params": {
 				"name": "id"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -55,8 +54,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -216,7 +214,6 @@
 					"stencilFail": 7680,
 					"stencilZFail": 7680,
 					"stencilZPass": 7680,
-					"forceSinglePass": true,
 					"depthPacking": 3201
 				},
 				"onBeforeCompileDataJSONWithoutShaders": {

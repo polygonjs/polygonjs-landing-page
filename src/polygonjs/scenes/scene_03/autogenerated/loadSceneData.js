@@ -4,14 +4,14 @@ const manifest = {
   root: "1684667187978",
   nodes: {
     geo1: "1684664033662",
-    "geo1/MAT": "1684623206045",
+    "geo1/MAT": "1684880988611",
     ground: "1684667150007",
     "ground/MAT": "1684623152906",
     "ground/MAT/meshStandardBuilder1": "1684667150007",
-    COP: "1684623206045",
-    lights: "1684796450077",
-    cameras: "1684623206045",
-    "cameras/cameraControls1": "1684623206045",
+    COP: "1684880988611",
+    lights: "1684880988611",
+    cameras: "1684880997870",
+    "cameras/cameraControls1": "1684880988611",
   },
   shaders: {
     "/ground/MAT/meshStandardBuilder1": {

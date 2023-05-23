@@ -2,7 +2,6 @@ import { ParamValueSerializedTypeMap } from "@polygonjs/polygonjs/dist/src/engin
 
 import { PolyScene } from "@polygonjs/polygonjs/dist/src/engine/scene/PolyScene";
 // obj
-import { CopNetworkObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/CopNetwork";
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
 // sop
 import { AreaLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AreaLight";
@@ -36,10 +35,6 @@ import { MeshStandardBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine
 import { MeshStandardMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandard";
 // event
 import { CameraOrbitControlsEventNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/event/CameraOrbitControls";
-// cop
-import { EnvMapCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/EnvMap";
-import { ImageCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/Image";
-import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/ImageEXR";
 
 export class PolySceneWithNodeMap_scene_04 extends PolyScene {
   node(path: "/geo1"): GeoObjNode;
@@ -91,10 +86,6 @@ export class PolySceneWithNodeMap_scene_04 extends PolyScene {
     path: "/geo1/cameraControls_PLAYER1/cameraOrbitControls1"
   ): CameraOrbitControlsEventNode;
   node(path: "/geo1/physicsWorld1"): PhysicsWorldSopNode;
-  node(path: "/COP"): CopNetworkObjNode;
-  node(path: "/COP/envMap"): EnvMapCopNode;
-  node(path: "/COP/imageEnv"): ImageEXRCopNode;
-  node(path: "/COP/image1"): ImageCopNode;
   node(path: "/lights"): GeoObjNode;
   node(path: "/lights/hemisphereLight1"): HemisphereLightSopNode;
   node(path: "/lights/spotLight1"): SpotLightSopNode;
@@ -115,11 +106,11 @@ export class PolySceneWithNodeMap_scene_04 extends PolyScene {
   node(path: "/env/merge1"): MergeSopNode;
   node(path: "/env/sphere1"): SphereSopNode;
   node(path: "/env/instance1"): InstanceSopNode;
+  node(path: "/env/attribId1"): AttribIdSopNode;
   node(path: "/env/MAT"): MaterialsNetworkSopNode;
   node(
     path: "/env/MAT/meshLambertBuilder_INSTANCES"
   ): MeshLambertBuilderMatNode;
-  node(path: "/env/attribId1"): AttribIdSopNode;
   node(
     path: string
   ): any /* we need any for now as otherwise an error occurs when adding plugins to the overloaded methods */ {
@@ -1341,89 +1332,6 @@ export interface PolySceneProps_scene_04 {
   "geo1-physicsWorld1--gravityy"?: ParamValueSerializedTypeMap["float"];
   "geo1-physicsWorld1--gravityz"?: ParamValueSerializedTypeMap["float"];
   "geo1-physicsWorld1--debug"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-envMap--useCameraRenderer"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--url"?: ParamValueSerializedTypeMap["string"];
-  "COP-imageEnv--reload"?: ParamValueSerializedTypeMap["button"];
-  "COP-imageEnv--tencoding"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--encoding"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--tmapping"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--mapping"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--twrap"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--wrapS"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--wrapT"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--tminFilter"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--minFilter"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--tmagFilter"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--magFilter"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--tanisotropy"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--useRendererMaxAnisotropy"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--anisotropy"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--tflipY"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--flipY"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--ttransform"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--offset"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-imageEnv--offset-offsetx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--offset-offsety"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--offsetx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--offsety"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--repeat"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-imageEnv--repeat-repeatx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--repeat-repeaty"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--repeatx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--repeaty"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--rotation"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--center"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-imageEnv--center-centerx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--center-centery"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--centerx"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--centery"?: ParamValueSerializedTypeMap["float"];
-  "COP-imageEnv--tadvanced"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--tformat"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--format"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--ttype"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--type"?: ParamValueSerializedTypeMap["integer"];
-  "COP-imageEnv--checkFileType"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--url"?: ParamValueSerializedTypeMap["string"];
-  "COP-image1--reload"?: ParamValueSerializedTypeMap["button"];
-  "COP-image1--tencoding"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--encoding"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--tmapping"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--mapping"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--twrap"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--wrapS"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--wrapT"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--tminFilter"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--minFilter"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--tmagFilter"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--magFilter"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--tanisotropy"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--useRendererMaxAnisotropy"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--anisotropy"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--tflipY"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--flipY"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--ttransform"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--offset"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-image1--offset-offsetx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--offset-offsety"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--offsetx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--offsety"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--repeat"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-image1--repeat-repeatx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--repeat-repeaty"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--repeatx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--repeaty"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--rotation"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--center"?: ParamValueSerializedTypeMap["vector2"];
-  "COP-image1--center-centerx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--center-centery"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--centerx"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--centery"?: ParamValueSerializedTypeMap["float"];
-  "COP-image1--tadvanced"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--tformat"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--format"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--ttype"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-image1--type"?: ParamValueSerializedTypeMap["integer"];
-  "COP-image1--checkFileType"?: ParamValueSerializedTypeMap["boolean"];
   "lights--transform"?: ParamValueSerializedTypeMap["folder"];
   "lights--keepPosWhenParenting"?: ParamValueSerializedTypeMap["boolean"];
   "lights--rotationOrder"?: ParamValueSerializedTypeMap["integer"];
@@ -1859,6 +1767,11 @@ export interface PolySceneProps_scene_04 {
   "env-instance1--attributesToCopy"?: ParamValueSerializedTypeMap["string"];
   "env-instance1--applyMaterial"?: ParamValueSerializedTypeMap["boolean"];
   "env-instance1--material"?: ParamValueSerializedTypeMap["node_path"];
+  "env-attribId1--class"?: ParamValueSerializedTypeMap["integer"];
+  "env-attribId1--id"?: ParamValueSerializedTypeMap["boolean"];
+  "env-attribId1--idName"?: ParamValueSerializedTypeMap["string"];
+  "env-attribId1--idn"?: ParamValueSerializedTypeMap["boolean"];
+  "env-attribId1--idnName"?: ParamValueSerializedTypeMap["string"];
   "env-MAT-meshLambertBuilder_INSTANCES--default"?: ParamValueSerializedTypeMap["folder"];
   "env-MAT-meshLambertBuilder_INSTANCES--transparent"?: ParamValueSerializedTypeMap["boolean"];
   "env-MAT-meshLambertBuilder_INSTANCES--opacity"?: ParamValueSerializedTypeMap["float"];
@@ -1911,9 +1824,4 @@ export interface PolySceneProps_scene_04 {
   "env-MAT-meshLambertBuilder_INSTANCES--useFog"?: ParamValueSerializedTypeMap["boolean"];
   "env-MAT-meshLambertBuilder_INSTANCES--shadowPCSS"?: ParamValueSerializedTypeMap["boolean"];
   "env-MAT-meshLambertBuilder_INSTANCES--shadowPCSSFilterSize"?: ParamValueSerializedTypeMap["float"];
-  "env-attribId1--class"?: ParamValueSerializedTypeMap["integer"];
-  "env-attribId1--id"?: ParamValueSerializedTypeMap["boolean"];
-  "env-attribId1--idName"?: ParamValueSerializedTypeMap["string"];
-  "env-attribId1--idn"?: ParamValueSerializedTypeMap["boolean"];
-  "env-attribId1--idnName"?: ParamValueSerializedTypeMap["string"];
 }

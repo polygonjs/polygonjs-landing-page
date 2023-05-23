@@ -20,6 +20,7 @@
 					"nodes": {
 						"rayMarchingBuilder1": {
 							"pos": [100, -50],
+							"selection": ["SDFMaterial1"],
 							"nodes": {
 								"globals1": {
 									"pos": [-1450, -200]
@@ -194,16 +195,12 @@
 		},
 		"COP": {
 			"pos": [-300, -50],
-			"selection": ["image1"],
 			"nodes": {
 				"envMap": {
 					"pos": [50, 250]
 				},
 				"imageEnv": {
 					"pos": [50, 100]
-				},
-				"image1": {
-					"pos": [-200, 100]
 				}
 			}
 		},

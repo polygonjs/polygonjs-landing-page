@@ -5,12 +5,10 @@
 			"type": "envMap",
 			"inputs": ["imageEnv"]
 		},
-		"image1": {
-			"type": "image"
-		},
 		"imageEnv": {
 			"type": "imageEXR",
 			"params": {
+				"url": "textures/piz_compressed.256x.exr?timestamp=1684879740914",
 				"tminFilter": true,
 				"tmagFilter": true,
 				"tanisotropy": true,

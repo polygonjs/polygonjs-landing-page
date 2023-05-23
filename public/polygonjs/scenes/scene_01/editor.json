@@ -1,6 +1,6 @@
 {
 	"multiple_panel": {
-		"split_ratio": 0.464,
+		"split_ratio": 0.5002666666666666,
 		"split_panel0": {
 			"split_ratio": 0.5543217692883486,
 			"split_panel0": {
@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": -25,
-									"y": -175
+									"x": 200,
+									"y": -100
 								},
 								"zoom": 1
 							},
@@ -33,6 +33,13 @@
 									"position": {
 										"x": 100,
 										"y": -125
+									},
+									"zoom": 1
+								},
+								"89": {
+									"position": {
+										"x": 200,
+										"y": -100
 									},
 									"zoom": 1
 								},
@@ -57,6 +64,20 @@
 									},
 									"zoom": 1
 								},
+								"256": {
+									"position": {
+										"x": -100,
+										"y": 50
+									},
+									"zoom": 1
+								},
+								"259": {
+									"position": {
+										"x": 25,
+										"y": -25
+									},
+									"zoom": 1
+								},
 								"892": {
 									"position": {
 										"x": 0,
@@ -68,6 +89,13 @@
 									"position": {
 										"x": 300,
 										"y": 0
+									},
+									"zoom": 1
+								},
+								"1181": {
+									"position": {
+										"x": -25,
+										"y": -175
 									},
 									"zoom": 1
 								},
@@ -110,7 +138,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": null,
+					"active_folder": 328,
 					"linkIndex": 1
 				}
 			},
@@ -122,10 +150,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 70.21291970281706,
-						"y": -183.3311304739965
+						"x": -163.61960622726653,
+						"y": -168.6739207886847
 					},
-					"zoom": 0.8402221069335933
+					"zoom": 1.135802341037326
 				},
 				"history": {
 					"2": {
@@ -137,10 +165,17 @@
 					},
 					"36": {
 						"position": {
-							"x": 69.6739096232304,
-							"y": -249.2391444467658
+							"x": 77.49999746239675,
+							"y": -158.26087331645698
 						},
 						"zoom": 1.0222221069335933
+					},
+					"89": {
+						"position": {
+							"x": -163.61960622726653,
+							"y": -168.6739207886847
+						},
+						"zoom": 1.135802341037326
 					},
 					"142": {
 						"position": {
@@ -162,6 +197,20 @@
 							"y": -583.1522340432077
 						},
 						"zoom": 1.0222221069335933
+					},
+					"256": {
+						"position": {
+							"x": -350.4348108533233,
+							"y": 25.54347550260515
+						},
+						"zoom": 1.0222221069335933
+					},
+					"259": {
+						"position": {
+							"x": -1152.7435873802488,
+							"y": -1054.4974820045022
+						},
+						"zoom": 0.9272221069335932
 					},
 					"892": {
 						"position": {
@@ -219,30 +268,30 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/cameras/actor_rotate", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/COP", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
+				"/cameras",
+				"/cameras/actor_rotate",
+				"/cameras",
+				"/",
+				"/COP",
+				"/",
+				"/geo1",
 				"/geo1/MAT",
 				"/geo1/MAT/rayMarchingBuilder1",
 				"/geo1/MAT",
 				"/geo1",
 				"/",
-				"/cameras",
-				"/cameras/actor_rotate",
-				"/cameras",
+				"/COP",
 				"/",
-				"/cameras",
+				"/COP",
 				"/",
 				"/geo1",
-				"/geo1",
-				"/",
-				"/cameras",
-				"/cameras/cameraRenderer1",
-				"/cameras",
-				"/cameras/actor_perf_check",
-				"/cameras",
-				"/cameras/actor_rotate"
+				"/geo1/MAT",
+				"/geo1/MAT/rayMarchingBuilder1",
+				"/geo1/MAT"
 			],
 			"2": ["/"],
 			"3": ["/"],
@@ -253,7 +302,7 @@
 			"8": ["/"]
 		},
 		"index": {
-			"1": 19,
+			"1": 14,
 			"2": 0,
 			"3": 0,
 			"4": 0,
@@ -272,5 +321,15 @@
 		"createZip": false,
 		"runPostExportCommand": false
 	},
-	"paramsModal": []
+	"paramsModal": [
+		{
+			"nodePath": "/geo1/MAT/rayMarchingBuilder1",
+			"style": {
+				"top": 272,
+				"left": 1394.5,
+				"width": 600,
+				"height": 585
+			}
+		}
+	]
 }

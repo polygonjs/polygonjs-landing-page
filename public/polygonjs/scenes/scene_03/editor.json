@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": -50,
-									"y": 50
+									"x": 0,
+									"y": -50
 								},
 								"zoom": 1
 							},
@@ -43,10 +43,24 @@
 									},
 									"zoom": 1
 								},
+								"142": {
+									"position": {
+										"x": 200,
+										"y": -100
+									},
+									"zoom": 1
+								},
 								"145": {
 									"position": {
 										"x": -50,
 										"y": 50
+									},
+									"zoom": 1
+								},
+								"802": {
+									"position": {
+										"x": 0,
+										"y": 0
 									},
 									"zoom": 1
 								},
@@ -75,7 +89,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 1343,
+					"active_folder": 1443,
 					"linkIndex": 1
 				}
 			},
@@ -87,8 +101,8 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": -295.568469123088,
-						"y": -28.515088767245825
+						"x": 0,
+						"y": -50
 					},
 					"zoom": 1.1972221069335913
 				},
@@ -102,8 +116,8 @@
 					},
 					"36": {
 						"position": {
-							"x": 53.114637029521276,
-							"y": -5386.351099914462
+							"x": 112.74052593592887,
+							"y": -5679.219436601817
 						},
 						"zoom": 0.5702221069335915
 					},
@@ -114,12 +128,26 @@
 						},
 						"zoom": 1.1972221069335913
 					},
-					"145": {
+					"142": {
 						"position": {
-							"x": -295.568469123088,
-							"y": -28.515088767245825
+							"x": 61.345694304650976,
+							"y": -115.03480423202579
 						},
 						"zoom": 1.1972221069335913
+					},
+					"145": {
+						"position": {
+							"x": -310.6032733551138,
+							"y": -27.679821865466614
+						},
+						"zoom": 1.1972221069335913
+					},
+					"802": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.5702221069335915
 					},
 					"896": {
 						"position": {
@@ -142,20 +170,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/lights", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/cameras", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/",
-				"/geo1",
-				"/",
-				"/ground",
-				"/ground/MAT",
-				"/ground/MAT/meshStandardBuilder1",
-				"/ground/MAT",
-				"/ground",
-				"/",
-				"/ground",
 				"/ground/MAT",
 				"/ground/MAT/meshStandardBuilder1",
 				"/ground/MAT",
@@ -165,7 +183,17 @@
 				"/",
 				"/ground",
 				"/",
-				"/lights"
+				"/lights",
+				"/",
+				"/COP",
+				"/",
+				"/geo1",
+				"/geo1/MAT",
+				"/COP",
+				"/",
+				"/lights",
+				"/",
+				"/cameras"
 			],
 			"2": ["/"],
 			"3": ["/"],

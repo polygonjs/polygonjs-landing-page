@@ -1300,7 +1300,7 @@ vec3 applyMaterialWithoutRefraction(vec3 p, vec3 n, vec3 rayDir, int mat, inout 
 		EnvMapProps envMapProps;
 		envMapProps.tint = vec3(1.0, 1.0, 1.0);
 		envMapProps.intensity = 0.07;
-		envMapProps.roughness = 0.0;
+		envMapProps.roughness = 1.0;
 		envMapProps.fresnel = 0.0;
 		envMapProps.fresnelPower = 5.0;
 		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
@@ -1344,7 +1344,7 @@ vec3 applyMaterialWithoutReflection(vec3 p, vec3 n, vec3 rayDir, int mat, inout 
 		EnvMapProps envMapProps;
 		envMapProps.tint = vec3(1.0, 1.0, 1.0);
 		envMapProps.intensity = 0.07;
-		envMapProps.roughness = 0.0;
+		envMapProps.roughness = 1.0;
 		envMapProps.fresnel = 0.0;
 		envMapProps.fresnelPower = 5.0;
 		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
@@ -1494,7 +1494,7 @@ vec3 applyMaterial(vec3 p, vec3 n, vec3 rayDir, int mat, inout SDFContext sdfCon
 		EnvMapProps envMapProps;
 		envMapProps.tint = vec3(1.0, 1.0, 1.0);
 		envMapProps.intensity = 0.07;
-		envMapProps.roughness = 0.0;
+		envMapProps.roughness = 1.0;
 		envMapProps.fresnel = 0.0;
 		envMapProps.fresnelPower = 5.0;
 		col += envMapSampleWithFresnel(rayDir, envMapProps, n, cameraPosition);
@@ -1507,7 +1507,7 @@ vec3 applyMaterial(vec3 p, vec3 n, vec3 rayDir, int mat, inout SDFContext sdfCon
 		float absorption = 1.7;
 			
 	
-		vec4 refractedData = GetRefractedData(p, n, rayDir, ior, biasMult, 0.0, 2.3639, 3, sdfContext);
+		vec4 refractedData = GetRefractedData(p, n, rayDir, ior, biasMult, 1.0, 2.3639, 3, sdfContext);
 		refractedColor = applyRefractionAbsorption(refractedData.rgb, baseValue, tint, refractedData.w, absorption);
 				;
 	

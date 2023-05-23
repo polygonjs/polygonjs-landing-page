@@ -38,7 +38,7 @@
 			"type": "spotLight",
 			"params": {
 				"intensity": 3.8,
-				"angle": 57.6,
+				"angle": 46.8,
 				"penumbra": 0.51,
 				"decay": 0.6,
 				"distance": 10,

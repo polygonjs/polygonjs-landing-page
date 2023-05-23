@@ -1,5 +1,5 @@
 {
-	"properties": "1684706453144",
+	"properties": "1684881406207",
 	"root": "1684622508824",
 	"nodes": {
 		"geo1": "1684623137677",
@@ -10,13 +10,12 @@
 		"geo1/physicsPlayer1": "1684677476810",
 		"geo1/cameraControls_PLAYER1": "1684664308093",
 		"geo1/physicsWorld1": "1684622347434",
-		"COP": "1684618262298",
 		"lights": "1684622582531",
 		"cameras": "1684618262298",
 		"cameras/cameraControls1": "1684623137677",
 		"env": "1684706453144",
 		"env/MAT": "1684706453144",
-		"env/MAT/meshLambertBuilder_INSTANCES": "1684706453144"
+		"env/MAT/meshLambertBuilder_INSTANCES": "1684881406207"
 	},
 	"shaders": {
 		"/geo1/MAT/meshStandardBuilder_GROUND": {

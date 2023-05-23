@@ -1,7 +1,3 @@
-// cop
-import { EnvMapCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/EnvMap";
-import { ImageCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/Image";
-import { ImageEXRCopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/cop/ImageEXR";
 // event
 import { CameraOrbitControlsEventNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/event/CameraOrbitControls";
 // mat
@@ -9,7 +5,6 @@ import { MeshLambertBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/
 import { MeshStandardMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandard";
 import { MeshStandardBuilderMatNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/mat/MeshStandardBuilder";
 // obj
-import { CopNetworkObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/CopNetwork";
 import { GeoObjNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/obj/Geo";
 // sop
 import { AreaLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/AreaLight";
@@ -53,14 +48,10 @@ import { setPlayerInput } from "@polygonjs/polygonjs/dist/src/engine/functions/s
 
 export const requiredImports_scene_04 = {
   nodes: [
-    EnvMapCopNode,
-    ImageCopNode,
-    ImageEXRCopNode,
     CameraOrbitControlsEventNode,
     MeshLambertBuilderMatNode,
     MeshStandardMatNode,
     MeshStandardBuilderMatNode,
-    CopNetworkObjNode,
     GeoObjNode,
     AreaLightSopNode,
     AttribIdSopNode,

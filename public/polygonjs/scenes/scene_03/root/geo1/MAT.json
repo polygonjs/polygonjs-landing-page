@@ -4,7 +4,7 @@
 		"meshStandard1": {
 			"type": "meshStandard",
 			"params": {
-				"useEnvMap": true,
+				"useEnvMap": 1,
 				"envMap": "../../../COP/envMap",
 				"metalness": 1,
 				"roughness": 0.74

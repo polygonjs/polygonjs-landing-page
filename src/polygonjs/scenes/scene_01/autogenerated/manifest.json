@@ -1,14 +1,14 @@
 {
-	"properties": "1684834747475",
+	"properties": "1684880820562",
 	"root": "1684601820575",
 	"nodes": {
 		"geo1": "1684540525558",
 		"geo1/MAT": "1684540520673",
-		"geo1/MAT/rayMarchingBuilder1": "1684834747475",
-		"COP": "1675552563896",
+		"geo1/MAT/rayMarchingBuilder1": "1684880820562",
+		"COP": "1684880820562",
 		"lights": "1684601815224",
 		"cameras": "1684834747475",
-		"cameras/actor_rotate": "1684834747475",
+		"cameras/actor_rotate": "1684879947917",
 		"cameras/cameraRenderer1": "1684606786734"
 	},
 	"shaders": {

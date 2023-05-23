@@ -258,8 +258,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"edge0": {
 					"type": "float",
