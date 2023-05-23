@@ -57,8 +57,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"preAdd": {
 					"type": "float",
@@ -143,14 +142,14 @@
 				{
 					"index": 0,
 					"inputName": "x",
-					"node": "multAdd2",
-					"output": "val"
+					"node": "smootherstep2",
+					"output": "smootherstep"
 				},
 				{
 					"index": 1,
 					"inputName": "y",
-					"node": "multAdd1",
-					"output": "val"
+					"node": "smootherstep1",
+					"output": "smootherstep"
 				}
 			]
 		},
@@ -249,6 +248,135 @@
 					}
 				]
 			}
+		},
+		"smootherstep1": {
+			"type": "smootherstep",
+			"params": {
+				"x": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				},
+				"edge0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -1
+				},
+				"edge1": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "x",
+					"node": "multAdd1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "x",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "edge0",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "edge1",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "smootherstep",
+						"type": "float",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"smootherstep2": {
+			"type": "smootherstep",
+			"params": {
+				"x": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"edge0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -1
+				},
+				"edge1": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "x",
+					"node": "multAdd2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "x",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "edge0",
+						"type": "float",
+						"isArray": false
+					},
+					{
+						"name": "edge1",
+						"type": "float",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "smootherstep",
+						"type": "float",
+						"isArray": false
+					}
+				]
+			}
 		}
 	},
 	"inputs": ["hierarchy1"],
@@ -279,6 +407,8 @@
 			"globalsCursor",
 			"multAdd",
 			"mathFloat_4",
+			"smootherstep",
+			"mathFloat_3",
 			"floatToVec3",
 			"eulerSetFromVector3",
 			"setObjectRotation"

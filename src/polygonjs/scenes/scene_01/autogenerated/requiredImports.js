@@ -29,9 +29,11 @@ import { SpotLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop
 import { eulerSetFromVector3 } from "@polygonjs/polygonjs/dist/src/engine/functions/eulerSetFromVector3";
 import { floatToVec3 } from "@polygonjs/polygonjs/dist/src/engine/functions/floatToVec3";
 import { globalsCursor } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsCursor";
+import { mathFloat_3 } from "@polygonjs/polygonjs/dist/src/engine/functions/mathFloat_3";
 import { mathFloat_4 } from "@polygonjs/polygonjs/dist/src/engine/functions/mathFloat_4";
 import { multAdd } from "@polygonjs/polygonjs/dist/src/engine/functions/multAdd";
 import { setObjectRotation } from "@polygonjs/polygonjs/dist/src/engine/functions/setObjectRotation";
+import { smootherstep } from "@polygonjs/polygonjs/dist/src/engine/functions/smootherstep";
 
 export const requiredImports_scene_01 = {
   nodes: [
@@ -62,8 +64,10 @@ export const requiredImports_scene_01 = {
     eulerSetFromVector3,
     floatToVec3,
     globalsCursor,
+    mathFloat_3,
     mathFloat_4,
     multAdd,
     setObjectRotation,
+    smootherstep,
   ],
 };

@@ -12,6 +12,9 @@
 				"material1": {
 					"pos": [-150, 100]
 				},
+				"merge1": {
+					"pos": [-50, 400]
+				},
 				"MAT": {
 					"pos": [-350, 100],
 					"nodes": {
@@ -186,9 +189,6 @@
 							}
 						}
 					}
-				},
-				"merge1": {
-					"pos": [-50, 400]
 				}
 			}
 		},
@@ -239,6 +239,9 @@
 				"hierarchy1": {
 					"pos": [0, 300]
 				},
+				"actor_perf_check": {
+					"pos": [0, 750]
+				},
 				"actor_rotate": {
 					"pos": [0, 450],
 					"nodes": {
@@ -249,13 +252,13 @@
 							"pos": [400, 50]
 						},
 						"cursor1": {
-							"pos": [-350, 300]
+							"pos": [-550, 300]
 						},
 						"vec2ToFloat1": {
-							"pos": [-200, 300]
+							"pos": [-400, 300]
 						},
 						"multAdd1": {
-							"pos": [0, 200]
+							"pos": [-150, 200]
 						},
 						"floatToVec3_1": {
 							"pos": [150, 300]
@@ -264,12 +267,15 @@
 							"pos": [300, 250]
 						},
 						"multAdd2": {
+							"pos": [-150, 350]
+						},
+						"smootherstep1": {
+							"pos": [0, 200]
+						},
+						"smootherstep2": {
 							"pos": [0, 350]
 						}
 					}
-				},
-				"actor_perf_check": {
-					"pos": [0, 750]
 				},
 				"cameraRenderer1": {
 					"pos": [0, 600],

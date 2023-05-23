@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 0,
-									"y": -50
+									"x": -25,
+									"y": -175
 								},
 								"zoom": 1
 							},
@@ -45,8 +45,8 @@
 								},
 								"145": {
 									"position": {
-										"x": -50,
-										"y": 50
+										"x": 0,
+										"y": -50
 									},
 									"zoom": 1
 								},
@@ -110,7 +110,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 2407,
+					"active_folder": null,
 					"linkIndex": 1
 				}
 			},
@@ -122,10 +122,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": -127.17392738645324,
-						"y": -583.1522340432077
+						"x": 70.21291970281706,
+						"y": -183.3311304739965
 					},
-					"zoom": 1.0222221069335933
+					"zoom": 0.8402221069335933
 				},
 				"history": {
 					"2": {
@@ -151,10 +151,10 @@
 					},
 					"145": {
 						"position": {
-							"x": -194.39132063261917,
-							"y": -89.10871134118189
+							"x": -184.4641624122461,
+							"y": -410.26472018560855
 						},
-						"zoom": 1.135802341037326
+						"zoom": 0.8402221069335933
 					},
 					"198": {
 						"position": {
@@ -176,6 +176,13 @@
 							"y": 755.635040097681
 						},
 						"zoom": 0.6278588106373004
+					},
+					"1181": {
+						"position": {
+							"x": 70.21291970281706,
+							"y": -183.3311304739965
+						},
+						"zoom": 0.8402221069335933
 					},
 					"1889": {
 						"position": {
@@ -212,11 +219,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/cameras", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/cameras/actor_rotate", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/geo1",
 				"/geo1/MAT",
 				"/geo1/MAT/rayMarchingBuilder1",
 				"/geo1/MAT",
@@ -235,7 +241,8 @@
 				"/cameras/cameraRenderer1",
 				"/cameras",
 				"/cameras/actor_perf_check",
-				"/cameras"
+				"/cameras",
+				"/cameras/actor_rotate"
 			],
 			"2": ["/"],
 			"3": ["/"],

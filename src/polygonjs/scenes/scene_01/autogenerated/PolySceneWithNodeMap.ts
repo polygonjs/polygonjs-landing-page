@@ -33,9 +33,9 @@ export class PolySceneWithNodeMap_scene_01 extends PolyScene {
   node(path: "/geo1/boxLines1"): BoxLinesSopNode;
   node(path: "/geo1/box1"): BoxSopNode;
   node(path: "/geo1/material1"): MaterialSopNode;
+  node(path: "/geo1/merge1"): MergeSopNode;
   node(path: "/geo1/MAT"): MaterialsNetworkSopNode;
   node(path: "/geo1/MAT/rayMarchingBuilder1"): RayMarchingBuilderMatNode;
-  node(path: "/geo1/merge1"): MergeSopNode;
   node(path: "/COP"): CopNetworkObjNode;
   node(path: "/COP/envMap"): EnvMapCopNode;
   node(path: "/COP/imageEnv"): ImageEXRCopNode;
@@ -50,8 +50,8 @@ export class PolySceneWithNodeMap_scene_01 extends PolyScene {
   node(path: "/cameras/perspectiveCamera1"): PerspectiveCameraSopNode;
   node(path: "/cameras/cameraFrameMode1"): CameraFrameModeSopNode;
   node(path: "/cameras/hierarchy1"): HierarchySopNode;
-  node(path: "/cameras/actor_rotate"): ActorSopNode;
   node(path: "/cameras/actor_perf_check"): ActorSopNode;
+  node(path: "/cameras/actor_rotate"): ActorSopNode;
   node(path: "/cameras/cameraRenderer1"): CameraRendererSopNode;
   node(path: "/cameras/cameraRenderer1/WebGLRenderer1"): WebGLRendererRopNode;
   node(
@@ -177,6 +177,9 @@ export interface PolySceneProps_scene_01 {
   "geo1-material1--swapCurrentTex"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--texSrc0"?: ParamValueSerializedTypeMap["string"];
   "geo1-material1--texDest0"?: ParamValueSerializedTypeMap["string"];
+  "geo1-merge1--compact"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-merge1--preserveMaterials"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-merge1--inputsCount"?: ParamValueSerializedTypeMap["integer"];
   "geo1-MAT-rayMarchingBuilder1--default"?: ParamValueSerializedTypeMap["folder"];
   "geo1-MAT-rayMarchingBuilder1--maxSteps"?: ParamValueSerializedTypeMap["integer"];
   "geo1-MAT-rayMarchingBuilder1--maxDist"?: ParamValueSerializedTypeMap["float"];
@@ -208,9 +211,6 @@ export interface PolySceneProps_scene_01 {
   "geo1-MAT-rayMarchingBuilder1--debugMaxSteps"?: ParamValueSerializedTypeMap["integer"];
   "geo1-MAT-rayMarchingBuilder1--debugMinDepth"?: ParamValueSerializedTypeMap["float"];
   "geo1-MAT-rayMarchingBuilder1--debugMaxDepth"?: ParamValueSerializedTypeMap["float"];
-  "geo1-merge1--compact"?: ParamValueSerializedTypeMap["boolean"];
-  "geo1-merge1--preserveMaterials"?: ParamValueSerializedTypeMap["boolean"];
-  "geo1-merge1--inputsCount"?: ParamValueSerializedTypeMap["integer"];
   "COP-envMap--useCameraRenderer"?: ParamValueSerializedTypeMap["boolean"];
   "COP-imageEnv--url"?: ParamValueSerializedTypeMap["string"];
   "COP-imageEnv--reload"?: ParamValueSerializedTypeMap["button"];
@@ -420,6 +420,8 @@ export interface PolySceneProps_scene_01 {
   "lights-spotLight1--volAnglePower"?: ParamValueSerializedTypeMap["float"];
   "lights-spotLight1--raymarching"?: ParamValueSerializedTypeMap["folder"];
   "lights-spotLight1--raymarchingPenumbra"?: ParamValueSerializedTypeMap["float"];
+  "lights-spotLight1--raymarchingShadowBiasAngle"?: ParamValueSerializedTypeMap["float"];
+  "lights-spotLight1--raymarchingShadowBiasDistance"?: ParamValueSerializedTypeMap["float"];
   "lights-polarTransform1--applyOn"?: ParamValueSerializedTypeMap["integer"];
   "lights-polarTransform1--center"?: ParamValueSerializedTypeMap["vector3"];
   "lights-polarTransform1--center-centerx"?: ParamValueSerializedTypeMap["float"];
@@ -502,6 +504,7 @@ export interface PolySceneProps_scene_01 {
   "cameras--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-perspectiveCamera1--default"?: ParamValueSerializedTypeMap["folder"];
   "cameras-perspectiveCamera1--fov"?: ParamValueSerializedTypeMap["float"];
   "cameras-perspectiveCamera1--near"?: ParamValueSerializedTypeMap["float"];
   "cameras-perspectiveCamera1--far"?: ParamValueSerializedTypeMap["float"];
@@ -523,18 +526,24 @@ export interface PolySceneProps_scene_01 {
   "cameras-perspectiveCamera1--matrixAutoUpdate"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-perspectiveCamera1--name"?: ParamValueSerializedTypeMap["string"];
   "cameras-perspectiveCamera1--updateTransformFromCamera"?: ParamValueSerializedTypeMap["button"];
+  "cameras-perspectiveCamera1--PBR"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-perspectiveCamera1--apertureBlades"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-perspectiveCamera1--fStop"?: ParamValueSerializedTypeMap["float"];
+  "cameras-perspectiveCamera1--focusDistance"?: ParamValueSerializedTypeMap["float"];
+  "cameras-perspectiveCamera1--apertureRotation"?: ParamValueSerializedTypeMap["float"];
+  "cameras-perspectiveCamera1--anamorphicRatio"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraFrameMode1--frameMode"?: ParamValueSerializedTypeMap["integer"];
   "cameras-cameraFrameMode1--expectedAspectRatio"?: ParamValueSerializedTypeMap["float"];
   "cameras-hierarchy1--mode"?: ParamValueSerializedTypeMap["integer"];
   "cameras-hierarchy1--levels"?: ParamValueSerializedTypeMap["integer"];
   "cameras-hierarchy1--objectMask"?: ParamValueSerializedTypeMap["string"];
   "cameras-hierarchy1--addChildMode"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-actor_rotate--objectsMask"?: ParamValueSerializedTypeMap["string"];
-  "cameras-actor_rotate--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
-  "cameras-actor_rotate--node"?: ParamValueSerializedTypeMap["node_path"];
   "cameras-actor_perf_check--objectsMask"?: ParamValueSerializedTypeMap["string"];
   "cameras-actor_perf_check--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-actor_perf_check--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-actor_rotate--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor_rotate--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-actor_rotate--node"?: ParamValueSerializedTypeMap["node_path"];
   "cameras-cameraRenderer1--node"?: ParamValueSerializedTypeMap["node_path"];
   "cameras-cameraRenderer1-WebGLRenderer1--common"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraRenderer1-WebGLRenderer1--toneMapping"?: ParamValueSerializedTypeMap["integer"];

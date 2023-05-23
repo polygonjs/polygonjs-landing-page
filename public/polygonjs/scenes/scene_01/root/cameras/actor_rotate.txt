@@ -2,25 +2,40 @@
 class CustomActorEvaluator extends ActorEvaluator {
 	// insert members
 
-	// /cameras/actor1/cursor1
+	// /cameras/actor_rotate/cursor1
 	v_POLY_cursor1_cursor = computed(() => globalsCursor());
 
-	// /cameras/actor1/vec2ToFloat1
+	// /cameras/actor_rotate/vec2ToFloat1
 	v_POLY_vec2ToFloat1_x = computed(() => VAR__vec2ToFloat1_vec2.copy(this.v_POLY_cursor1_cursor.value).x);
 	v_POLY_vec2ToFloat1_y = computed(() => VAR__vec2ToFloat1_vec2.copy(this.v_POLY_cursor1_cursor.value).y);
 
-	// /cameras/actor1/multAdd2
+	// /cameras/actor_rotate/multAdd2
 	v_POLY_multAdd2_val = computed(() => mathFloat_4(multAdd, this.v_POLY_vec2ToFloat1_y.value, 0.0, -0.19, 0.0));
 
-	// /cameras/actor1/multAdd1
+	// /cameras/actor_rotate/multAdd1
 	v_POLY_multAdd1_val = computed(() => mathFloat_4(multAdd, this.v_POLY_vec2ToFloat1_x.value, 0.0, 0.19, 0.0));
 
-	// /cameras/actor1/floatToVec3_1
-	v_POLY_floatToVec3_1_vec3 = computed(() =>
-		floatToVec3(this.v_POLY_multAdd2_val.value, this.v_POLY_multAdd1_val.value, 0.0, VAR__floatToVec3_1_)
+	// /cameras/actor_rotate/smootherstep2
+	v_POLY_smootherstep2_smootherstep = computed(() =>
+		mathFloat_3(smootherstep, this.v_POLY_multAdd2_val.value, -1.0, 1.0)
 	);
 
-	// /cameras/actor1/euler1
+	// /cameras/actor_rotate/smootherstep1
+	v_POLY_smootherstep1_smootherstep = computed(() =>
+		mathFloat_3(smootherstep, this.v_POLY_multAdd1_val.value, -1.0, 1.0)
+	);
+
+	// /cameras/actor_rotate/floatToVec3_1
+	v_POLY_floatToVec3_1_vec3 = computed(() =>
+		floatToVec3(
+			this.v_POLY_smootherstep2_smootherstep.value,
+			this.v_POLY_smootherstep1_smootherstep.value,
+			0.0,
+			VAR__floatToVec3_1_
+		)
+	);
+
+	// /cameras/actor_rotate/euler1
 	v_POLY_euler1_Euler = computed(() =>
 		eulerSetFromVector3(VAR__euler1_Euler.copy(this.v_POLY_floatToVec3_1_vec3.value), 0.0, VAR__euler1__1)
 	);
@@ -34,12 +49,12 @@ class CustomActorEvaluator extends ActorEvaluator {
 	onTick() {
 		this.onTick1();
 	}
-	// /cameras/actor1/onTick1
+	// /cameras/actor_rotate/onTick1
 	onTick1() {
 		this.setObjectRotation1(0);
 	}
 
-	// /cameras/actor1/setObjectRotation1
+	// /cameras/actor_rotate/setObjectRotation1
 	setObjectRotation1() {
 		setObjectRotation(this.object3D, this.v_POLY_euler1_Euler.value, 0.1, true);
 	}
