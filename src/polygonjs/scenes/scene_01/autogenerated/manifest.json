@@ -1,10 +1,10 @@
 {
-	"properties": "1684880820562",
+	"properties": "1685480249130",
 	"root": "1684601820575",
 	"nodes": {
 		"geo1": "1684540525558",
 		"geo1/MAT": "1684540520673",
-		"geo1/MAT/rayMarchingBuilder1": "1684880820562",
+		"geo1/MAT/rayMarchingBuilder1": "1685480249130",
 		"COP": "1684880820562",
 		"lights": "1684601815224",
 		"cameras": "1684834747475",

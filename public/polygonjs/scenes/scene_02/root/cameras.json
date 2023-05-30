@@ -13,7 +13,18 @@
 				"frameMode": 2,
 				"expectedAspectRatio": 2
 			},
-			"inputs": ["cameraControls1"],
+			"inputs": ["cameraControls1"]
+		},
+		"perspectiveCamera_DEBUG": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [3.544110460710903, 2.4460418072108268, 5.788483593774441],
+				"rotation": [-20.97757001299194, 29.249383316157623, 10.610859023625775]
+			}
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": ["cameraFrameMode1", "cameraControls2"],
 			"flags": {
 				"display": true
 			}

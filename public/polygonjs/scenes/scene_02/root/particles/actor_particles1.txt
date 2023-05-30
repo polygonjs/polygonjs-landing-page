@@ -30,7 +30,7 @@ class CustomActorEvaluator extends ActorEvaluator {
 
 	// /particles/actor_particles1/particlesSystemStepSimulation1
 	particlesSystemStepSimulation1() {
-		particlesSystemStepSimulation(this.object3D);
+		particlesSystemStepSimulation(this.object3D, { texture_: this.v_POLY_particlesSystemStepSimulation1_ });
 	}
 }
 return CustomActorEvaluator;

@@ -207,6 +207,9 @@ export interface PolySceneProps_scene_04 {
   "geo1-tube1--directionx"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube1--directiony"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube1--directionz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube1--open"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-tube1--thetaStart"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube1--thetaLength"?: ParamValueSerializedTypeMap["float"];
   "geo1-sphere_PLAYER1--type"?: ParamValueSerializedTypeMap["integer"];
   "geo1-sphere_PLAYER1--radius"?: ParamValueSerializedTypeMap["float"];
   "geo1-sphere_PLAYER1--resolution"?: ParamValueSerializedTypeMap["vector2"];
@@ -351,7 +354,13 @@ export interface PolySceneProps_scene_04 {
   "geo1-box1--sizesx"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--sizesy"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--sizesz"?: ParamValueSerializedTypeMap["float"];
-  "geo1-box1--divisions"?: ParamValueSerializedTypeMap["integer"];
+  "geo1-box1--divisions"?: ParamValueSerializedTypeMap["vector3"];
+  "geo1-box1--divisions-divisionsx"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisions-divisionsy"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisions-divisionsz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsx"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsy"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsz"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--center"?: ParamValueSerializedTypeMap["vector3"];
   "geo1-box1--center-centerx"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--center-centery"?: ParamValueSerializedTypeMap["float"];
@@ -692,6 +701,9 @@ export interface PolySceneProps_scene_04 {
   "geo1-tube2--directionx"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube2--directiony"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube2--directionz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube2--open"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-tube2--thetaStart"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube2--thetaLength"?: ParamValueSerializedTypeMap["float"];
   "geo1-hexagons1--size"?: ParamValueSerializedTypeMap["vector2"];
   "geo1-hexagons1--size-sizex"?: ParamValueSerializedTypeMap["float"];
   "geo1-hexagons1--size-sizey"?: ParamValueSerializedTypeMap["float"];
@@ -726,6 +738,9 @@ export interface PolySceneProps_scene_04 {
   "geo1-tube3--directionx"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube3--directiony"?: ParamValueSerializedTypeMap["float"];
   "geo1-tube3--directionz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube3--open"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-tube3--thetaStart"?: ParamValueSerializedTypeMap["float"];
+  "geo1-tube3--thetaLength"?: ParamValueSerializedTypeMap["float"];
   "geo1-delete1--class"?: ParamValueSerializedTypeMap["integer"];
   "geo1-delete1--invert"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-delete1--byObjectType"?: ParamValueSerializedTypeMap["boolean"];

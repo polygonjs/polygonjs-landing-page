@@ -11,11 +11,11 @@
 	},
 	"dependencies": {
 		"@heroicons/vue": "2.0.18",
-		"@polygonjs/vue3": "1.4.14-1",
+		"@polygonjs/vue3": "1.4.16-1",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.3",
 		"@tailwindcss/typography": "0.5.9",
-		"polygonjs-editor": "1.4.15-1",
+		"polygonjs-editor": "1.4.16-1",
 		"vue": "3.2.45"
 	},
 	"devDependencies": {

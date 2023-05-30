@@ -195,6 +195,7 @@
 		},
 		"COP": {
 			"pos": [-300, -50],
+			"selection": ["imageEnv"],
 			"nodes": {
 				"envMap": {
 					"pos": [50, 250]

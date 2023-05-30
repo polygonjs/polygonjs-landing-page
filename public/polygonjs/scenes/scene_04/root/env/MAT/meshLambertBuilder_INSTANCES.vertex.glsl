@@ -260,6 +260,9 @@ vec4 align(vec3 dir, vec3 up){
 // /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 varying float v_POLY_attribute_id;
 
+// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+varying vec3 v_POLY_attribute_instancePosition;
+
 // /env/MAT/meshLambertBuilder_INSTANCES/instanceTransform1
 attribute vec3 instancePosition;
 attribute vec4 instanceQuaternion;
@@ -272,7 +275,6 @@ attribute float id;
 
 
 #include <uv_pars_vertex>
-#include <uv2_pars_vertex>
 #include <displacementmap_pars_vertex>
 #include <envmap_pars_vertex>
 #include <color_pars_vertex>
@@ -285,7 +287,6 @@ attribute float id;
 #include <clipping_planes_pars_vertex>
 void main() {
 	#include <uv_vertex>
-	#include <uv2_vertex>
 	#include <color_vertex>
 
 
@@ -300,6 +301,9 @@ void main() {
 	
 	// /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 	v_POLY_attribute_id = float(id);
+	
+	// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+	v_POLY_attribute_instancePosition = vec3(instancePosition);
 	
 	// /env/MAT/meshLambertBuilder_INSTANCES/output1
 	vec3 transformed = v_POLY_instanceTransform1_position;

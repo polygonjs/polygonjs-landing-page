@@ -22,8 +22,8 @@
 				{
 					"index": 2,
 					"inputName": "color",
-					"node": "hsvToRgb1",
-					"output": "rgb"
+					"node": "mix1",
+					"output": "mix"
 				}
 			]
 		},
@@ -154,6 +154,210 @@
 					"output": "vec3"
 				}
 			]
+		},
+		"length1": {
+			"type": "length",
+			"params": {
+				"x": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "x",
+					"node": "attribute2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "x",
+						"type": "vec3"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"attribute2": {
+			"type": "attribute",
+			"params": {
+				"name": "instancePosition",
+				"type": 2
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"smoothstep1": {
+			"type": "smoothstep",
+			"params": {
+				"edge0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 12
+				},
+				"edge1": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 120,
+					"overriden_options": {}
+				},
+				"x": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				null,
+				null,
+				{
+					"index": 2,
+					"inputName": "x",
+					"node": "length1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "edge0",
+						"type": "float"
+					},
+					{
+						"name": "edge1",
+						"type": "float"
+					},
+					{
+						"name": "x",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"constant1": {
+			"type": "constant",
+			"params": {
+				"type": 4,
+				"asColor": 1
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"mix1": {
+			"type": "mix",
+			"params": {
+				"value0": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"value1": {
+					"type": "vector3",
+					"default_value": [0, 0, 0],
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				},
+				"blend": {
+					"type": "float",
+					"default_value": 0.5,
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "value0",
+					"node": "hsvToRgb1",
+					"output": "rgb"
+				},
+				{
+					"index": 1,
+					"inputName": "value1",
+					"node": "constant1",
+					"output": "val"
+				},
+				{
+					"index": 2,
+					"inputName": "blend",
+					"node": "smoothstep1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value0",
+						"type": "vec3"
+					},
+					{
+						"name": "value1",
+						"type": "vec3"
+					},
+					{
+						"name": "blend",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "mix",
+						"type": "vec3"
+					}
+				]
+			}
 		}
 	},
 	"persisted_config": {
@@ -166,7 +370,7 @@
 			"uuid": "/env/MAT/meshLambertBuilder_INSTANCES-main",
 			"type": "MeshLambertMaterial",
 			"name": "/env/MAT/meshLambertBuilder_INSTANCES",
-			"color": 16711422,
+			"color": 16777215,
 			"emissive": 0,
 			"reflectivity": 1,
 			"refractionRatio": 0.98,
@@ -214,6 +418,7 @@
 					"stencilFail": 7680,
 					"stencilZFail": 7680,
 					"stencilZPass": 7680,
+					"forceSinglePass": true,
 					"depthPacking": 3201
 				},
 				"onBeforeCompileDataJSONWithoutShaders": {

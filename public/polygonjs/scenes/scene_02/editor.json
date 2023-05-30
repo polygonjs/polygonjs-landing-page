@@ -16,8 +16,8 @@
 						"initLayoutData": {
 							"camera": {
 								"position": {
-									"x": 450,
-									"y": -1000
+									"x": 475,
+									"y": -400
 								},
 								"zoom": 1
 							},
@@ -26,6 +26,55 @@
 									"position": {
 										"x": 0,
 										"y": 0
+									},
+									"zoom": 1
+								},
+								"36": {
+									"position": {
+										"x": 450,
+										"y": -1000
+									},
+									"zoom": 1
+								},
+								"89": {
+									"position": {
+										"x": 0,
+										"y": -125
+									},
+									"zoom": 1
+								},
+								"368": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"371": {
+									"position": {
+										"x": 500,
+										"y": -300
+									},
+									"zoom": 1
+								},
+								"379": {
+									"position": {
+										"x": 0,
+										"y": 0
+									},
+									"zoom": 1
+								},
+								"387": {
+									"position": {
+										"x": -100,
+										"y": 100
+									},
+									"zoom": 1
+								},
+								"441": {
+									"position": {
+										"x": 475,
+										"y": -400
 									},
 									"zoom": 1
 								},
@@ -68,7 +117,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 1066,
+					"active_folder": 444,
 					"linkIndex": 1
 				}
 			},
@@ -80,10 +129,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 75.67526728062549,
-						"y": -1035.047802216205
+						"x": 191.58466383183853,
+						"y": -178.5452480532506
 					},
-					"zoom": 0.6647599066162105
+					"zoom": 0.7027599066162106
 				},
 				"history": {
 					"2": {
@@ -92,6 +141,55 @@
 							"y": 206.5278927303953
 						},
 						"zoom": 1.0222221069335933
+					},
+					"36": {
+						"position": {
+							"x": 134.34306540118223,
+							"y": -857.5401053386229
+						},
+						"zoom": 0.6647599066162105
+					},
+					"89": {
+						"position": {
+							"x": -206.66668997502254,
+							"y": -195.3381721841124
+						},
+						"zoom": 0.8279999066162106
+					},
+					"368": {
+						"position": {
+							"x": -177.50769687758196,
+							"y": -10.530117611381982
+						},
+						"zoom": 0.6647599066162105
+					},
+					"371": {
+						"position": {
+							"x": 18.623194908252287,
+							"y": -256.37522703856035
+						},
+						"zoom": 0.6647599066162105
+					},
+					"379": {
+						"position": {
+							"x": -229.52147632312267,
+							"y": -21.611937296101193
+						},
+						"zoom": 0.8187599066162107
+					},
+					"387": {
+						"position": {
+							"x": -105.01495933394128,
+							"y": 301.19552310419317
+						},
+						"zoom": 0.5577599066162104
+					},
+					"441": {
+						"position": {
+							"x": 191.58466383183853,
+							"y": -178.5452480532506
+						},
+						"zoom": 0.7027599066162106
 					},
 					"816": {
 						"position": {
@@ -128,20 +226,30 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/particles", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/",
+				"/particles/particlesSystemGpu1",
 				"/particles",
-				"/",
-				"/cameras",
-				"/",
+				"/particles/actor1",
+				"/particles",
+				"/particles/particlesSystemGpu1",
+				"/particles",
+				"/particles/MAT",
 				"/particles",
 				"/particles/MAT",
 				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
 				"/particles/MAT",
-				"/particles"
+				"/particles",
+				"/particles/particlesSystemGpu1",
+				"/particles",
+				"/particles/MAT",
+				"/particles",
+				"/",
+				"/particles",
+				"/particles/MAT",
+				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES"
 			],
 			"2": ["/"],
 			"3": ["/"],
@@ -152,7 +260,7 @@
 			"8": ["/"]
 		},
 		"index": {
-			"1": 9,
+			"1": 19,
 			"2": 0,
 			"3": 0,
 			"4": 0,

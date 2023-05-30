@@ -6,7 +6,6 @@
 			"params": {
 				"name": "idn"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -31,7 +30,6 @@
 					}
 				}
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -380,7 +378,7 @@
 			"uuid": "/particles/MAT/meshBasicBuilder_INSTANCES-main",
 			"type": "MeshBasicMaterial",
 			"name": "/particles/MAT/meshBasicBuilder_INSTANCES",
-			"color": 16711422,
+			"color": 16777215,
 			"reflectivity": 1,
 			"refractionRatio": 0.98,
 			"depthFunc": 3,

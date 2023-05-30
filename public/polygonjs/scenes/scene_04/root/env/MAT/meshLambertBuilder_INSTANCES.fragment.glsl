@@ -24,6 +24,9 @@ vec3 hsv2rgb(vec3 c) {
 // /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 varying float v_POLY_attribute_id;
 
+// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+varying vec3 v_POLY_attribute_instancePosition;
+
 
 
 
@@ -31,7 +34,6 @@ varying float v_POLY_attribute_id;
 #include <dithering_pars_fragment>
 #include <color_pars_fragment>
 #include <uv_pars_fragment>
-#include <uv2_pars_fragment>
 #include <map_pars_fragment>
 #include <alphamap_pars_fragment>
 #include <alphatest_pars_fragment>
@@ -60,11 +62,23 @@ void main() {
 	// /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 	float v_POLY_attribute1_val = v_POLY_attribute_id;
 	
+	// /env/MAT/meshLambertBuilder_INSTANCES/constant1
+	vec3 v_POLY_constant1_val = vec3(0.0, 0.0, 0.0);
+	
+	// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+	vec3 v_POLY_attribute2_val = v_POLY_attribute_instancePosition;
+	
 	// /env/MAT/meshLambertBuilder_INSTANCES/round1
 	float v_POLY_round1_val = sign(v_POLY_attribute1_val)*floor(abs(v_POLY_attribute1_val)+0.5);
 	
+	// /env/MAT/meshLambertBuilder_INSTANCES/length1
+	float v_POLY_length1_val = length(v_POLY_attribute2_val);
+	
 	// /env/MAT/meshLambertBuilder_INSTANCES/floatToVec2_1
 	vec2 v_POLY_floatToVec2_1_vec2 = vec2(v_POLY_round1_val, 0.0);
+	
+	// /env/MAT/meshLambertBuilder_INSTANCES/smoothstep1
+	float v_POLY_smoothstep1_val = smoothstep(12.0, 120.0, v_POLY_length1_val);
 	
 	// /env/MAT/meshLambertBuilder_INSTANCES/random1
 	float v_POLY_random1_rand = rand(v_POLY_floatToVec2_1_vec2);
@@ -75,8 +89,11 @@ void main() {
 	// /env/MAT/meshLambertBuilder_INSTANCES/hsvToRgb1
 	vec3 v_POLY_hsvToRgb1_rgb = hsv2rgb(v_POLY_floatToVec3_1_vec3);
 	
+	// /env/MAT/meshLambertBuilder_INSTANCES/mix1
+	vec3 v_POLY_mix1_mix = mix(v_POLY_hsvToRgb1_rgb, v_POLY_constant1_val, v_POLY_smoothstep1_val);
+	
 	// /env/MAT/meshLambertBuilder_INSTANCES/output1
-	diffuseColor.xyz = v_POLY_hsvToRgb1_rgb;
+	diffuseColor.xyz = v_POLY_mix1_mix;
 
 
 

@@ -192,8 +192,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"maxInputsCount": 1,
@@ -666,8 +665,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"blend": {
 					"type": "float",
@@ -675,8 +673,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -1208,7 +1205,7 @@
 				"cook": false,
 				"dependentOnFoundNode": true
 			},
-			"raw_input": [5.413367813510279, -2.9655841065317188, -8.881784197001252e-16],
+			"raw_input": [6.9824599333683315, -3.1538751609146845, 0],
 			"overriden_options": {
 				"callback": "{}"
 			}
@@ -1270,7 +1267,7 @@
 		"texture_allocations": {
 			"writable": [
 				{
-					"instancePosition_SEPARATOR_state": [
+					"instancePosition_x_state": [
 						{
 							"name": "instancePosition",
 							"size": 3,
@@ -1301,7 +1298,7 @@
 			],
 			"readonly": [
 				{
-					"restP_SEPARATOR_id": [
+					"restP_x_id": [
 						{
 							"name": "restP",
 							"size": 3,
@@ -1341,12 +1338,13 @@
 			"stencilFail": 7680,
 			"stencilZFail": 7680,
 			"stencilZPass": 7680,
+			"forceSinglePass": true,
 			"fog": false,
 			"glslVersion": null,
 			"uniforms": {
 				"v_POLY_param_cursor": {
 					"type": "v3",
-					"value": [5.413367813510279, -2.9655841065317188, -8.881784197001252e-16]
+					"value": [6.9824599333683315, -3.1538751609146845, 0]
 				},
 				"v_POLY_param_velocity": {
 					"type": "v3",
@@ -1358,7 +1356,8 @@
 			},
 			"vertexShader": "void main() {\n\tgl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n}",
 			"fragmentShader": "void main() {\n\tgl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );\n}",
-			"lights": false
+			"lights": false,
+			"clipping": false
 		}
 	}
 }

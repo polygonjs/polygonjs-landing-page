@@ -213,7 +213,7 @@ vec4 complement(vec4 x){return vec4(1.0-x.x, 1.0-x.y, 1.0-x.z, 1.0-x.w);}
 
 
 // /particles/particlesSystemGpu1/attribute1
-uniform sampler2D texture_instancePosition_SEPARATOR_state;
+uniform sampler2D texture_instancePosition_x_state;
 
 // /particles/particlesSystemGpu1/globals1
 uniform sampler2D texture_velocity;
@@ -225,7 +225,7 @@ uniform vec3 v_POLY_param_velocity;
 uniform vec3 v_POLY_param_cursor;
 
 // /particles/particlesSystemGpu1/attribute3
-uniform sampler2D texture_restP_SEPARATOR_id;
+uniform sampler2D texture_restP_x_id;
 
 // /particles/particlesSystemGpu1/ramp1
 uniform sampler2D v_POLY_ramp_ramp1;
@@ -239,7 +239,7 @@ uniform float delta_time;
 
 void main() {
 
-	vec2 particleUV = (gl_FragCoord.xy / resolution.xy);
+	vec2 particleUv = (gl_FragCoord.xy / resolution.xy);
 
 // removed:
 //	// INSERT BODY
@@ -247,11 +247,11 @@ void main() {
 
 
 	// /particles/particlesSystemGpu1/attribute1
-	vec3 v_POLY_attribute1_val = texture2D( texture_instancePosition_SEPARATOR_state, particleUV ).xyz;
+	vec3 v_POLY_attribute1_val = texture2D( texture_instancePosition_x_state, particleUv ).xyz;
 	gl_FragColor.xyz = v_POLY_attribute1_val;
 	
 	// /particles/particlesSystemGpu1/globals1
-	vec3 v_POLY_globals1_velocity = texture2D( texture_velocity, particleUV ).xyz;
+	vec3 v_POLY_globals1_velocity = texture2D( texture_velocity, particleUv ).xyz;
 	
 	// /particles/particlesSystemGpu1/param2
 	vec3 v_POLY_param2_val = v_POLY_param_velocity;
@@ -260,13 +260,13 @@ void main() {
 	vec3 v_POLY_param1_val = v_POLY_param_cursor;
 	
 	// /particles/particlesSystemGpu1/attribute3
-	float v_POLY_attribute3_val = texture2D( texture_restP_SEPARATOR_id, particleUV ).w;
+	float v_POLY_attribute3_val = texture2D( texture_restP_x_id, particleUv ).w;
 	
 	// /particles/particlesSystemGpu1/attribute4
-	vec3 v_POLY_attribute4_val = texture2D( texture_restP_SEPARATOR_id, particleUV ).xyz;
+	vec3 v_POLY_attribute4_val = texture2D( texture_restP_x_id, particleUv ).xyz;
 	
 	// /particles/particlesSystemGpu1/attribute_state_IN
-	float v_POLY_attribute_state_IN_val = texture2D( texture_instancePosition_SEPARATOR_state, particleUV ).w;
+	float v_POLY_attribute_state_IN_val = texture2D( texture_instancePosition_x_state, particleUv ).w;
 	gl_FragColor.w = v_POLY_attribute_state_IN_val;
 	
 	// /particles/particlesSystemGpu1/null1

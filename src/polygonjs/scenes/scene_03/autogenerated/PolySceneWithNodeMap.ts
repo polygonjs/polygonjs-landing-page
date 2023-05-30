@@ -865,6 +865,9 @@ export interface PolySceneProps_scene_03 {
   "ground-tube1--directionx"?: ParamValueSerializedTypeMap["float"];
   "ground-tube1--directiony"?: ParamValueSerializedTypeMap["float"];
   "ground-tube1--directionz"?: ParamValueSerializedTypeMap["float"];
+  "ground-tube1--open"?: ParamValueSerializedTypeMap["boolean"];
+  "ground-tube1--thetaStart"?: ParamValueSerializedTypeMap["float"];
+  "ground-tube1--thetaLength"?: ParamValueSerializedTypeMap["float"];
   "ground-MAT-meshStandardBuilder1--default"?: ParamValueSerializedTypeMap["folder"];
   "ground-MAT-meshStandardBuilder1--transparent"?: ParamValueSerializedTypeMap["boolean"];
   "ground-MAT-meshStandardBuilder1--opacity"?: ParamValueSerializedTypeMap["float"];
@@ -945,8 +948,8 @@ export interface PolySceneProps_scene_03 {
   "COP-envMap--useCameraRenderer"?: ParamValueSerializedTypeMap["boolean"];
   "COP-imageEnv--url"?: ParamValueSerializedTypeMap["string"];
   "COP-imageEnv--reload"?: ParamValueSerializedTypeMap["button"];
-  "COP-imageEnv--tencoding"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--encoding"?: ParamValueSerializedTypeMap["integer"];
+  "COP-imageEnv--tcolorSpace"?: ParamValueSerializedTypeMap["boolean"];
+  "COP-imageEnv--colorSpace"?: ParamValueSerializedTypeMap["string"];
   "COP-imageEnv--tmapping"?: ParamValueSerializedTypeMap["boolean"];
   "COP-imageEnv--mapping"?: ParamValueSerializedTypeMap["integer"];
   "COP-imageEnv--twrap"?: ParamValueSerializedTypeMap["boolean"];

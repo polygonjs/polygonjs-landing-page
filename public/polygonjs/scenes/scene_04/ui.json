@@ -281,6 +281,7 @@
 		},
 		"env": {
 			"pos": [-50, -350],
+			"selection": ["instance1"],
 			"nodes": {
 				"circle1": {
 					"pos": [-50, -400]
@@ -308,34 +309,48 @@
 					"nodes": {
 						"meshLambertBuilder_INSTANCES": {
 							"pos": [0, 0],
-							"selection": ["floatToVec3_1"],
 							"nodes": {
 								"instanceTransform1": {
-									"pos": [0, 0]
+									"pos": [-50, -150]
 								},
 								"output1": {
-									"pos": [400, 0]
+									"pos": [600, 0]
 								},
 								"globals1": {
 									"pos": [-400, 0]
 								},
 								"attribute1": {
-									"pos": [-250, 300]
+									"pos": [-300, 350]
 								},
 								"round1": {
-									"pos": [-150, 300]
+									"pos": [-200, 350]
 								},
 								"floatToVec2_1": {
-									"pos": [-50, 300]
+									"pos": [-100, 350]
 								},
 								"random1": {
-									"pos": [50, 300]
+									"pos": [0, 350]
 								},
 								"floatToVec3_1": {
-									"pos": [150, 300]
+									"pos": [100, 350]
 								},
 								"hsvToRgb1": {
-									"pos": [250, 300]
+									"pos": [200, 350]
+								},
+								"length1": {
+									"pos": [50, 700]
+								},
+								"attribute2": {
+									"pos": [-100, 700]
+								},
+								"smoothstep1": {
+									"pos": [250, 700]
+								},
+								"constant1": {
+									"pos": [100, 500]
+								},
+								"mix1": {
+									"pos": [450, 450]
 								}
 							}
 						}

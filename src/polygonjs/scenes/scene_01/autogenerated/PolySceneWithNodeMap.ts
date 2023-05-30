@@ -158,7 +158,13 @@ export interface PolySceneProps_scene_01 {
   "geo1-box1--sizesx"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--sizesy"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--sizesz"?: ParamValueSerializedTypeMap["float"];
-  "geo1-box1--divisions"?: ParamValueSerializedTypeMap["integer"];
+  "geo1-box1--divisions"?: ParamValueSerializedTypeMap["vector3"];
+  "geo1-box1--divisions-divisionsx"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisions-divisionsy"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisions-divisionsz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsx"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsy"?: ParamValueSerializedTypeMap["float"];
+  "geo1-box1--divisionsz"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--center"?: ParamValueSerializedTypeMap["vector3"];
   "geo1-box1--center-centerx"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--center-centery"?: ParamValueSerializedTypeMap["float"];
@@ -196,6 +202,7 @@ export interface PolySceneProps_scene_01 {
   "geo1-MAT-rayMarchingBuilder1--builderNode"?: ParamValueSerializedTypeMap["node_path"];
   "geo1-MAT-rayMarchingBuilder1--doubleSided"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-MAT-rayMarchingBuilder1--front"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-MAT-rayMarchingBuilder1--useFog"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-MAT-rayMarchingBuilder1--overrideCustomMaterials"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-MAT-rayMarchingBuilder1--createCustomMatDistance"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-MAT-rayMarchingBuilder1--shadowDistanceMin"?: ParamValueSerializedTypeMap["float"];
@@ -212,8 +219,8 @@ export interface PolySceneProps_scene_01 {
   "COP-envMap--useCameraRenderer"?: ParamValueSerializedTypeMap["boolean"];
   "COP-imageEnv--url"?: ParamValueSerializedTypeMap["string"];
   "COP-imageEnv--reload"?: ParamValueSerializedTypeMap["button"];
-  "COP-imageEnv--tencoding"?: ParamValueSerializedTypeMap["boolean"];
-  "COP-imageEnv--encoding"?: ParamValueSerializedTypeMap["integer"];
+  "COP-imageEnv--tcolorSpace"?: ParamValueSerializedTypeMap["boolean"];
+  "COP-imageEnv--colorSpace"?: ParamValueSerializedTypeMap["string"];
   "COP-imageEnv--tmapping"?: ParamValueSerializedTypeMap["boolean"];
   "COP-imageEnv--mapping"?: ParamValueSerializedTypeMap["integer"];
   "COP-imageEnv--twrap"?: ParamValueSerializedTypeMap["boolean"];
@@ -505,7 +512,7 @@ export interface PolySceneProps_scene_01 {
   "cameras-cameraRenderer1-WebGLRenderer1--common"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraRenderer1-WebGLRenderer1--toneMapping"?: ParamValueSerializedTypeMap["integer"];
   "cameras-cameraRenderer1-WebGLRenderer1--toneMappingExposure"?: ParamValueSerializedTypeMap["float"];
-  "cameras-cameraRenderer1-WebGLRenderer1--outputEncoding"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraRenderer1-WebGLRenderer1--outputColorSpace"?: ParamValueSerializedTypeMap["string"];
   "cameras-cameraRenderer1-WebGLRenderer1--physicallyCorrectLights"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--sortObjects"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--tpixelRatio"?: ParamValueSerializedTypeMap["boolean"];

@@ -196,7 +196,7 @@
 			"uuid": "/geo1/MAT/meshStandardBuilder_GROUND-main",
 			"type": "MeshStandardMaterial",
 			"name": "/geo1/MAT/meshStandardBuilder_GROUND",
-			"color": 16711422,
+			"color": 16777215,
 			"roughness": 1,
 			"metalness": 0,
 			"emissive": 0,

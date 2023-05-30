@@ -1,13 +1,13 @@
 import { SceneDataManifestImporter } from "@polygonjs/polygonjs/dist/src/engine/io/manifest/import/SceneData";
 const manifest = {
-  properties: "1684881406207",
+  properties: "1685480417272",
   root: "1684622508824",
   nodes: {
     geo1: "1684623137677",
     "geo1/MAT": "1684618262298",
-    "geo1/MAT/meshStandardBuilder_GROUND": "1684620977085",
-    "geo1/MAT/meshStandardBuilder_PLAYER": "1684623137677",
-    "geo1/MAT/meshStandardBuilder_BLOCKS": "1684623137677",
+    "geo1/MAT/meshStandardBuilder_GROUND": "1685480417272",
+    "geo1/MAT/meshStandardBuilder_PLAYER": "1685480417272",
+    "geo1/MAT/meshStandardBuilder_BLOCKS": "1685480417272",
     "geo1/physicsPlayer1": "1684677476810",
     "geo1/cameraControls_PLAYER1": "1684664308093",
     "geo1/physicsWorld1": "1684622347434",
@@ -16,12 +16,12 @@ const manifest = {
     "cameras/cameraControls1": "1684623137677",
     env: "1684706453144",
     "env/MAT": "1684706453144",
-    "env/MAT/meshLambertBuilder_INSTANCES": "1684881406207",
+    "env/MAT/meshLambertBuilder_INSTANCES": "1685480417272",
   },
   shaders: {
     "/geo1/MAT/meshStandardBuilder_GROUND": {
-      vertex: "1684618414151",
-      fragment: "1684618414151",
+      vertex: "1685480417272",
+      fragment: "1685480417272",
       "customDepthMaterial.vertex": "1684618414151",
       "customDepthMaterial.fragment": "1684618414151",
       "customDistanceMaterial.vertex": "1684618414151",

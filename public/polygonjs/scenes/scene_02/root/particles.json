@@ -5,6 +5,7 @@
 			"type": "instance",
 			"params": {
 				"attributesToCopy": "instance* id idn restP",
+				"applyMaterial": 0,
 				"material": "../MAT/meshBasicBuilder_INSTANCES"
 			},
 			"inputs": ["sphere1", "restAttributes1"]

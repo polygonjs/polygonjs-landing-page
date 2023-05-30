@@ -258,6 +258,9 @@ vec4 align(vec3 dir, vec3 up){
 // /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 varying float v_POLY_attribute_id;
 
+// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+varying vec3 v_POLY_attribute_instancePosition;
+
 // /env/MAT/meshLambertBuilder_INSTANCES/instanceTransform1
 attribute vec3 instancePosition;
 attribute vec4 instanceQuaternion;
@@ -300,6 +303,9 @@ void main() {
 	
 	// /env/MAT/meshLambertBuilder_INSTANCES/attribute1
 	v_POLY_attribute_id = float(id);
+	
+	// /env/MAT/meshLambertBuilder_INSTANCES/attribute2
+	v_POLY_attribute_instancePosition = vec3(instancePosition);
 	
 	// /env/MAT/meshLambertBuilder_INSTANCES/output1
 	vec3 transformed = v_POLY_instanceTransform1_position;

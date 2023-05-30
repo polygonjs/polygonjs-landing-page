@@ -592,7 +592,7 @@
 			"uuid": "/ground/MAT/meshStandardBuilder1-main",
 			"type": "MeshStandardMaterial",
 			"name": "/ground/MAT/meshStandardBuilder1",
-			"color": 16711422,
+			"color": 16777215,
 			"roughness": 1,
 			"metalness": 0,
 			"emissive": 0,

@@ -6,7 +6,6 @@
 			"params": {
 				"name": "idn"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -31,7 +30,6 @@
 					}
 				}
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -47,7 +45,6 @@
 			"params": {
 				"name": "state"
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -127,8 +124,8 @@
 				{
 					"index": 0,
 					"inputName": "val",
-					"node": "ramp1",
-					"output": "val"
+					"node": "random2",
+					"output": "rand"
 				}
 			],
 			"connection_points": {
@@ -526,8 +523,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"preAdd": {
 					"type": "float",
@@ -553,8 +549,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -625,8 +620,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -676,7 +670,6 @@
 					}
 				}
 			},
-			"maxInputsCount": 0,
 			"connection_points": {
 				"in": [],
 				"out": [
@@ -845,8 +838,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -881,8 +873,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"mult": {
 					"type": "float",
@@ -890,8 +881,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -983,7 +973,7 @@
 			"uuid": "/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES-main",
 			"type": "MeshBasicMaterial",
 			"name": "/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
-			"color": 16711422,
+			"color": 16777215,
 			"reflectivity": 1,
 			"refractionRatio": 0.98,
 			"transparent": true,

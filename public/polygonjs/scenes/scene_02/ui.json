@@ -3,6 +3,45 @@
 		"particles": {
 			"pos": [-50, -300],
 			"nodes": {
+				"instance1": {
+					"pos": [-450, 700]
+				},
+				"point1": {
+					"pos": [-250, 250]
+				},
+				"restAttributes1": {
+					"pos": [-250, 400]
+				},
+				"scatter1": {
+					"pos": [-400, -500]
+				},
+				"sphere1": {
+					"pos": [-550, 500]
+				},
+				"text1": {
+					"pos": [-300, -950]
+				},
+				"sort1": {
+					"pos": [-250, -100]
+				},
+				"attribId1": {
+					"pos": [-250, 50]
+				},
+				"delete1": {
+					"pos": [-400, -800]
+				},
+				"delete2": {
+					"pos": [-100, -800]
+				},
+				"scatter2": {
+					"pos": [-100, -500]
+				},
+				"merge1": {
+					"pos": [-250, -300]
+				},
+				"merge2": {
+					"pos": [-400, -650]
+				},
 				"MAT": {
 					"pos": [-650, 700],
 					"nodes": {
@@ -110,7 +149,7 @@
 									"pos": [250, 0]
 								},
 								"ramp1": {
-									"pos": [-550, -150]
+									"pos": [-550, -250]
 								},
 								"random1": {
 									"pos": [-500, 100]
@@ -168,7 +207,6 @@
 				},
 				"actor1": {
 					"pos": [-450, 1150],
-					"selection": ["plane1", "rayFromCursor1", "rayIntersectPlane1"],
 					"nodes": {
 						"divide2": {
 							"pos": [-150, 100]
@@ -207,6 +245,7 @@
 				},
 				"actor_particles1": {
 					"pos": [-450, 850],
+					"selection": ["particlesSystemStepSimulation1"],
 					"nodes": {
 						"onScenePause1": {
 							"pos": [-100, -100]
@@ -222,11 +261,9 @@
 						}
 					}
 				},
-				"instance1": {
-					"pos": [-450, 700]
-				},
 				"particlesSystemGpu1": {
 					"pos": [-450, 1000],
+					"selection": ["attribute1"],
 					"nodes": {
 						"acceleration1": {
 							"pos": [450, -650]
@@ -319,48 +356,18 @@
 							"pos": [350, 500]
 						}
 					}
-				},
-				"point1": {
-					"pos": [-250, 250]
-				},
-				"restAttributes1": {
-					"pos": [-250, 400]
-				},
-				"scatter1": {
-					"pos": [-400, -500]
-				},
-				"sphere1": {
-					"pos": [-550, 500]
-				},
-				"text1": {
-					"pos": [-300, -950]
-				},
-				"sort1": {
-					"pos": [-250, -100]
-				},
-				"attribId1": {
-					"pos": [-250, 50]
-				},
-				"delete1": {
-					"pos": [-400, -800]
-				},
-				"delete2": {
-					"pos": [-100, -800]
-				},
-				"scatter2": {
-					"pos": [-100, -500]
-				},
-				"merge1": {
-					"pos": [-250, -300]
-				},
-				"merge2": {
-					"pos": [-400, -650]
 				}
 			}
 		},
 		"cameras": {
 			"pos": [-50, -100],
 			"nodes": {
+				"perspectiveCamera1": {
+					"pos": [0, -50]
+				},
+				"cameraFrameMode1": {
+					"pos": [0, 300]
+				},
 				"cameraControls1": {
 					"pos": [0, 150],
 					"nodes": {
@@ -369,11 +376,19 @@
 						}
 					}
 				},
-				"perspectiveCamera1": {
-					"pos": [0, -50]
+				"cameraControls2": {
+					"pos": [250, 150],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [0, 0]
+						}
+					}
 				},
-				"cameraFrameMode1": {
-					"pos": [0, 300]
+				"perspectiveCamera_DEBUG": {
+					"pos": [250, -50]
+				},
+				"merge1": {
+					"pos": [150, 450]
 				}
 			}
 		}

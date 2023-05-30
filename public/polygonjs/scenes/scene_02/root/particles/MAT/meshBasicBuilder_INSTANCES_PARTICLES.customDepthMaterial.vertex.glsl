@@ -384,23 +384,20 @@ vec4 align(vec3 dir, vec3 up){
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/globals1
 uniform float time;
 
-// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/ramp1
-uniform sampler2D v_POLY_ramp_ramp1;
-
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/instanceTransform1
-uniform sampler2D texture_instancePosition_SEPARATOR_state;
+uniform sampler2D texture_instancePosition_x_state;
 
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/attribute4
 varying float v_POLY_attribute_idn;
 
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/instanceTransform1
-varying vec2 particles_sim_uv_varying;
+varying vec2 particlesSimUvVarying;
 
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/attribute2
 attribute float idn;
 
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/instanceTransform1
-attribute vec2 particles_sim_uv_attrib;
+attribute vec2 particlesSimUv;
 attribute vec4 instanceQuaternion;
 
 
@@ -452,20 +449,17 @@ void main() {
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/random3
 	float v_POLY_random3_rand = rand(v_POLY_floatToVec2_3_vec2);
 	
-	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/ramp1
-	float v_POLY_ramp1_val = texture2D(v_POLY_ramp_ramp1, vec2(v_POLY_random2_rand, 0.0)).x;
+	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/fitFrom01_1
+	float v_POLY_fitFrom01_1_val = fitFrom01(v_POLY_random2_rand, 0.22, 1.4000000000000001);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/multScalar1
 	float v_POLY_multScalar1_val = (0.51*v_POLY_random3_rand);
 	
-	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/fitFrom01_1
-	float v_POLY_fitFrom01_1_val = fitFrom01(v_POLY_ramp1_val, 0.22, 1.4000000000000001);
+	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/floatToVec3_2
+	vec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/add1
 	float v_POLY_add1_sum = (v_POLY_attribute4_val + v_POLY_multScalar1_val + 0.0);
-	
-	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/floatToVec3_2
-	vec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/negate1
 	float v_POLY_negate1_val = -1.0 * v_POLY_add1_sum;
@@ -480,11 +474,11 @@ void main() {
 	vec3 v_POLY_multScalar2_val = (v_POLY_smoothstep1_val*v_POLY_floatToVec3_2_vec3);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/instanceTransform1
-	particles_sim_uv_varying = particles_sim_uv_attrib;
+	particlesSimUvVarying = particlesSimUv;
 	vec3 v_POLY_instanceTransform1_position = vec3(position);
 	v_POLY_instanceTransform1_position *= v_POLY_multScalar2_val;
 	v_POLY_instanceTransform1_position = rotateWithQuat( v_POLY_instanceTransform1_position, instanceQuaternion );
-	v_POLY_instanceTransform1_position += texture2D( texture_instancePosition_SEPARATOR_state, particles_sim_uv_varying ).xyz;
+	v_POLY_instanceTransform1_position += texture2D( texture_instancePosition_x_state, particlesSimUvVarying ).xyz;
 	vec3 v_POLY_instanceTransform1_normal = vec3(normal);
 	v_POLY_instanceTransform1_normal = rotateWithQuat( v_POLY_instanceTransform1_normal, instanceQuaternion );
 	

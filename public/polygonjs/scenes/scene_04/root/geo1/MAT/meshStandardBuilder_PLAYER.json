@@ -196,7 +196,7 @@
 			"uuid": "/geo1/MAT/meshStandardBuilder_PLAYER-main",
 			"type": "MeshStandardMaterial",
 			"name": "/geo1/MAT/meshStandardBuilder_PLAYER",
-			"color": 16711422,
+			"color": 16777215,
 			"roughness": 1,
 			"metalness": 0,
 			"emissive": 0,

@@ -34,7 +34,7 @@ uniform float time;
 varying float v_POLY_attribute_idn;
 
 // /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/instanceTransform1
-varying vec2 particles_sim_uv_varying;
+varying vec2 particlesSimUvVarying;
 
 
 
