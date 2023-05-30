@@ -38,7 +38,7 @@
 		<a
 			v-if="!loggedIn"
 			:href="loginRoute"
-			class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-fuchsia-400 hover:bg-fuchsia-400 dark:border-fuchsia-700 dark:hover:bg-fuchsia-700"
+			class="block lg:inline whitespace-nowrap leading-tight border-b-4 border-rose-700 hover:bg-rose-700 dark:border-rose-700 dark:hover:bg-rose-700"
 			>Login</a
 		>
 		<span v-if="!loggedIn" class="hidden lg:inline text-sm">&bull;</span>
