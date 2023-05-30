@@ -442,17 +442,20 @@ void main() {
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/random3
 	float v_POLY_random3_rand = rand(v_POLY_floatToVec2_3_vec2);
 	
-	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/fitFrom01_1
-	float v_POLY_fitFrom01_1_val = fitFrom01(v_POLY_random2_rand, 0.22, 1.4000000000000001);
+	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/pow1
+	float v_POLY_pow1_val = pow(v_POLY_random2_rand, 2.3);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/multScalar1
 	float v_POLY_multScalar1_val = (0.51*v_POLY_random3_rand);
 	
-	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/floatToVec3_2
-	vec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val);
+	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/fitFrom01_1
+	float v_POLY_fitFrom01_1_val = fitFrom01(v_POLY_pow1_val, 0.22, 1.4000000000000001);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/add1
 	float v_POLY_add1_sum = (v_POLY_attribute4_val + v_POLY_multScalar1_val + 0.0);
+	
+	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/floatToVec3_2
+	vec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val, v_POLY_fitFrom01_1_val);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/negate1
 	float v_POLY_negate1_val = -1.0 * v_POLY_add1_sum;

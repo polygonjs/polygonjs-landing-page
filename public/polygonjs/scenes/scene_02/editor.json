@@ -129,8 +129,8 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 191.58466383183853,
-						"y": -178.5452480532506
+						"x": 298.306745290818,
+						"y": -187.08301456996895
 					},
 					"zoom": 0.7027599066162106
 				},
@@ -179,15 +179,15 @@
 					},
 					"387": {
 						"position": {
-							"x": -105.01495933394128,
-							"y": 301.19552310419317
+							"x": -162.38731546856553,
+							"y": 152.38597438001148
 						},
 						"zoom": 0.5577599066162104
 					},
 					"441": {
 						"position": {
-							"x": 191.58466383183853,
-							"y": -178.5452480532506
+							"x": 298.306745290818,
+							"y": -187.08301456996895
 						},
 						"zoom": 0.7027599066162106
 					},
@@ -230,12 +230,6 @@
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/particles/particlesSystemGpu1",
-				"/particles",
-				"/particles/actor1",
-				"/particles",
-				"/particles/particlesSystemGpu1",
-				"/particles",
 				"/particles/MAT",
 				"/particles",
 				"/particles/MAT",
@@ -247,6 +241,12 @@
 				"/particles/MAT",
 				"/particles",
 				"/",
+				"/particles",
+				"/particles/MAT",
+				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
+				"/particles/MAT",
+				"/particles",
+				"/particles/particlesSystemGpu1",
 				"/particles",
 				"/particles/MAT",
 				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES"

@@ -124,8 +124,8 @@
 				{
 					"index": 0,
 					"inputName": "val",
-					"node": "random2",
-					"output": "rand"
+					"node": "pow1",
+					"output": "val"
 				}
 			],
 			"connection_points": {
@@ -913,6 +913,55 @@
 					{
 						"name": "val",
 						"type": "vec3"
+					}
+				]
+			}
+		},
+		"pow1": {
+			"type": "pow",
+			"params": {
+				"x": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					},
+					"overriden_options": {}
+				},
+				"y": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 2.3
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"inputName": "x",
+					"node": "random2",
+					"output": "rand"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "x",
+						"type": "float"
+					},
+					{
+						"name": "y",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
 					}
 				]
 			}
