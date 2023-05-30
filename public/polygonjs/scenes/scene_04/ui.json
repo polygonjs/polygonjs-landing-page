@@ -2,6 +2,7 @@
 	"nodes": {
 		"geo1": {
 			"pos": [-50, -450],
+			"selection": ["physicsPlayer1"],
 			"nodes": {
 				"tube1": {
 					"pos": [0, 50]
