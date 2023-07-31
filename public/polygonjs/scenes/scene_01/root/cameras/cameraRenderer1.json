@@ -6,8 +6,7 @@
 			"params": {
 				"physicallyCorrectLights": 0,
 				"sortObjects": 0,
-				"tpixelRatio": 1,
-				"pixelRatio": 0.1
+				"tpixelRatio": 1
 			}
 		}
 	},

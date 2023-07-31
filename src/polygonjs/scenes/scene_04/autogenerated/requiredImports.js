@@ -40,6 +40,8 @@ import { getPlayerInputDataJump } from "@polygonjs/polygonjs/dist/src/engine/fun
 import { getPlayerInputDataLeft } from "@polygonjs/polygonjs/dist/src/engine/functions/getPlayerInputDataLeft";
 import { getPlayerInputDataRight } from "@polygonjs/polygonjs/dist/src/engine/functions/getPlayerInputDataRight";
 import { getPlayerInputDataRun } from "@polygonjs/polygonjs/dist/src/engine/functions/getPlayerInputDataRun";
+import { globalsTime } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsTime";
+import { globalsTimeDelta } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsTimeDelta";
 import { keyboardEventMatchesConfig } from "@polygonjs/polygonjs/dist/src/engine/functions/keyboardEventMatchesConfig";
 import { physicsWorldReset } from "@polygonjs/polygonjs/dist/src/engine/functions/physicsWorldReset";
 import { physicsWorldStepSimulation } from "@polygonjs/polygonjs/dist/src/engine/functions/physicsWorldStepSimulation";
@@ -87,6 +89,8 @@ export const requiredImports_scene_04 = {
     getPlayerInputDataLeft,
     getPlayerInputDataRight,
     getPlayerInputDataRun,
+    globalsTime,
+    globalsTimeDelta,
     keyboardEventMatchesConfig,
     physicsWorldReset,
     physicsWorldStepSimulation,

@@ -47,7 +47,7 @@ export const loadScene_scene_03 = async function (options = {}) {
   let i = 0;
   for (let moduleName of moduleNames) {
     const moduleNameContainer = moduleName + "Module";
-    Poly.registerModule(loadedModules[i][moduleNameContainer]);
+    Poly.registerModule(loadedModules[i][moduleNameContainer], printWarnings);
     i++;
   }
 

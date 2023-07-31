@@ -37,7 +37,7 @@
 	"persisted_config": {
 		"variableNames": [],
 		"variables": [],
-		"functionNames": ["physicsWorldReset", "physicsWorldStepSimulation"],
+		"functionNames": ["globalsTime", "globalsTimeDelta", "physicsWorldReset", "physicsWorldStepSimulation"],
 		"serializedParamConfigs": [],
 		"eventDatas": []
 	}

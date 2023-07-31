@@ -71,7 +71,35 @@
 									},
 									"zoom": 1
 								},
+								"390": {
+									"position": {
+										"x": 0,
+										"y": -300
+									},
+									"zoom": 1
+								},
+								"398": {
+									"position": {
+										"x": -100,
+										"y": -100
+									},
+									"zoom": 1
+								},
+								"406": {
+									"position": {
+										"x": 600,
+										"y": 800
+									},
+									"zoom": 1
+								},
 								"441": {
+									"position": {
+										"x": 475,
+										"y": -400
+									},
+									"zoom": 1
+								},
+								"460": {
 									"position": {
 										"x": 475,
 										"y": -400
@@ -117,7 +145,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 444,
+					"active_folder": 463,
 					"linkIndex": 1
 				}
 			},
@@ -129,10 +157,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 298.306745290818,
-						"y": -187.08301456996895
+						"x": 422.1187341520904,
+						"y": -544.9362768675032
 					},
-					"zoom": 0.7027599066162106
+					"zoom": 0.7717599066162106
 				},
 				"history": {
 					"2": {
@@ -144,10 +172,10 @@
 					},
 					"36": {
 						"position": {
-							"x": 134.34306540118223,
-							"y": -857.5401053386229
+							"x": 172.50268648094948,
+							"y": -935.3774274557748
 						},
-						"zoom": 0.6647599066162105
+						"zoom": 0.7337599066162106
 					},
 					"89": {
 						"position": {
@@ -179,10 +207,31 @@
 					},
 					"387": {
 						"position": {
-							"x": -162.38731546856553,
-							"y": 152.38597438001148
+							"x": -223.34544386160383,
+							"y": -105.78962822579774
 						},
-						"zoom": 0.5577599066162104
+						"zoom": 0.6477599066162105
+					},
+					"390": {
+						"position": {
+							"x": 159.91683221728746,
+							"y": -88.35830828376085
+						},
+						"zoom": 0.6647599066162105
+					},
+					"398": {
+						"position": {
+							"x": -100,
+							"y": -100
+						},
+						"zoom": 0.7337599066162106
+					},
+					"406": {
+						"position": {
+							"x": 600,
+							"y": 800
+						},
+						"zoom": 0.7337599066162106
 					},
 					"441": {
 						"position": {
@@ -190,6 +239,13 @@
 							"y": -187.08301456996895
 						},
 						"zoom": 0.7027599066162106
+					},
+					"460": {
+						"position": {
+							"x": 422.1187341520904,
+							"y": -544.9362768675032
+						},
+						"zoom": 0.7717599066162106
 					},
 					"816": {
 						"position": {
@@ -230,25 +286,25 @@
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/particles/MAT",
 				"/particles",
 				"/particles/MAT",
 				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
 				"/particles/MAT",
 				"/particles",
+				"/particles/actor1",
+				"/particles",
+				"/particles/actor_particles1",
+				"/particles",
+				"/particles/particlesSystemGpu1",
+				"/particles",
+				"/particles/actor1",
+				"/particles",
+				"/particles/actor1",
+				"/particles",
 				"/particles/particlesSystemGpu1",
 				"/particles",
 				"/particles/MAT",
 				"/particles",
-				"/",
-				"/particles",
-				"/particles/MAT",
-				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
-				"/particles/MAT",
-				"/particles",
-				"/particles/particlesSystemGpu1",
-				"/particles",
-				"/particles/MAT",
 				"/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES"
 			],
 			"2": ["/"],

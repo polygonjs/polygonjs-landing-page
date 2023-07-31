@@ -2,6 +2,10 @@
 class CustomActorEvaluator extends ActorEvaluator {
 	// insert members
 
+	// /geo1/physicsPlayer1/onTick1
+	v_POLY_onTick1_time = computed(() => globalsTime());
+	v_POLY_onTick1_delta = computed(() => globalsTimeDelta());
+
 	// /geo1/physicsPlayer1/setPlayerInput1
 	v_POLY_setPlayerInput1_left = computed(() => getPlayerInputDataLeft(this.object3D));
 	v_POLY_setPlayerInput1_right = computed(() => getPlayerInputDataRight(this.object3D));
@@ -10,8 +14,8 @@ class CustomActorEvaluator extends ActorEvaluator {
 	v_POLY_setPlayerInput1_jump = computed(() => getPlayerInputDataJump(this.object3D));
 	v_POLY_setPlayerInput1_run = computed(() => getPlayerInputDataRun(this.object3D));
 
-	constructor(scene, object3D) {
-		super(scene, object3D);
+	constructor(node, object3D) {
+		super(node, object3D);
 		// insert after constructor
 	}
 	// insert body

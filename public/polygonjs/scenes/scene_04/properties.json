@@ -5,6 +5,6 @@
 	"realtimeState": true,
 	"mainCameraPath": "/geo1/geo1:sopGroup/physicsWorld1/perspectiveCamera_PLAYER1",
 	"versions": {
-		"polygonjs": "1.4.16"
+		"polygonjs": "1.4.43"
 	}
 }

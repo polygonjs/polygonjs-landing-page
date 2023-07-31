@@ -80,6 +80,8 @@
 		"variableNames": [],
 		"variables": [],
 		"functionNames": [
+			"globalsTime",
+			"globalsTimeDelta",
 			"getPlayerInputDataLeft",
 			"getPlayerInputDataRight",
 			"getPlayerInputDataForward",

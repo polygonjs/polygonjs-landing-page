@@ -97,7 +97,7 @@ void main () {
 	vec3 v_POLY_floatToVec3_1_vec3 = vec3(v_POLY_random1_rand, 1.0, 0.76);
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/multAdd2
-	float v_POLY_multAdd2_val = (0.34*(v_POLY_globals1_time + 1.5)) + v_POLY_negate1_val;
+	float v_POLY_multAdd2_val = (0.39*(v_POLY_globals1_time + 2.22)) + v_POLY_negate1_val;
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/hsvToRgb1
 	vec3 v_POLY_hsvToRgb1_rgb = hsv2rgb(v_POLY_floatToVec3_1_vec3);

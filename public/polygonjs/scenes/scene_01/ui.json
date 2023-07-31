@@ -2,6 +2,7 @@
 	"nodes": {
 		"geo1": {
 			"pos": [-50, -350],
+			"selection": ["MAT"],
 			"nodes": {
 				"boxLines1": {
 					"pos": [100, 0]
@@ -195,7 +196,6 @@
 		},
 		"COP": {
 			"pos": [-300, -50],
-			"selection": ["imageEnv"],
 			"nodes": {
 				"envMap": {
 					"pos": [50, 250]

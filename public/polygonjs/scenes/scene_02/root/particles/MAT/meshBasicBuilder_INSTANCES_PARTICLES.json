@@ -532,7 +532,7 @@
 						"spare": true,
 						"editable": true
 					},
-					"raw_input": 1.5
+					"raw_input": 2.22
 				},
 				"mult": {
 					"type": "float",
@@ -541,7 +541,7 @@
 						"spare": true,
 						"editable": true
 					},
-					"raw_input": 0.34
+					"raw_input": 0.39
 				},
 				"postAdd": {
 					"type": "float",
@@ -926,8 +926,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"y": {
 					"type": "float",

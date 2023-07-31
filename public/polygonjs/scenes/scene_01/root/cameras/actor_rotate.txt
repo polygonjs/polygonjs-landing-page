@@ -40,8 +40,12 @@ class CustomActorEvaluator extends ActorEvaluator {
 		eulerSetFromVector3(VAR__euler1_Euler.copy(this.v_POLY_floatToVec3_1_vec3.value), 0.0, VAR__euler1__1)
 	);
 
-	constructor(scene, object3D) {
-		super(scene, object3D);
+	// /cameras/actor_rotate/onTick1
+	v_POLY_onTick1_time = computed(() => globalsTime());
+	v_POLY_onTick1_delta = computed(() => globalsTimeDelta());
+
+	constructor(node, object3D) {
+		super(node, object3D);
 		// insert after constructor
 	}
 	// insert body

@@ -1,6 +1,10 @@
 #define DISTANCE
 varying vec3 vWorldPosition;
 #include <common>
+#include <uv_pars_vertex>
+#include <displacementmap_pars_vertex>
+#include <morphtarget_pars_vertex>
+#include <skinning_pars_vertex>
 
 
 
@@ -274,10 +278,6 @@ attribute float id;
 
 
 
-#include <uv_pars_vertex>
-#include <displacementmap_pars_vertex>
-#include <morphtarget_pars_vertex>
-#include <skinning_pars_vertex>
 #include <clipping_planes_pars_vertex>
 void main() {
 	#include <uv_vertex>

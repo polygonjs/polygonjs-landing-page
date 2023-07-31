@@ -2,6 +2,7 @@
 	"nodes": {
 		"particles": {
 			"pos": [-50, -300],
+			"selection": ["particlesSystemGpu1"],
 			"nodes": {
 				"instance1": {
 					"pos": [-450, 700]
@@ -44,6 +45,7 @@
 				},
 				"MAT": {
 					"pos": [-650, 700],
+					"selection": ["meshBasicBuilder_INSTANCES_PARTICLES"],
 					"nodes": {
 						"meshBasicBuilder_INSTANCES": {
 							"pos": [0, 0],
@@ -243,6 +245,12 @@
 						},
 						"subtract2": {
 							"pos": [-50, 250]
+						},
+						"getParam1": {
+							"pos": [0, -200]
+						},
+						"getParam2": {
+							"pos": [350, -200]
 						}
 					}
 				},
@@ -371,6 +379,12 @@
 				"cameraFrameMode1": {
 					"pos": [0, 300]
 				},
+				"perspectiveCamera_DEBUG": {
+					"pos": [250, -50]
+				},
+				"merge1": {
+					"pos": [150, 450]
+				},
 				"cameraControls1": {
 					"pos": [0, 150],
 					"nodes": {
@@ -386,12 +400,6 @@
 							"pos": [0, 0]
 						}
 					}
-				},
-				"perspectiveCamera_DEBUG": {
-					"pos": [250, -50]
-				},
-				"merge1": {
-					"pos": [150, 450]
 				}
 			}
 		}

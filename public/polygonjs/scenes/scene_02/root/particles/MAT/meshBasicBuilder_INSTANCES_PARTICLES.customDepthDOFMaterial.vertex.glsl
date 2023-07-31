@@ -1,4 +1,8 @@
 #include <common>
+#include <uv_pars_vertex>
+#include <displacementmap_pars_vertex>
+#include <morphtarget_pars_vertex>
+#include <skinning_pars_vertex>
 
 
 
@@ -403,10 +407,6 @@ attribute vec4 instanceQuaternion;
 
 
 
-#include <uv_pars_vertex>
-#include <displacementmap_pars_vertex>
-#include <morphtarget_pars_vertex>
-#include <skinning_pars_vertex>
 #include <logdepthbuf_pars_vertex>
 #include <clipping_planes_pars_vertex>
 varying vec2 vHighPrecisionZW;
@@ -468,7 +468,7 @@ void main() {
 	float v_POLY_negate1_val = -1.0 * v_POLY_add1_sum;
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/multAdd2
-	float v_POLY_multAdd2_val = (0.34*(v_POLY_globals1_time + 1.5)) + v_POLY_negate1_val;
+	float v_POLY_multAdd2_val = (0.39*(v_POLY_globals1_time + 2.22)) + v_POLY_negate1_val;
 	
 	// /particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES/smoothstep1
 	float v_POLY_smoothstep1_val = smoothstep(0.0, 1.0, v_POLY_multAdd2_val);

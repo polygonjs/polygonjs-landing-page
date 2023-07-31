@@ -234,7 +234,6 @@
 		"setParam1": {
 			"type": "setParam",
 			"params": {
-				"param": "../../particlesSystemGpu1/cursor",
 				"type": 6,
 				"lerp": {
 					"type": "float",
@@ -253,7 +252,7 @@
 					}
 				}
 			},
-			"maxInputsCount": 3,
+			"maxInputsCount": 4,
 			"inputs": [
 				{
 					"index": 0,
@@ -261,9 +260,15 @@
 					"node": "setParam2",
 					"output": "trigger"
 				},
+				{
+					"index": 1,
+					"inputName": "Param",
+					"node": "getParam2",
+					"output": "Param"
+				},
 				null,
 				{
-					"index": 2,
+					"index": 3,
 					"inputName": "val",
 					"node": "null1",
 					"output": "out"
@@ -274,6 +279,11 @@
 					{
 						"name": "trigger",
 						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Param",
+						"type": "Param",
 						"isArray": false
 					},
 					{
@@ -299,7 +309,6 @@
 		"setParam2": {
 			"type": "setParam",
 			"params": {
-				"param": "../../particlesSystemGpu1/velocity",
 				"type": 6,
 				"lerp": {
 					"type": "float",
@@ -318,7 +327,7 @@
 					}
 				}
 			},
-			"maxInputsCount": 3,
+			"maxInputsCount": 4,
 			"inputs": [
 				{
 					"index": 0,
@@ -326,9 +335,15 @@
 					"node": "onTick1",
 					"output": "trigger"
 				},
+				{
+					"index": 1,
+					"inputName": "Param",
+					"node": "getParam1",
+					"output": "Param"
+				},
 				null,
 				{
-					"index": 2,
+					"index": 3,
 					"inputName": "val",
 					"node": "multScalar1",
 					"output": "val"
@@ -339,6 +354,11 @@
 					{
 						"name": "trigger",
 						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Param",
+						"type": "Param",
 						"isArray": false
 					},
 					{
@@ -430,6 +450,18 @@
 					}
 				]
 			}
+		},
+		"getParam1": {
+			"type": "getParam",
+			"params": {
+				"Param": "../../particlesSystemGpu1/velocity"
+			}
+		},
+		"getParam2": {
+			"type": "getParam",
+			"params": {
+				"Param": "../../particlesSystemGpu1/cursor"
+			}
 		}
 	},
 	"inputs": ["particlesSystemGpu1"],
@@ -509,6 +541,7 @@
 			"planeSet",
 			"globalsTime",
 			"globalsTimeDelta",
+			"getParam",
 			"rayIntersectPlane",
 			"divideNumber",
 			"previousValueVector3",

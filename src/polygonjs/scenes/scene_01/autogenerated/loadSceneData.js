@@ -1,16 +1,16 @@
 import { SceneDataManifestImporter } from "@polygonjs/polygonjs/dist/src/engine/io/manifest/import/SceneData";
 const manifest = {
-  properties: "1685480249130",
+  properties: "1690795024734",
   root: "1684601820575",
   nodes: {
-    geo1: "1684540525558",
+    geo1: "1690794740435",
     "geo1/MAT": "1684540520673",
-    "geo1/MAT/rayMarchingBuilder1": "1685480249130",
+    "geo1/MAT/rayMarchingBuilder1": "1690795024734",
     COP: "1684880820562",
-    lights: "1684601815224",
-    cameras: "1684834747475",
-    "cameras/actor_rotate": "1684879947917",
-    "cameras/cameraRenderer1": "1684606786734",
+    lights: "1690794740435",
+    cameras: "1690794740435",
+    "cameras/actor_rotate": "1690794740435",
+    "cameras/cameraRenderer1": "1690794740435",
   },
   shaders: {
     "/geo1/MAT/rayMarchingBuilder1": {
@@ -18,7 +18,7 @@ const manifest = {
       fragment: "1684540520673",
     },
   },
-  jsFunctionBodies: { "/cameras/actor_rotate": "1684834747475" },
+  jsFunctionBodies: { "/cameras/actor_rotate": "1690794740435" },
 };
 
 export const loadSceneData_scene_01 = async (options = {}) => {

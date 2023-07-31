@@ -410,6 +410,8 @@
 			"mathFloat_3",
 			"floatToVec3",
 			"eulerSetFromVector3",
+			"globalsTime",
+			"globalsTimeDelta",
 			"setObjectRotation"
 		],
 		"serializedParamConfigs": [],

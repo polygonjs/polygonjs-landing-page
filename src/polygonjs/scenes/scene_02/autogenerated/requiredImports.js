@@ -25,6 +25,7 @@ import { TextSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/Text
 
 // named functions
 import { divideNumber } from "@polygonjs/polygonjs/dist/src/engine/functions/divideNumber";
+import { getParam } from "@polygonjs/polygonjs/dist/src/engine/functions/getParam";
 import { globalsRayFromCursor } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsRayFromCursor";
 import { globalsTime } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsTime";
 import { globalsTimeDelta } from "@polygonjs/polygonjs/dist/src/engine/functions/globalsTimeDelta";
@@ -63,6 +64,7 @@ export const requiredImports_scene_02 = {
   operations: [],
   jsFunctions: [
     divideNumber,
+    getParam,
     globalsRayFromCursor,
     globalsTime,
     globalsTimeDelta,

@@ -1,8 +1,13 @@
 // insert defines
 class CustomActorEvaluator extends ActorEvaluator {
 	// insert members
-	constructor(scene, object3D) {
-		super(scene, object3D);
+
+	// /geo1/physicsWorld1/onTick1
+	v_POLY_onTick1_time = computed(() => globalsTime());
+	v_POLY_onTick1_delta = computed(() => globalsTimeDelta());
+
+	constructor(node, object3D) {
+		super(node, object3D);
 		// insert after constructor
 	}
 	// insert body

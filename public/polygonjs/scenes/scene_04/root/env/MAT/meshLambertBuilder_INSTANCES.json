@@ -225,8 +225,7 @@
 						"spare": true,
 						"editable": true
 					},
-					"raw_input": 120,
-					"overriden_options": {}
+					"raw_input": 120
 				},
 				"x": {
 					"type": "float",
@@ -303,8 +302,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				},
 				"blend": {
 					"type": "float",
@@ -312,8 +310,7 @@
 					"options": {
 						"spare": true,
 						"editable": false
-					},
-					"overriden_options": {}
+					}
 				}
 			},
 			"inputs": [
@@ -418,7 +415,6 @@
 					"stencilFail": 7680,
 					"stencilZFail": 7680,
 					"stencilZPass": 7680,
-					"forceSinglePass": true,
 					"depthPacking": 3201
 				},
 				"onBeforeCompileDataJSONWithoutShaders": {
