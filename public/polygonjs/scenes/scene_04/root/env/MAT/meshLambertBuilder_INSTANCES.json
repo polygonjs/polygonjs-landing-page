@@ -366,7 +366,6 @@
 			},
 			"uuid": "/env/MAT/meshLambertBuilder_INSTANCES-main",
 			"type": "MeshLambertMaterial",
-			"name": "/env/MAT/meshLambertBuilder_INSTANCES",
 			"color": 16777215,
 			"emissive": 0,
 			"reflectivity": 1,

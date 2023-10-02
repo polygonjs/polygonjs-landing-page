@@ -2,7 +2,6 @@
 	"nodes": {
 		"geo1": {
 			"pos": [-50, -350],
-			"selection": ["MAT"],
 			"nodes": {
 				"boxLines1": {
 					"pos": [100, 0]
@@ -21,7 +20,6 @@
 					"nodes": {
 						"rayMarchingBuilder1": {
 							"pos": [100, -50],
-							"selection": ["SDFMaterial1"],
 							"nodes": {
 								"globals1": {
 									"pos": [-1450, -200]

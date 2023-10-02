@@ -174,6 +174,9 @@ export interface PolySceneProps_scene_03 {
   "geo1--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "geo1--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "geo1--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "geo1--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "geo1--TET"?: ParamValueSerializedTypeMap["folder"];
   "geo1--TetScale"?: ParamValueSerializedTypeMap["float"];
   "geo1--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -433,6 +436,8 @@ export interface PolySceneProps_scene_03 {
   "geo1-boxLines4--centerx"?: ParamValueSerializedTypeMap["float"];
   "geo1-boxLines4--centery"?: ParamValueSerializedTypeMap["float"];
   "geo1-boxLines4--centerz"?: ParamValueSerializedTypeMap["float"];
+  "geo1-copy1--srcGroup"?: ParamValueSerializedTypeMap["string"];
+  "geo1-copy1--templateGroup"?: ParamValueSerializedTypeMap["string"];
   "geo1-copy1--count"?: ParamValueSerializedTypeMap["integer"];
   "geo1-copy1--t"?: ParamValueSerializedTypeMap["vector3"];
   "geo1-copy1--t-tx"?: ParamValueSerializedTypeMap["float"];
@@ -462,6 +467,8 @@ export interface PolySceneProps_scene_03 {
   "geo1-copy1--copyAttributes"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-copy1--attributesToCopy"?: ParamValueSerializedTypeMap["string"];
   "geo1-copy1--useCopyExpr"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1-copy2--srcGroup"?: ParamValueSerializedTypeMap["string"];
+  "geo1-copy2--templateGroup"?: ParamValueSerializedTypeMap["string"];
   "geo1-copy2--count"?: ParamValueSerializedTypeMap["integer"];
   "geo1-copy2--t"?: ParamValueSerializedTypeMap["vector3"];
   "geo1-copy2--t-tx"?: ParamValueSerializedTypeMap["float"];
@@ -506,7 +513,6 @@ export interface PolySceneProps_scene_03 {
   "geo1-hexagons1--directionz"?: ParamValueSerializedTypeMap["float"];
   "geo1-hexagons1--pointsOnly"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--group"?: ParamValueSerializedTypeMap["string"];
-  "geo1-material1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--assignMat"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--material"?: ParamValueSerializedTypeMap["node_path"];
   "geo1-material1--cloneMat"?: ParamValueSerializedTypeMap["boolean"];
@@ -534,7 +540,6 @@ export interface PolySceneProps_scene_03 {
   "geo1-merge7--inputsCount"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform1--applyOn"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform1--group"?: ParamValueSerializedTypeMap["string"];
-  "geo1-transform1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-transform1--objectMode"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform1--objectTransformSpace"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform1--pointGroup"?: ParamValueSerializedTypeMap["string"];
@@ -570,7 +575,6 @@ export interface PolySceneProps_scene_03 {
   "geo1-transform1--pivotz"?: ParamValueSerializedTypeMap["float"];
   "geo1-transform2--applyOn"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform2--group"?: ParamValueSerializedTypeMap["string"];
-  "geo1-transform2--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-transform2--objectMode"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform2--objectTransformSpace"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform2--pointGroup"?: ParamValueSerializedTypeMap["string"];
@@ -606,7 +610,6 @@ export interface PolySceneProps_scene_03 {
   "geo1-transform2--pivotz"?: ParamValueSerializedTypeMap["float"];
   "geo1-transform3--applyOn"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform3--group"?: ParamValueSerializedTypeMap["string"];
-  "geo1-transform3--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-transform3--objectMode"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform3--objectTransformSpace"?: ParamValueSerializedTypeMap["integer"];
   "geo1-transform3--pointGroup"?: ParamValueSerializedTypeMap["string"];
@@ -817,6 +820,9 @@ export interface PolySceneProps_scene_03 {
   "ground--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "ground--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "ground--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "ground--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "ground--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "ground--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "ground--TET"?: ParamValueSerializedTypeMap["folder"];
   "ground--TetScale"?: ParamValueSerializedTypeMap["float"];
   "ground--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -827,7 +833,6 @@ export interface PolySceneProps_scene_03 {
   "ground--TetDisplayCenter"?: ParamValueSerializedTypeMap["boolean"];
   "ground--TetDisplaySphere"?: ParamValueSerializedTypeMap["boolean"];
   "ground-material1--group"?: ParamValueSerializedTypeMap["string"];
-  "ground-material1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "ground-material1--assignMat"?: ParamValueSerializedTypeMap["boolean"];
   "ground-material1--material"?: ParamValueSerializedTypeMap["node_path"];
   "ground-material1--cloneMat"?: ParamValueSerializedTypeMap["boolean"];
@@ -837,7 +842,6 @@ export interface PolySceneProps_scene_03 {
   "ground-material1--texDest0"?: ParamValueSerializedTypeMap["string"];
   "ground-transform1--applyOn"?: ParamValueSerializedTypeMap["integer"];
   "ground-transform1--group"?: ParamValueSerializedTypeMap["string"];
-  "ground-transform1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "ground-transform1--objectMode"?: ParamValueSerializedTypeMap["integer"];
   "ground-transform1--objectTransformSpace"?: ParamValueSerializedTypeMap["integer"];
   "ground-transform1--pointGroup"?: ParamValueSerializedTypeMap["string"];
@@ -1081,6 +1085,9 @@ export interface PolySceneProps_scene_03 {
   "lights--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "lights--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "lights--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "lights--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "lights--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "lights--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "lights--TET"?: ParamValueSerializedTypeMap["folder"];
   "lights--TetScale"?: ParamValueSerializedTypeMap["float"];
   "lights--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -1250,6 +1257,9 @@ export interface PolySceneProps_scene_03 {
   "cameras--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "cameras--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "cameras--TET"?: ParamValueSerializedTypeMap["folder"];
   "cameras--TetScale"?: ParamValueSerializedTypeMap["float"];
   "cameras--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -1289,6 +1299,7 @@ export interface PolySceneProps_scene_03 {
   "cameras-perspectiveCamera1--anamorphicRatio"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1--group"?: ParamValueSerializedTypeMap["string"];
   "cameras-cameraControls1--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-cameraControls1-cameraOrbitControls1--main"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--enabled"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--allowPan"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--allowRotate"?: ParamValueSerializedTypeMap["boolean"];
@@ -1297,6 +1308,7 @@ export interface PolySceneProps_scene_03 {
   "cameras-cameraControls1-cameraOrbitControls1--damping"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--screenSpacePanning"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--rotateSpeed"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls1-cameraOrbitControls1--limits"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--minDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--maxDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--limitAzimuthAngle"?: ParamValueSerializedTypeMap["boolean"];
@@ -1310,6 +1322,13 @@ export interface PolySceneProps_scene_03 {
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRange-polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRangex"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls1-cameraOrbitControls1--controls"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraControls1-cameraOrbitControls1--leftMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--middleMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--rightMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--oneFingerTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--twoFingersTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--misc"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--target"?: ParamValueSerializedTypeMap["vector3"];
   "cameras-cameraControls1-cameraOrbitControls1--target-targetx"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--target-targety"?: ParamValueSerializedTypeMap["float"];

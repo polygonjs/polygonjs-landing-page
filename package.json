@@ -15,7 +15,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.3",
 		"@tailwindcss/typography": "0.5.9",
-		"polygonjs-editor": "1.4.43-1",
+		"polygonjs-editor": "1.5.2-1",
 		"vue": "3.3.4"
 	},
 	"devDependencies": {

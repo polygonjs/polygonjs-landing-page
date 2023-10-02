@@ -128,6 +128,9 @@ export interface PolySceneProps_scene_01 {
   "geo1--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "geo1--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "geo1--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "geo1--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "geo1--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "geo1--TET"?: ParamValueSerializedTypeMap["folder"];
   "geo1--TetScale"?: ParamValueSerializedTypeMap["float"];
   "geo1--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -182,7 +185,6 @@ export interface PolySceneProps_scene_01 {
   "geo1-box1--centery"?: ParamValueSerializedTypeMap["float"];
   "geo1-box1--centerz"?: ParamValueSerializedTypeMap["float"];
   "geo1-material1--group"?: ParamValueSerializedTypeMap["string"];
-  "geo1-material1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--assignMat"?: ParamValueSerializedTypeMap["boolean"];
   "geo1-material1--material"?: ParamValueSerializedTypeMap["node_path"];
   "geo1-material1--cloneMat"?: ParamValueSerializedTypeMap["boolean"];
@@ -335,6 +337,9 @@ export interface PolySceneProps_scene_01 {
   "lights--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "lights--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "lights--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "lights--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "lights--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "lights--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "lights--TET"?: ParamValueSerializedTypeMap["folder"];
   "lights--TetScale"?: ParamValueSerializedTypeMap["float"];
   "lights--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -488,6 +493,9 @@ export interface PolySceneProps_scene_01 {
   "cameras--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "cameras--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "cameras--TET"?: ParamValueSerializedTypeMap["folder"];
   "cameras--TetScale"?: ParamValueSerializedTypeMap["float"];
   "cameras--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -532,10 +540,10 @@ export interface PolySceneProps_scene_01 {
   "cameras-hierarchy1--levels"?: ParamValueSerializedTypeMap["integer"];
   "cameras-hierarchy1--objectMask"?: ParamValueSerializedTypeMap["string"];
   "cameras-hierarchy1--addChildMode"?: ParamValueSerializedTypeMap["integer"];
-  "cameras-actor_perf_check--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor_perf_check--group"?: ParamValueSerializedTypeMap["string"];
   "cameras-actor_perf_check--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-actor_perf_check--node"?: ParamValueSerializedTypeMap["node_path"];
-  "cameras-actor_rotate--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "cameras-actor_rotate--group"?: ParamValueSerializedTypeMap["string"];
   "cameras-actor_rotate--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-actor_rotate--node"?: ParamValueSerializedTypeMap["node_path"];
   "cameras-cameraRenderer1--group"?: ParamValueSerializedTypeMap["string"];
@@ -559,6 +567,7 @@ export interface PolySceneProps_scene_01 {
   "cameras-cameraRenderer1-WebGLRenderer1--premultipliedAlpha"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--stencil"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--depth"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras-cameraRenderer1-WebGLRenderer1--localClippingEnabled"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--logarithmicDepthBuffer"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--preserveDrawingBuffer"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraRenderer1-WebGLRenderer1--tprecision"?: ParamValueSerializedTypeMap["boolean"];

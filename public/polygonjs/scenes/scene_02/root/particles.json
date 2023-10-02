@@ -61,7 +61,7 @@
 		"delete1": {
 			"type": "delete",
 			"params": {
-				"class": 1,
+				"class": 3,
 				"byExpression": 1,
 				"expression": "@name=='D'"
 			},
@@ -70,7 +70,7 @@
 		"delete2": {
 			"type": "delete",
 			"params": {
-				"class": 1,
+				"class": 3,
 				"invert": 1,
 				"byExpression": true,
 				"expression": "@name=='D'"
@@ -163,6 +163,16 @@
 			}
 		},
 		"CSGWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"QUADTriangles": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"QUADWireframe": {
 			"overriden_options": {
 				"callback": "{}"
 			}

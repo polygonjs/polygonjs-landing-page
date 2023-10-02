@@ -25,6 +25,13 @@
 			"flags": {
 				"bypass": true,
 				"display": true
+			},
+			"persisted_config": {
+				"variableNames": [],
+				"variables": [],
+				"functionNames": [],
+				"serializedParamConfigs": [],
+				"eventDatas": []
 			}
 		}
 	},
@@ -90,6 +97,16 @@
 			}
 		},
 		"CSGWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"QUADTriangles": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"QUADWireframe": {
 			"overriden_options": {
 				"callback": "{}"
 			}

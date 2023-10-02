@@ -320,6 +320,16 @@
 				"callback": "{}"
 			}
 		},
+		"QUADTriangles": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"QUADWireframe": {
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
 		"TetScale": {
 			"overriden_options": {
 				"callback": "{}"

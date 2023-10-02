@@ -2629,7 +2629,6 @@
 			},
 			"uuid": "/geo1/MAT/rayMarchingBuilder1-main",
 			"type": "ShaderMaterial",
-			"name": "/geo1/MAT/rayMarchingBuilder1",
 			"side": 1,
 			"transparent": true,
 			"depthFunc": 3,

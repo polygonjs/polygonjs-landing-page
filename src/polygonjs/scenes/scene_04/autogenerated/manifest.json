@@ -1,21 +1,21 @@
 {
-	"properties": "1690795221911",
+	"properties": "1696286942146",
 	"root": "1690794950156",
 	"nodes": {
-		"geo1": "1690794950156",
+		"geo1": "1696286942146",
 		"geo1/MAT": "1690794950156",
-		"geo1/MAT/meshStandardBuilder_GROUND": "1690794950156",
-		"geo1/MAT/meshStandardBuilder_PLAYER": "1690794950156",
-		"geo1/MAT/meshStandardBuilder_BLOCKS": "1690794950156",
+		"geo1/MAT/meshStandardBuilder_GROUND": "1696286942146",
+		"geo1/MAT/meshStandardBuilder_PLAYER": "1696286942146",
+		"geo1/MAT/meshStandardBuilder_BLOCKS": "1696286942146",
 		"geo1/physicsPlayer1": "1690794950156",
 		"geo1/cameraControls_PLAYER1": "1690794950156",
 		"geo1/physicsWorld1": "1690794950156",
-		"lights": "1690794950156",
-		"cameras": "1690794950156",
+		"lights": "1696286942146",
+		"cameras": "1696286942146",
 		"cameras/cameraControls1": "1690794950156",
-		"env": "1690794950156",
+		"env": "1696286942146",
 		"env/MAT": "1690794950156",
-		"env/MAT/meshLambertBuilder_INSTANCES": "1690794950156"
+		"env/MAT/meshLambertBuilder_INSTANCES": "1696286942146"
 	},
 	"shaders": {
 		"/geo1/MAT/meshStandardBuilder_GROUND": {

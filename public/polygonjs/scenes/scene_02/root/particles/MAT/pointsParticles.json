@@ -45,7 +45,6 @@
 			},
 			"uuid": "/particles/MAT/pointsParticles-main",
 			"type": "PointsMaterial",
-			"name": "/particles/MAT/pointsParticles",
 			"color": 16777215,
 			"size": 1,
 			"sizeAttenuation": true,

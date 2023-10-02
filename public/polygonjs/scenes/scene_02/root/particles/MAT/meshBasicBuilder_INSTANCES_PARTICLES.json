@@ -1020,7 +1020,6 @@
 			},
 			"uuid": "/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES-main",
 			"type": "MeshBasicMaterial",
-			"name": "/particles/MAT/meshBasicBuilder_INSTANCES_PARTICLES",
 			"color": 16777215,
 			"reflectivity": 1,
 			"refractionRatio": 0.98,

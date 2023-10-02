@@ -141,6 +141,9 @@ export interface PolySceneProps_scene_02 {
   "particles--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "particles--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "particles--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "particles--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "particles--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "particles--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "particles--TET"?: ParamValueSerializedTypeMap["folder"];
   "particles--TetScale"?: ParamValueSerializedTypeMap["float"];
   "particles--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -452,14 +455,13 @@ export interface PolySceneProps_scene_02 {
   "particles-MAT-pointsParticles--createCustomMatDistance"?: ParamValueSerializedTypeMap["boolean"];
   "particles-MAT-pointsParticles--createCustomMatDepth"?: ParamValueSerializedTypeMap["boolean"];
   "particles-MAT-pointsParticles--createCustomMatDepthDOF"?: ParamValueSerializedTypeMap["boolean"];
-  "particles-actor1--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "particles-actor1--group"?: ParamValueSerializedTypeMap["string"];
   "particles-actor1--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
   "particles-actor1--node"?: ParamValueSerializedTypeMap["node_path"];
-  "particles-actor_particles1--objectsMask"?: ParamValueSerializedTypeMap["string"];
+  "particles-actor_particles1--group"?: ParamValueSerializedTypeMap["string"];
   "particles-actor_particles1--useThisNode"?: ParamValueSerializedTypeMap["boolean"];
   "particles-actor_particles1--node"?: ParamValueSerializedTypeMap["node_path"];
   "particles-particlesSystemGpu1--group"?: ParamValueSerializedTypeMap["string"];
-  "particles-particlesSystemGpu1--applyToChildren"?: ParamValueSerializedTypeMap["boolean"];
   "particles-particlesSystemGpu1--dataType"?: ParamValueSerializedTypeMap["integer"];
   "particles-particlesSystemGpu1--preRollFramesCount"?: ParamValueSerializedTypeMap["integer"];
   "particles-particlesSystemGpu1--material"?: ParamValueSerializedTypeMap["node_path"];
@@ -546,6 +548,9 @@ export interface PolySceneProps_scene_02 {
   "cameras--CSGMeshesColorg"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGMeshesColorb"?: ParamValueSerializedTypeMap["float"];
   "cameras--CSGWireframe"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUAD"?: ParamValueSerializedTypeMap["folder"];
+  "cameras--QUADTriangles"?: ParamValueSerializedTypeMap["boolean"];
+  "cameras--QUADWireframe"?: ParamValueSerializedTypeMap["boolean"];
   "cameras--TET"?: ParamValueSerializedTypeMap["folder"];
   "cameras--TetScale"?: ParamValueSerializedTypeMap["float"];
   "cameras--TetDisplayOuterMesh"?: ParamValueSerializedTypeMap["boolean"];
@@ -619,6 +624,7 @@ export interface PolySceneProps_scene_02 {
   "cameras-merge1--inputsCount"?: ParamValueSerializedTypeMap["integer"];
   "cameras-cameraControls1--group"?: ParamValueSerializedTypeMap["string"];
   "cameras-cameraControls1--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-cameraControls1-cameraOrbitControls1--main"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--enabled"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--allowPan"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--allowRotate"?: ParamValueSerializedTypeMap["boolean"];
@@ -627,6 +633,7 @@ export interface PolySceneProps_scene_02 {
   "cameras-cameraControls1-cameraOrbitControls1--damping"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--screenSpacePanning"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls1-cameraOrbitControls1--rotateSpeed"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls1-cameraOrbitControls1--limits"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--minDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--maxDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--limitAzimuthAngle"?: ParamValueSerializedTypeMap["boolean"];
@@ -640,6 +647,13 @@ export interface PolySceneProps_scene_02 {
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRange-polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRangex"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls1-cameraOrbitControls1--controls"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraControls1-cameraOrbitControls1--leftMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--middleMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--rightMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--oneFingerTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--twoFingersTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls1-cameraOrbitControls1--misc"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls1-cameraOrbitControls1--target"?: ParamValueSerializedTypeMap["vector3"];
   "cameras-cameraControls1-cameraOrbitControls1--target-targetx"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls1-cameraOrbitControls1--target-targety"?: ParamValueSerializedTypeMap["float"];
@@ -649,6 +663,7 @@ export interface PolySceneProps_scene_02 {
   "cameras-cameraControls1-cameraOrbitControls1--targetz"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2--group"?: ParamValueSerializedTypeMap["string"];
   "cameras-cameraControls2--node"?: ParamValueSerializedTypeMap["node_path"];
+  "cameras-cameraControls2-cameraOrbitControls1--main"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls2-cameraOrbitControls1--enabled"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls2-cameraOrbitControls1--allowPan"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls2-cameraOrbitControls1--allowRotate"?: ParamValueSerializedTypeMap["boolean"];
@@ -657,6 +672,7 @@ export interface PolySceneProps_scene_02 {
   "cameras-cameraControls2-cameraOrbitControls1--damping"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--screenSpacePanning"?: ParamValueSerializedTypeMap["boolean"];
   "cameras-cameraControls2-cameraOrbitControls1--rotateSpeed"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls2-cameraOrbitControls1--limits"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls2-cameraOrbitControls1--minDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--maxDistance"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--limitAzimuthAngle"?: ParamValueSerializedTypeMap["boolean"];
@@ -670,6 +686,13 @@ export interface PolySceneProps_scene_02 {
   "cameras-cameraControls2-cameraOrbitControls1--polarAngleRange-polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--polarAngleRangex"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--polarAngleRangey"?: ParamValueSerializedTypeMap["float"];
+  "cameras-cameraControls2-cameraOrbitControls1--controls"?: ParamValueSerializedTypeMap["folder"];
+  "cameras-cameraControls2-cameraOrbitControls1--leftMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls2-cameraOrbitControls1--middleMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls2-cameraOrbitControls1--rightMouseButton"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls2-cameraOrbitControls1--oneFingerTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls2-cameraOrbitControls1--twoFingersTouch"?: ParamValueSerializedTypeMap["integer"];
+  "cameras-cameraControls2-cameraOrbitControls1--misc"?: ParamValueSerializedTypeMap["folder"];
   "cameras-cameraControls2-cameraOrbitControls1--target"?: ParamValueSerializedTypeMap["vector3"];
   "cameras-cameraControls2-cameraOrbitControls1--target-targetx"?: ParamValueSerializedTypeMap["float"];
   "cameras-cameraControls2-cameraOrbitControls1--target-targety"?: ParamValueSerializedTypeMap["float"];

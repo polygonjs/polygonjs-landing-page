@@ -313,10 +313,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@polygonjs/polygonjs@1.4.43":
-  version "1.4.43"
-  resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.4.43.tgz#7a6bd7b87e5535506a4fd4f6412362fc2a86273a"
-  integrity sha512-0xMmblKBKBu46bG+/5kat0wgpkZ6HhTTuI/gyjnR29HaQuHvRsgThl6BKorzupzH9wH0FtWuw3UJ4BNgMfplsQ==
+"@polygonjs/polygonjs@1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.5.2.tgz#d9cd63ba46eab17cb9925b0d4832bc8cf95db652"
+  integrity sha512-PH4KXfL1N2frO9qEKxyLaHuQ2uGlsH2jP/5do0LbjLLSzFmyqdK6ZQ8yeeKjb+HynGyYGViyT4hfpvv+pr2BgQ==
   dependencies:
     "@dimforge/rapier3d-compat" "0.11.1"
     "@jscad/modeling" "2.11.0"
@@ -328,6 +328,7 @@
     "@vue-reactivity/watch" "0.2.0"
     "@vue/reactivity" "3.3.4"
     chromotome "1.20.0"
+    fontfaceobserver "2.3.0"
     gifuct-js "2.1.2"
     gsap "3.11.5"
     jsep "1.0.3"
@@ -347,7 +348,9 @@
     three-subdivide "1.1.2"
     tone "14.7.77"
     web-ifc-three "0.0.125"
+    xatlas-three "0.2.0"
     xatlas-web "0.1.0"
+    yuka "^0.7.8"
 
 "@polygonjs/polygonjs@^1.4.16":
   version "1.4.16"
@@ -1950,6 +1953,11 @@ finalhandler@1.2.0:
     statuses "2.0.1"
     unpipe "~1.0.0"
 
+fontfaceobserver@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
+  integrity sha512-6FPvD/IVyT4ZlNe7Wcn5Fb/4ChigpucKYSvD6a+0iMoLn2inpo711eyIcKjmDtE5XNcgAkSH9uN/nfAeZzHEfg==
+
 form-data@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
@@ -1974,10 +1982,10 @@ fresh@0.5.2:
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==
 
-fs-extra@10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
-  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+fs-extra@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.1.tgz#da69f7c39f3b002378b0954bb6ae7efdc0876e2d"
+  integrity sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -2786,12 +2794,12 @@ pirates@^4.0.1:
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.5.tgz#feec352ea5c3268fb23a37c702ab1699f35a5f3b"
   integrity sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==
 
-polygonjs-editor@1.4.43-1:
-  version "1.4.43-1"
-  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.4.43-1.tgz#8c4ee40922fd9060311a55893def3716a146f3ea"
-  integrity sha512-mf0cxBqwQPDVThqiAyB7H9ObKjxKQb6dsl46ihLYAna7j1urbfa1ejVhf8qgOpXGX9TJm60Zbiklp/Go7FyHQQ==
+polygonjs-editor@1.5.2-1:
+  version "1.5.2-1"
+  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.5.2-1.tgz#225e98a4863528aace93d0a6aa8f93f5e6277316"
+  integrity sha512-TMomfN/ZNLOhdNK6+Eqx5HfUYPtBsGMqEmSMYVdvyA5Lm9NxmueoS93YOIn7LZxWL01fwbvGmxEOKz2Qqpg4DQ==
   dependencies:
-    "@polygonjs/polygonjs" "1.4.43"
+    "@polygonjs/polygonjs" "1.5.2"
     btoa "1.2.1"
     chalk "4.1.0"
     compression-webpack-plugin "10.0.0"
@@ -2800,7 +2808,7 @@ polygonjs-editor@1.4.43-1:
     express "4.18.1"
     fflate "0.7.2"
     form-data "4.0.0"
-    fs-extra "10.0.0"
+    fs-extra "11.1.1"
     http-status-codes "2.1.4"
     lodash "4.17.21"
     md5 "2.3.0"
@@ -3712,6 +3720,11 @@ ws@~8.11.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
   integrity sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==
 
+xatlas-three@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/xatlas-three/-/xatlas-three-0.2.0.tgz#2ea6aad4a286c33f835d5d8ccbb8f8a6e04e8551"
+  integrity sha512-oZjKK+n4xVi9tj1PTdBycYLkQtoOjXlTYMDfdHwR2JUlvBaIy2faO1lOxAamkKlcEVQbdX981i0jR7vXVTxf4A==
+
 xatlas-web@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/xatlas-web/-/xatlas-web-0.1.0.tgz#c1c636d557cbcd30726b546cde011c3861b6e4ef"
@@ -3780,3 +3793,8 @@ yauzl@^2.10.0:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
+
+yuka@^0.7.8:
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/yuka/-/yuka-0.7.8.tgz#5297c2d8c36e6e6bbe24c6119522cbc2a8dd8dd7"
+  integrity sha512-G/pFcMZh2Azz7Yy500NSV1jQ0Ru7h9hTNyEW+HjRXcdzjJIyp/3mCGspnx7VJVP06zxORqK6mkl5TywLqVUnVg==

@@ -5,6 +5,6 @@
 	"realtimeState": true,
 	"mainCameraPath": "/cameras/cameras:sopGroup/perspectiveCamera1",
 	"versions": {
-		"polygonjs": "1.4.43"
+		"polygonjs": "1.5.2"
 	}
 }
