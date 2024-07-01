@@ -81,18 +81,18 @@ const FOOTER_BOTTOM_ICONS: FooterBottomIcon[] = [
 		href: '/discord',
 		component: DiscordIcon,
 	},
-	{
-		name: 'Discourse',
-		href: '/forum',
-		component: DiscourseIcon,
-	},
+	// {
+	// 	name: 'Discourse',
+	// 	href: '/forum',
+	// 	component: DiscourseIcon,
+	// },
 ];
 const COMPONENT_BY_LINK: Record<string, FooterIcon> = {
 	'/twitter': TwitterIcon,
 	'/github': GithubIcon,
 	'/youtube': YoutubeIcon,
 	'/discord': DiscordIcon,
-	'/forum': DiscourseIcon,
+	// '/forum': DiscourseIcon,
 };
 
 enum FooterSection {
@@ -158,7 +158,7 @@ const LINKS_BY_SECTION: Record<FooterSection, FooterLink[]> = {
 	],
 	[FooterSection.COMMUNITY]: [
 		{label: 'Discord', href: '/discord', color: nextColor()},
-		{label: 'Forum', href: '/forum', color: nextColor()},
+		// {label: 'Forum', href: '/forum', color: nextColor()},
 		{label: 'Twitter', href: '/twitter', color: nextColor()},
 		{label: 'Github', href: '/github', color: nextColor()},
 		{label: 'Youtube', href: '/youtube', color: nextColor()},
